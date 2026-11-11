@@ -10,7 +10,7 @@ import {
   staticFile,
   useCurrentFrame,
 } from "remotion";
-import { SHOTS, Shot, shotFrames } from "./script";
+import { SHOTS, Shot, shotFrames, VOICE_START, voiceDuration } from "./script";
 import { Scene3D } from "./three/Scene3D";
 import { EndCard, fontFamily, Subtitle, VentasScreen, WebsScreen } from "./ui/Ui";
 
@@ -56,6 +56,7 @@ const ShotView: React.FC<{ shot: Shot; offset: number }> = ({ shot, offset }) =>
       default:
         return (
           <Scene3D
+            shotId={shot.id}
             kind={shot.kind}
             talk={shot.talk}
             globalOffset={offset}
@@ -78,6 +79,11 @@ const ShotView: React.FC<{ shot: Shot; offset: number }> = ({ shot, offset }) =>
             </Sequence>
           ))}
         </>
+      ) : null}
+      {voiceDuration(shot.id) ? (
+        <Sequence from={VOICE_START} layout="none" name={`voz-${shot.id}`}>
+          <Audio src={staticFile(`voz/${shot.id}.mp3`)} volume={1} />
+        </Sequence>
       ) : null}
       {shot.line ? (
         <Sequence from={2} layout="absolute-fill">

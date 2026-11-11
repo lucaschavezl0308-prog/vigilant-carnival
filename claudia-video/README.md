@@ -28,6 +28,15 @@ En una máquina sin internet hacia remotion.media, agrega
 
 ## Voces
 
-El video va con subtítulos y efectos, sin voces. Para agregar voces con IA
-(ElevenLabs), genera un MP3 por línea del guion en `public/voz/<id>.mp3` y
-agrégalos con `<Audio>` en `src/ClaudiaVideo.tsx`.
+Las voces se generan con edge-tts (voces neuronales de Microsoft, acento
+argentino): Tomás para Alejandro y Elena para Claudia, con un toque robótico.
+
+```bash
+pip install edge-tts
+python scripts/generar-voces.py
+```
+
+El script lee los diálogos de `src/script.ts` (usa `say` si la voz debe leer
+algo distinto al subtítulo) y escribe `public/voz/<id>.mp3`, más
+`src/voice-durations.json` y `src/voice-envelopes.json`. Las tomas se alargan
+solas si la frase no entra, y la boca se mueve con el volumen de la voz.

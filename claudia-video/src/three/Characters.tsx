@@ -44,11 +44,14 @@ export const Alejandro: React.FC<{
   sleepy?: number; // 0 = ojos abiertos, 1 = muy dormido
   surprised?: number; // 0..1, abre ojos y cejas
   holdingMug?: boolean;
+  /** volumen de la voz 0..1 (sincroniza la boca); si falta, aleteo genérico */
+  mouthLevel?: number;
   position?: [number, number, number];
   rotationY?: number;
 }> = ({
   frame,
   talking,
+  mouthLevel,
   sleepy = 0.55,
   surprised = 0,
   holdingMug = false,
@@ -56,7 +59,7 @@ export const Alejandro: React.FC<{
   rotationY = 0,
 }) => {
   const skin = "#d9a377";
-  const mouth = mouthOpen(frame, talking);
+  const mouth = mouthLevel ?? mouthOpen(frame, talking);
   const lid = Math.max(0, sleepy - surprised * 0.9); // párpado caído
   const breathe = Math.sin(frame * 0.08) * 0.01;
   const headTilt = Math.sin(frame * 0.05) * 0.03 + (talking ? Math.sin(frame * 0.3) * 0.02 : 0);
@@ -232,18 +235,20 @@ export const Claudia: React.FC<{
   lookAway?: number; // 0..1 gira la cabeza (disimulando)
   typing?: boolean;
   offerArm?: number; // 0..1 brazo extendido (dando el café)
+  mouthLevel?: number;
   position?: [number, number, number];
   rotationY?: number;
 }> = ({
   frame,
   talking,
+  mouthLevel,
   lookAway = 0,
   typing = false,
   offerArm = 0,
   position = [0, 0, 0],
   rotationY = 0,
 }) => {
-  const mouth = mouthOpen(frame, talking);
+  const mouth = mouthLevel ?? mouthOpen(frame, talking);
   const eye = blink(frame, 40);
   const bob = Math.sin(frame * 0.12) * 0.01;
   const headYaw = lookAway * 0.7 + Math.sin(frame * 0.06) * 0.04;

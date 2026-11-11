@@ -3,7 +3,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Alejandro, Claudia } from "./Characters";
 import { CameraRig, Room } from "./Room";
-import type { ShotKind, Speaker } from "../script";
+import { voiceLevel, type ShotKind, type Speaker } from "../script";
 
 type V3 = [number, number, number];
 
@@ -23,6 +23,8 @@ const CAMS: Record<string, { pos: V3; target: V3; fov: number }> = {
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 export const Scene3D: React.FC<{
+  /** id de la toma, para sincronizar la boca con su voz */
+  shotId: string;
   kind: ShotKind;
   talk: Speaker;
   /** frame global del video, para que el amanecer avance de corrido */
@@ -31,11 +33,12 @@ export const Scene3D: React.FC<{
   hasCoffee?: boolean;
   /** Expresión de sorpresa de Alejandro */
   surprised?: boolean;
-}> = ({ kind, talk, globalOffset, hasCoffee = false, surprised = false }) => {
+}> = ({ shotId, kind, talk, globalOffset, hasCoffee = false, surprised = false }) => {
   const frame = useCurrentFrame();
   const { width, height, durationInFrames } = useVideoConfig();
   const g = frame + globalOffset;
   const cam = CAMS[kind] ?? CAMS.wide;
+  const level = voiceLevel(shotId, frame);
 
   // Empuje lento de cámara + leve movimiento "a mano".
   const push = interpolate(frame, [0, durationInFrames], [0, 0.08], {
@@ -64,6 +67,7 @@ export const Scene3D: React.FC<{
         <Claudia
           frame={g}
           talking={talk === "claudia"}
+          mouthLevel={talk === "claudia" ? level : undefined}
           position={CLAUDIA_POS}
           rotationY={kind === "wide" ? -0.75 : kind === "twoShot" ? 0.35 : 0.05}
           typing={kind === "wide"}
@@ -79,6 +83,7 @@ export const Scene3D: React.FC<{
         <Alejandro
           frame={g}
           talking={talk === "alejandro"}
+          mouthLevel={talk === "alejandro" ? level : undefined}
           position={ALEJANDRO_POS}
           rotationY={Math.PI}
           sleepy={hasCoffee ? 0.15 : 0.6}
