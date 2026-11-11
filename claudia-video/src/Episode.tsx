@@ -10,13 +10,14 @@ import {
   staticFile,
   useCurrentFrame,
 } from "remotion";
-import { SHOTS, Shot, shotFrames, VOICE_START, voiceDuration } from "./script";
+import { shotFrames, VOICE_START, voiceInfo, type Episode, type Shot } from "./script";
 import { Scene3D } from "./three/Scene3D";
 import { EndCard, fontFamily, Subtitle, VentasScreen, WebsScreen } from "./ui/Ui";
+import { EndCard2, EpisodeBadge, MercadoScreen, SeguidoresScreen, WordCaptions } from "./ui/Ep2Ui";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
-/** Reloj en pantalla para la toma de apertura. */
+/** Reloj en pantalla para la toma de apertura del episodio 1. */
 const Clock: React.FC = () => {
   const frame = useCurrentFrame();
   return (
@@ -44,33 +45,33 @@ const Clock: React.FC = () => {
   );
 };
 
-const ShotView: React.FC<{ shot: Shot; offset: number }> = ({ shot, offset }) => {
+const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2"]);
+
+const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, shot, offset }) => {
+  const voice = voiceInfo(ep.id, shot.id);
   const body = (() => {
     switch (shot.kind) {
       case "webs":
         return <WebsScreen />;
       case "ventas":
         return <VentasScreen />;
+      case "mercado":
+        return <MercadoScreen />;
+      case "seguidores":
+        return <SeguidoresScreen />;
       case "end":
         return <EndCard />;
+      case "end2":
+        return <EndCard2 />;
       default:
-        return (
-          <Scene3D
-            shotId={shot.id}
-            kind={shot.kind}
-            talk={shot.talk}
-            globalOffset={offset}
-            surprised={shot.id === "cinco"}
-            hasCoffee={shot.id === "me-sirve"}
-          />
-        );
+        return <Scene3D ep={ep} shot={shot} globalOffset={offset} />;
     }
   })();
 
   return (
     <AbsoluteFill>
       {body}
-      {shot.kind === "wide" ? (
+      {shot.kind === "wide" && ep.id === "ep1" ? (
         <>
           <Clock />
           {[4, 9, 13, 19, 24, 31, 36, 41, 50, 55, 61, 66, 72, 78].map((f) => (
@@ -80,35 +81,45 @@ const ShotView: React.FC<{ shot: Shot; offset: number }> = ({ shot, offset }) =>
           ))}
         </>
       ) : null}
-      {voiceDuration(shot.id) ? (
+      {shot.sfx ? (
+        <Sequence durationInFrames={40} layout="none" name={`sfx-${shot.sfx}`}>
+          <Audio src={staticFile(`sfx/${shot.sfx}.wav`)} volume={shot.sfx === "boom" ? 0.55 : 0.5} />
+        </Sequence>
+      ) : null}
+      {voice ? (
         <Sequence from={VOICE_START} layout="none" name={`voz-${shot.id}`}>
-          <Audio src={staticFile(`voz/${shot.id}.mp3`)} volume={1} />
+          <Audio src={staticFile(`voz/${ep.id}/${shot.id}.mp3`)} volume={1} />
         </Sequence>
       ) : null}
       {shot.line ? (
-        <Sequence from={2} layout="absolute-fill">
-          <Subtitle text={shot.line} />
-        </Sequence>
+        ep.wordCaptions && voice ? (
+          <WordCaptions words={voice.words} top={UI_KINDS.has(shot.kind) ? 250 : 1210} />
+        ) : (
+          <Sequence from={2} layout="absolute-fill">
+            <Subtitle text={shot.line} />
+          </Sequence>
+        )
       ) : null}
     </AbsoluteFill>
   );
 };
 
-export const ClaudiaVideo: React.FC = () => {
+export const EpisodeVideo: React.FC<{ ep: Episode }> = ({ ep }) => {
   let offset = 0;
   return (
     <AbsoluteFill style={{ backgroundColor: "#08070f" }}>
       <Series>
-        {SHOTS.map((shot) => {
+        {ep.shots.map((shot) => {
           const start = offset;
-          offset += shotFrames(shot);
+          offset += shotFrames(ep, shot);
           return (
-            <Series.Sequence key={shot.id} name={shot.id} durationInFrames={shotFrames(shot)}>
-              <ShotView shot={shot} offset={start} />
+            <Series.Sequence key={shot.id} name={shot.id} durationInFrames={shotFrames(ep, shot)}>
+              <ShotView ep={ep} shot={shot} offset={start} />
             </Series.Sequence>
           );
         })}
       </Series>
+      {ep.number ? <EpisodeBadge n={ep.number} /> : null}
     </AbsoluteFill>
   );
 };

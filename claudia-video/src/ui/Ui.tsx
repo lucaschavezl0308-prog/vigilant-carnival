@@ -60,7 +60,7 @@ export const Subtitle: React.FC<{ text: string }> = ({ text }) => {
 // ---------------------------------------------------------------------------
 // Fondo nocturno compartido para las pantallas 2D
 // ---------------------------------------------------------------------------
-const NightBg: React.FC = () => {
+export const NightBg: React.FC = () => {
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill

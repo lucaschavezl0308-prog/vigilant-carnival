@@ -1,12 +1,25 @@
-# Claudia nunca duerme — @claudiasinpermiso
+# Claudia — serie para @claudiasinpermiso
 
 Corto vertical (1080×1920, ~40 s) en 3D low-poly hecho con Remotion + Three.js.
 Alejandro le pregunta a su robotcita Claudia qué hizo toda la madrugada… y
 resulta que hizo cinco páginas web y las vendió.
 
+## Episodios
+
+| Composición | Episodio | Archivo |
+| --- | --- | --- |
+| `ClaudiaMadrugada` | 1 — Claudia nunca duerme | `src/episodes/ep1.ts` |
+| `ClaudiaEp2` | 2 — Claudia analizó el mercado | `src/episodes/ep2.ts` |
+
+Cada toma tiene `line` (subtítulo), `mood` (emoción de la voz), `eyes`
+(expresión de Claudia), `coffee`, `punch` (zoom en el remate) y `sfx`.
+
 ## Archivos
 
-- `src/script.ts` — **el guion**: tomas, duración y subtítulos. Edita aquí los diálogos.
+- `src/episodes/` — **los guiones** de cada episodio.
+- `src/script.ts` — tiempos y datos de voz compartidos.
+- `src/Episode.tsx` — arma un episodio a partir de su guion.
+- `src/ui/Ep2Ui.tsx` — subtítulos palabra por palabra, análisis de mercado, seguidores y cierre del episodio 2.
 - `src/three/Characters.tsx` — modelos de Alejandro y Claudia (y la taza).
 - `src/three/Room.tsx` — la habitación al amanecer y la cámara.
 - `src/three/Scene3D.tsx` — encuadres de cámara por tipo de toma.
@@ -20,6 +33,7 @@ resulta que hizo cinco páginas web y las vendió.
 npm i
 npx remotion studio                 # vista previa
 npx remotion render ClaudiaMadrugada out/claudia-madrugada.mp4
+npx remotion render ClaudiaEp2 out/claudia-ep2.mp4
 npx remotion still FotoPerfil out/foto-perfil-claudiasinpermiso.png
 ```
 
@@ -33,10 +47,12 @@ argentino): Tomás para Alejandro y Elena para Claudia, con un toque robótico.
 
 ```bash
 pip install edge-tts
-python scripts/generar-voces.py
+python scripts/generar-voces.py        # todos los episodios
+python scripts/generar-voces.py ep2    # solo uno
 ```
 
-El script lee los diálogos de `src/script.ts` (usa `say` si la voz debe leer
-algo distinto al subtítulo) y escribe `public/voz/<id>.mp3`, más
-`src/voice-durations.json` y `src/voice-envelopes.json`. Las tomas se alargan
+El script lee los guiones de `src/episodes/` (usa `say` si la voz debe leer
+algo distinto al subtítulo, y `mood` para la emoción) y escribe
+`public/voz/<ep>/<id>.mp3` más `src/voice-data.json` (duración, volumen por
+frame y tiempo de cada palabra). Las tomas se alargan
 solas si la frase no entra, y la boca se mueve con el volumen de la voz.

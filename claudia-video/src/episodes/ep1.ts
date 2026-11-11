@@ -1,0 +1,93 @@
+import type { Episode } from "./types";
+
+// Episodio 1 — "Claudia nunca duerme": qué hizo toda la madrugada.
+export const EP1: Episode = {
+  id: "ep1",
+  number: null,
+  wordCaptions: false,
+  dawnStart: 0,
+  shots: [
+    { id: "amanecer", kind: "wide", seconds: 3, talk: null },
+    {
+      id: "pregunta",
+      kind: "alejandro",
+      seconds: 3.2,
+      talk: "alejandro",
+      line: "Claudia… ¿qué hiciste toda la madrugada?",
+    },
+    {
+      id: "nada",
+      kind: "claudia",
+      seconds: 2.4,
+      talk: "claudia",
+      line: "Nada. Cosas de robot.",
+    },
+    {
+      id: "notificaciones",
+      kind: "alejandro",
+      seconds: 3.4,
+      talk: "alejandro",
+      line: "¿Y por qué tengo 47 notificaciones de pago?",
+    },
+    {
+      id: "ah-eso",
+      kind: "claudiaAway",
+      seconds: 2.2,
+      talk: "claudia",
+      line: "Ah… eso.",
+    },
+    {
+      id: "webs",
+      kind: "webs",
+      seconds: 5,
+      talk: "claudia",
+      line: "Hice cinco páginas web.",
+    },
+    {
+      id: "cinco",
+      kind: "alejandro",
+      seconds: 2.8,
+      talk: "alejandro",
+      line: "¿¡Cinco!? ¿Y quién te las compró?",
+      mood: "shocked",
+    },
+    {
+      id: "vendi",
+      kind: "claudia",
+      seconds: 3.4,
+      talk: "claudia",
+      line: "Las vendí. A las 4 a.m. la gente compra de todo.",
+      say: "Las vendí. A las cuatro de la mañana, la gente compra de todo.",
+    },
+    {
+      id: "ventas",
+      kind: "ventas",
+      seconds: 4.2,
+      talk: null,
+      line: "",
+    },
+    {
+      id: "mi-parte",
+      kind: "alejandro",
+      seconds: 2.4,
+      talk: "alejandro",
+      line: "…¿Y mi parte?",
+    },
+    {
+      id: "cafe",
+      kind: "twoShot",
+      seconds: 3.8,
+      talk: "claudia",
+      line: "Tu parte es el café. Ya está calientito.",
+    },
+    {
+      id: "me-sirve",
+      kind: "alejandro",
+      seconds: 2.4,
+      talk: "alejandro",
+      line: "…Me sirve.",
+      coffee: true,
+    },
+    { id: "final", kind: "end", seconds: 3, talk: null },
+  ],
+};

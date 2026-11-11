@@ -3,7 +3,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Alejandro, Claudia } from "./Characters";
 import { CameraRig, Room } from "./Room";
-import { voiceLevel, type ShotKind, type Speaker } from "../script";
+import { voiceLevel, type Episode, type Shot } from "../script";
 
 type V3 = [number, number, number];
 
@@ -17,28 +17,46 @@ const CAMS: Record<string, { pos: V3; target: V3; fov: number }> = {
   alejandro: { pos: [0.28, 1.74, -0.72], target: [0.45, 1.66, 0.6], fov: 52 },
   claudia: { pos: [0.44, 1.44, 1.0], target: [0.35, 1.3, -0.3], fov: 48 },
   claudiaAway: { pos: [0.5, 1.44, 0.95], target: [0.35, 1.32, -0.3], fov: 46 },
+  claudiaClose: { pos: [0.4, 1.5, 0.85], target: [0.35, 1.42, -0.3], fov: 36 },
   twoShot: { pos: [1.55, 1.85, 1.55], target: [0.35, 1.25, -0.25], fov: 48 },
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
+// Expresión de Alejandro según la emoción de la toma.
+const alejandroFace = (shot: Shot) => {
+  const base = { sleepy: shot.coffee ? 0.15 : 0.6, surprised: 0, sad: 0 };
+  switch (shot.mood) {
+    case "sleepy":
+      return { ...base, sleepy: 0.62 };
+    case "shocked":
+      return { ...base, sleepy: 0.1, surprised: 1 };
+    case "sad":
+      return { ...base, sleepy: 0.35, sad: 1 };
+    case "hopeful":
+      return { ...base, sleepy: 0.05, surprised: 0.35 };
+    case "suspicious":
+      return { ...base, sleepy: 0.5 };
+    default:
+      return base;
+  }
+};
+
 export const Scene3D: React.FC<{
-  /** id de la toma, para sincronizar la boca con su voz */
-  shotId: string;
-  kind: ShotKind;
-  talk: Speaker;
+  ep: Episode;
+  shot: Shot;
   /** frame global del video, para que el amanecer avance de corrido */
   globalOffset: number;
-  /** ¿Alejandro ya tiene el café? */
-  hasCoffee?: boolean;
-  /** Expresión de sorpresa de Alejandro */
-  surprised?: boolean;
-}> = ({ shotId, kind, talk, globalOffset, hasCoffee = false, surprised = false }) => {
+}> = ({ ep, shot, globalOffset }) => {
+  const { kind, talk } = shot;
+  const hasCoffee = shot.coffee ?? false;
   const frame = useCurrentFrame();
   const { width, height, durationInFrames } = useVideoConfig();
-  const g = frame + globalOffset;
+  const g = frame + globalOffset + ep.dawnStart;
   const cam = CAMS[kind] ?? CAMS.wide;
-  const level = voiceLevel(shotId, frame);
+  const level = voiceLevel(ep.id, shot.id, frame);
+  const face = alejandroFace(shot);
+  const ease = { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) };
 
   // Empuje lento de cámara + leve movimiento "a mano".
   const push = interpolate(frame, [0, durationInFrames], [0, 0.08], {
@@ -50,6 +68,14 @@ export const Scene3D: React.FC<{
     cam.pos[1] + (cam.target[1] - cam.pos[1]) * push + Math.sin(g * 0.047) * 0.005,
     cam.pos[2] + (cam.target[2] - cam.pos[2]) * push,
   ];
+  // Sacudón de cámara cuando alguien se sorprende.
+  if (shot.mood === "shocked") {
+    const k = interpolate(frame, [0, 10], [1, 0], clamp);
+    pos[0] += Math.sin(frame * 2.1) * 0.02 * k;
+    pos[1] += Math.cos(frame * 2.7) * 0.015 * k;
+  }
+  // Zoom de golpe en el remate.
+  const fov = shot.punch ? interpolate(frame, [2, 6], [cam.fov, cam.fov * 0.8], ease) : cam.fov;
 
   const showAlejandro = kind === "twoShot" || kind === "alejandro";
   const showClaudia = kind !== "alejandro";
@@ -61,7 +87,7 @@ export const Scene3D: React.FC<{
 
   return (
     <ThreeCanvas width={width} height={height} style={{ backgroundColor: "#0d0b1a" }}>
-      <CameraRig position={pos} target={cam.target} fov={cam.fov} />
+      <CameraRig position={pos} target={cam.target} fov={fov} />
       <Room frame={g} mugOnDesk={!hasCoffee} mugX={mugX} mugZ={mugZ} />
       {showClaudia ? (
         <Claudia
@@ -77,6 +103,7 @@ export const Scene3D: React.FC<{
               : 0
           }
           offerArm={give}
+          eyeStyle={shot.eyes ?? "normal"}
         />
       ) : null}
       {showAlejandro ? (
@@ -86,12 +113,9 @@ export const Scene3D: React.FC<{
           mouthLevel={talk === "alejandro" ? level : undefined}
           position={ALEJANDRO_POS}
           rotationY={Math.PI}
-          sleepy={hasCoffee ? 0.15 : 0.6}
-          surprised={
-            surprised
-              ? interpolate(frame, [0, 8], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) })
-              : 0
-          }
+          sleepy={face.sleepy}
+          surprised={face.surprised * interpolate(frame, [0, 8], [0, 1], ease)}
+          sad={face.sad}
           holdingMug={hasCoffee}
         />
       ) : null}

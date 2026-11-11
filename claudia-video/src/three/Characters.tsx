@@ -43,6 +43,7 @@ export const Alejandro: React.FC<{
   talking: boolean;
   sleepy?: number; // 0 = ojos abiertos, 1 = muy dormido
   surprised?: number; // 0..1, abre ojos y cejas
+  sad?: number; // 0..1, cejas caídas y lágrimas
   holdingMug?: boolean;
   /** volumen de la voz 0..1 (sincroniza la boca); si falta, aleteo genérico */
   mouthLevel?: number;
@@ -54,6 +55,7 @@ export const Alejandro: React.FC<{
   mouthLevel,
   sleepy = 0.55,
   surprised = 0,
+  sad = 0,
   holdingMug = false,
   position = [0, 0, 0],
   rotationY = 0,
@@ -119,7 +121,7 @@ export const Alejandro: React.FC<{
 
       {/* Taza de café en la mano, frente al pecho */}
       {holdingMug ? (
-        <group position={[0.06, 1.38, 0.36]} scale={1.3}>
+        <group position={[0.24, 1.2, 0.32]} scale={1.1}>
           <Mug steam={frame} />
         </group>
       ) : null}
@@ -179,10 +181,20 @@ export const Alejandro: React.FC<{
               <boxGeometry args={[0.1, 0.018, 0.04]} />
               <Flat color="#a8735a" />
             </mesh>
+            {/* lágrima */}
+            {sad > 0.5 ? (
+              <mesh
+                position={[x < 0 ? -0.02 : 0.02, -0.09 - ((frame * 0.004) % 0.12), 0.05]}
+                scale={[0.8, 1.2, 0.8]}
+              >
+                <sphereGeometry args={[0.018, 6, 4]} />
+                <meshStandardMaterial color="#8fd8ff" emissive="#5ab8ff" emissiveIntensity={0.6} roughness={0.1} />
+              </mesh>
+            ) : null}
             {/* ceja */}
             <mesh
               position={[0, 0.115 + surprised * 0.05, 0.03]}
-              rotation={[0, 0, (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2)]}
+              rotation={[0, 0, (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2 - sad * 0.55)]}
             >
               <boxGeometry args={[0.12, 0.025, 0.04]} />
               <Flat color="#2b1d14" />
@@ -191,7 +203,7 @@ export const Alejandro: React.FC<{
         ))}
 
         {/* Boca */}
-        <mesh position={[0, -0.15, 0.255]} scale={[1, 0.25 + mouth * 1.4 + surprised * 0.6, 1]}>
+        <mesh position={[0, -0.15, 0.255]} scale={[1 - sad * 0.35, 0.25 + mouth * 1.4 + surprised * 0.6, 1]}>
           <boxGeometry args={[0.12, 0.04, 0.04]} />
           <Flat color="#5b1f22" />
         </mesh>
@@ -236,12 +248,15 @@ export const Claudia: React.FC<{
   typing?: boolean;
   offerArm?: number; // 0..1 brazo extendido (dando el café)
   mouthLevel?: number;
+  /** expresión de los ojos en la pantalla */
+  eyeStyle?: EyeStyle;
   position?: [number, number, number];
   rotationY?: number;
 }> = ({
   frame,
   talking,
   mouthLevel,
+  eyeStyle = "normal",
   lookAway = 0,
   typing = false,
   offerArm = 0,
@@ -346,22 +361,7 @@ export const Claudia: React.FC<{
         {/* Ojos */}
         {[-0.085, 0.085].map((x) => (
           <group key={x} position={[x, 0.03, 0.178]}>
-            <mesh scale={[1, eye, 1]}>
-              <circleGeometry args={[0.048, 10]} />
-              <Glow color={eyeColor} />
-            </mesh>
-            <mesh position={[0.016, 0.018, 0.001]} scale={[1, eye, 1]}>
-              <circleGeometry args={[0.014, 8]} />
-              <Glow color="#ffffff" />
-            </mesh>
-            {/* pestañas */}
-            <mesh
-              position={[(x < 0 ? -1 : 1) * 0.045, 0.045 * eye, 0.001]}
-              rotation={[0, 0, (x < 0 ? 1 : -1) * 0.6]}
-            >
-              <planeGeometry args={[0.035, 0.009]} />
-              <Glow color={eyeColor} />
-            </mesh>
+            <ClaudiaEye style={eyeStyle} eye={eye} side={x < 0 ? -1 : 1} color={eyeColor} />
           </group>
         ))}
         {/* Cachetes */}
@@ -378,7 +378,11 @@ export const Claudia: React.FC<{
             <Glow color={eyeColor} />
           </mesh>
         ) : (
-          <mesh position={[0, -0.06, 0.178]} rotation={[0, 0, Math.PI]}>
+          <mesh
+            position={[eyeStyle === "smug" ? 0.02 : 0, -0.06, 0.178]}
+            rotation={[0, 0, Math.PI + (eyeStyle === "smug" ? 0.35 : 0)]}
+            scale={eyeStyle === "serious" ? [1, 0.25, 1] : [1, 1, 1]}
+          >
             <torusGeometry args={[0.03, 0.006, 4, 10, Math.PI]} />
             <Glow color={eyeColor} />
           </mesh>
@@ -469,3 +473,56 @@ export const Mug: React.FC<{ steam?: number }> = ({ steam = 0 }) => (
       : null}
   </group>
 );
+
+export type EyeStyle = "normal" | "serious" | "happy" | "hearts" | "smug";
+
+/** Un ojo de Claudia según la expresión. `side` = -1 izquierdo, 1 derecho. */
+const ClaudiaEye: React.FC<{ style: EyeStyle; eye: number; side: number; color: string }> = ({
+  style,
+  eye,
+  side,
+  color,
+}) => {
+  if (style === "hearts") {
+    const beat = 1 + Math.abs(Math.sin(eye * 3)) * 0.05;
+    return <Heart position={[0, 0, 0.001]} scale={0.042 * beat} color="#ff6fa6" glow />;
+  }
+  if (style === "happy") {
+    // ^ ^
+    return (
+      <mesh position={[0, -0.01, 0]}>
+        <torusGeometry args={[0.035, 0.009, 4, 10, Math.PI]} />
+        <Glow color={color} />
+      </mesh>
+    );
+  }
+  const squash = style === "serious" ? 0.45 : style === "smug" ? 0.5 : 1;
+  return (
+    <group>
+      <mesh scale={[1, eye * squash, 1]}>
+        <circleGeometry args={[0.048, 10]} />
+        <Glow color={color} />
+      </mesh>
+      <mesh position={[0.016, 0.018 * squash, 0.001]} scale={[1, eye * squash, 1]}>
+        <circleGeometry args={[0.014, 8]} />
+        <Glow color="#ffffff" />
+      </mesh>
+      {style === "serious" || style === "smug" ? (
+        // ceja/párpado recto
+        <mesh
+          position={[0, 0.035, 0.001]}
+          rotation={[0, 0, style === "serious" ? side * -0.25 : side * 0.12]}
+        >
+          <planeGeometry args={[0.11, 0.012]} />
+          <Glow color={color} />
+        </mesh>
+      ) : (
+        // pestañas
+        <mesh position={[side * 0.045, 0.045 * eye, 0.001]} rotation={[0, 0, side * -0.6]}>
+          <planeGeometry args={[0.035, 0.009]} />
+          <Glow color={color} />
+        </mesh>
+      )}
+    </group>
+  );
+};
