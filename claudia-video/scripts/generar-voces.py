@@ -24,19 +24,21 @@ VOZ = {"alejandro": "es-AR-TomasNeural", "claudia": "es-AR-ElenaNeural"}
 # Tono base de cada personaje (Hz) y ajustes por emoción: (velocidad %, tono Hz, volumen %)
 BASE_PITCH = {"alejandro": -2, "claudia": 28}
 BASE_RATE = {"alejandro": 0, "claudia": 6}
+# Emoción SOLO con velocidad (%) y volumen (%): el tono (Hz) queda fijo por
+# personaje para que la voz suene siempre igual. (velocidad, tono, volumen)
 MOODS = {
     "neutral": (0, 0, 0),
-    "sleepy": (-8, -8, -10),
-    "shocked": (14, 14, 15),
-    "sad": (-14, -10, -15),
-    "hopeful": (6, 10, 5),
-    "suspicious": (-6, -4, -5),
-    "serious": (-4, -10, 0),
-    "proud": (8, 8, 10),
-    "tender": (-4, -4, -10),
-    "smug": (-6, -6, 0),
-    "excited": (16, 12, 15),
-    "deadpan": (-8, -12, -5),
+    "sleepy": (-8, 0, -5),
+    "shocked": (8, 0, 10),
+    "sad": (-10, 0, -8),
+    "hopeful": (4, 0, 5),
+    "suspicious": (-5, 0, 0),
+    "serious": (-4, 0, 0),
+    "proud": (5, 0, 5),
+    "tender": (-5, 0, -5),
+    "smug": (-3, 0, 0),
+    "excited": (8, 0, 10),
+    "deadpan": (-6, 0, -3),
 }
 # Toque robótico sutil para Claudia (chorus corto + brillo).
 ROBOT_FX = "chorus=0.6:0.85:18|26:0.35|0.25:0.4|0.6:2|1.5,highpass=f=140,treble=g=3"
@@ -111,6 +113,8 @@ async def main():
             filtros = f"atrim=start={lead},asetpts=PTS-STARTPTS,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse"
             if who == "claudia":
                 filtros += "," + ROBOT_FX
+            # mismo volumen percibido en todas las frases
+            filtros += ",apad=pad_dur=3,loudnorm=I=-16:TP=-1.5:LRA=7,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse"
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af", filtros, "-ar", "44100", str(final)], check=True)
             raw.unlink()
             words = [{"w": w["w"], "s": round(w["s"] - lead, 3), "e": round(w["e"] - lead, 3)} for w in words]

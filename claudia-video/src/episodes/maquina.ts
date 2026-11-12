@@ -73,7 +73,7 @@ export const MAQUINA: Episode = {
       seconds: 0.9,
       talk: "alejandro",
       mood: "hopeful",
-      line: "¿Y?",
+      line: "¿Y entonces?",
     },
     {
       id: "a-mi",
