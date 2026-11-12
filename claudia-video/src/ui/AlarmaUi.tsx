@@ -17,7 +17,7 @@ const out = Easing.bezier(0.16, 1, 0.3, 1);
 const pop = Easing.bezier(0.34, 1.56, 0.64, 1);
 
 /** Marco de monitor de PC: lo que "mira" Alejandro. */
-const Monitor: React.FC<{ children: React.ReactNode; glow?: string }> = ({ children, glow = "rgba(126,184,255,0.4)" }) => {
+export const Monitor: React.FC<{ children: React.ReactNode; glow?: string }> = ({ children, glow = "rgba(126,184,255,0.4)" }) => {
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", fontFamily }}>
@@ -52,7 +52,7 @@ const Monitor: React.FC<{ children: React.ReactNode; glow?: string }> = ({ child
   );
 };
 
-const money = (n: number) => `US$ ${Math.round(n).toLocaleString("es-AR")}`;
+export const money = (n: number) => `US$ ${Math.round(n).toLocaleString("es-AR")}`;
 
 // ---------------------------------------------------------------------------
 // Saldo de 5 mil dólares

@@ -17,6 +17,7 @@ import { EndCard2, EpisodeBadge, MercadoScreen, SeguidoresScreen, WordCaptions }
 import { ComprasScreen } from "./ui/NavidadUi";
 import { EmpresaScreen, PcSaldoScreen, VendidosScreen } from "./ui/AlarmaUi";
 import { LiveOverlay, PovTitle } from "./ui/LiveUi";
+import { ReciboScreen } from "./ui/JefaUi";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
@@ -48,7 +49,7 @@ const Clock: React.FC = () => {
   );
 };
 
-const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras", "pcSaldo", "vendidos", "empresa"]);
+const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras", "pcSaldo", "vendidos", "empresa", "recibo"]);
 
 const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, shot, offset }) => {
   const voice = voiceInfo(ep.id, shot.id);
@@ -74,6 +75,8 @@ const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, s
         return <VendidosScreen words={voice?.words ?? []} />;
       case "empresa":
         return <EmpresaScreen />;
+      case "recibo":
+        return <ReciboScreen />;
       default:
         return <Scene3D ep={ep} shot={shot} globalOffset={offset} />;
     }

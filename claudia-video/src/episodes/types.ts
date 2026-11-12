@@ -39,7 +39,8 @@ export type ShotKind =
   | "pcSaldo"
   | "vendidos"
   | "empresa"
-  | "live";
+  | "live"
+  | "recibo";
 
 export type Sfx = "boom" | "scratch" | "ding" | "pop" | "whoosh";
 

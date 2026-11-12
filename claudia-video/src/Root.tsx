@@ -5,6 +5,7 @@ import { EP2 } from "./episodes/ep2";
 import { NAVIDAD } from "./episodes/navidad";
 import { ALARMA } from "./episodes/alarma";
 import { LIVE } from "./episodes/live";
+import { JEFA } from "./episodes/jefa";
 import { EpisodeVideo } from "./Episode";
 import { ProfilePic } from "./ProfilePic";
 import { episodeFrames, FPS } from "./script";
@@ -62,6 +63,15 @@ export const RemotionRoot: React.FC = () => {
         component={EpisodeVideo}
         defaultProps={{ ep: { ...LIVE, style: "suave" as const } }}
         durationInFrames={episodeFrames(LIVE)}
+        fps={FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="ClaudiaJefa"
+        component={EpisodeVideo}
+        defaultProps={{ ep: JEFA }}
+        durationInFrames={episodeFrames(JEFA)}
         fps={FPS}
         width={1080}
         height={1920}
