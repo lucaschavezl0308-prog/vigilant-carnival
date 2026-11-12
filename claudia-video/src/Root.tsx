@@ -57,6 +57,15 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
+      <Composition
+        id="ClaudiaLiveSuave"
+        component={EpisodeVideo}
+        defaultProps={{ ep: { ...LIVE, style: "suave" as const } }}
+        durationInFrames={episodeFrames(LIVE)}
+        fps={FPS}
+        width={1080}
+        height={1920}
+      />
       <Still id="FotoPerfil" component={ProfilePic} width={1080} height={1080} />
     </>
   );

@@ -1,9 +1,10 @@
+import { useSmooth } from "./style";
 import React, { useLayoutEffect, useMemo } from "react";
 import { CanvasTexture, SRGBColorSpace } from "three";
 import { fontFamily } from "../ui/Ui";
 
 const Flat: React.FC<{ color: string }> = ({ color }) => (
-  <meshStandardMaterial color={color} flatShading roughness={0.9} />
+  <meshStandardMaterial color={color} flatShading={!useSmooth()} roughness={0.9} />
 );
 
 // ---------------------------------------------------------------------------

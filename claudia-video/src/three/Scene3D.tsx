@@ -4,6 +4,8 @@ import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Alejandro, Claudia } from "./Characters";
 import { CameraRig, Room } from "./Room";
 import { Bed, BED_HIP, Phone } from "./Props";
+import { StyleProvider } from "./style";
+import { ContactShadows, Environment, Lightformer } from "@react-three/drei";
 import { voiceLevel, type Episode, type Shot } from "../script";
 
 type V3 = [number, number, number];
@@ -74,8 +76,12 @@ export const Scene3D: React.FC<{
     easing: Easing.bezier(0.33, 0, 0.67, 1),
   });
   const pos: V3 = [
-    cam.pos[0] + (cam.target[0] - cam.pos[0]) * push + Math.sin(g * 0.031) * 0.006,
-    cam.pos[1] + (cam.target[1] - cam.pos[1]) * push + Math.sin(g * 0.047) * 0.005,
+    cam.pos[0] +
+      (cam.target[0] - cam.pos[0]) * push +
+      Math.sin(g * 0.031) * 0.006,
+    cam.pos[1] +
+      (cam.target[1] - cam.pos[1]) * push +
+      Math.sin(g * 0.047) * 0.005,
     cam.pos[2] + (cam.target[2] - cam.pos[2]) * push,
   ];
   // Sacudón de cámara cuando alguien se sorprende.
@@ -86,7 +92,17 @@ export const Scene3D: React.FC<{
   }
   // Zoom de golpe en el remate.
   const baseFov = cam.fov / (shot.zoom ?? 1);
-  const fov = shot.punch ? interpolate(frame, [2, 6], [baseFov, baseFov * (kind === "claudiaClose" || kind === "live" ? 0.9 : 0.8)], ease) : baseFov;
+  const fov = shot.punch
+    ? interpolate(
+        frame,
+        [2, 6],
+        [
+          baseFov,
+          baseFov * (kind === "claudiaClose" || kind === "live" ? 0.9 : 0.8),
+        ],
+        ease,
+      )
+    : baseFov;
   // Movimiento de celular en mano durante el vivo.
   if (kind === "live") {
     pos[0] += Math.sin(g * 0.11) * 0.006;
@@ -105,79 +121,171 @@ export const Scene3D: React.FC<{
       : 0.12;
   const isLive = kind === "live";
   // Celular: la pantalla se prende y vibra (sin sonido).
-  const phoneOn = kind === "phone" ? interpolate(frame, [10, 16], [0, 1], clamp) : ep.bed ? 0 : -1;
+  const phoneOn =
+    kind === "phone"
+      ? interpolate(frame, [10, 16], [0, 1], clamp)
+      : ep.bed
+        ? 0
+        : -1;
 
   // Toma del café: Claudia empuja la taza hacia el borde.
-  const give = kind === "twoShot" ? interpolate(frame, [20, 70], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) }) : 0;
+  const give =
+    kind === "twoShot"
+      ? interpolate(frame, [20, 70], [0, 1], {
+          ...clamp,
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        })
+      : 0;
   const mugX = interpolate(give, [0, 1], [0.75, 0.55]);
   const mugZ = interpolate(give, [0, 1], [-0.25, -0.13]);
 
   return (
-    <ThreeCanvas width={width} height={height} style={{ backgroundColor: "#0d0b1a" }}>
-      <CameraRig position={pos} target={cam.target} fov={fov} />
-      <Room frame={g} mugOnDesk={!hasCoffee} mugX={mugX} mugZ={mugZ} xmas={ep.xmas} />
-      {ep.bed ? <Bed /> : null}
-      {phoneOn >= 0 ? (
-        <Phone position={[0.1, 0.8675, -0.22]} rotationY={0.18} on={phoneOn} frame={frame} buzz={kind === "phone" && frame > 14} />
-      ) : null}
-      {isLive ? (
-        // luz del celular/aro de luz sobre Claudia
-        <pointLight position={[0.75, 1.25, 0.05]} intensity={0.9} distance={2.4} color="#ffd6ec" />
-      ) : null}
-      {ep.bed && (inBed || isLive || kind === "phone" || kind === "wide") ? (
-        // Alejandro en la cama: gira sobre la cadera para sentarse.
-        <group position={BED_HIP} rotation={[sitUp, 0, 0]}>
+    <ThreeCanvas
+      width={width}
+      height={height}
+      style={{ backgroundColor: "#0d0b1a" }}
+    >
+      <StyleProvider style={ep.style ?? "lowpoly"}>
+        {ep.style === "suave" ? <SmoothExtras /> : null}
+        <CameraRig position={pos} target={cam.target} fov={fov} />
+        <Room
+          frame={g}
+          mugOnDesk={!hasCoffee}
+          mugX={mugX}
+          mugZ={mugZ}
+          xmas={ep.xmas}
+        />
+        {ep.bed ? <Bed /> : null}
+        {phoneOn >= 0 ? (
+          <Phone
+            position={[0.1, 0.8675, -0.22]}
+            rotationY={0.18}
+            on={phoneOn}
+            frame={frame}
+            buzz={kind === "phone" && frame > 14}
+          />
+        ) : null}
+        {isLive ? (
+          // luz del celular/aro de luz sobre Claudia
+          <pointLight
+            position={[0.75, 1.25, 0.05]}
+            intensity={0.9}
+            distance={2.4}
+            color="#ffd6ec"
+          />
+        ) : null}
+        {ep.bed && (inBed || isLive || kind === "phone" || kind === "wide") ? (
+          // Alejandro en la cama: gira sobre la cadera para sentarse.
+          <group position={BED_HIP} rotation={[sitUp, 0, 0]}>
+            <Alejandro
+              frame={g}
+              talking={talk === "alejandro"}
+              mouthLevel={talk === "alejandro" ? level : undefined}
+              position={[0, -0.7, 0]}
+              rotationY={Math.PI}
+              sleepy={kind === "phone" ? 1 : face.sleepy}
+              surprised={
+                face.surprised * interpolate(frame, [0, 8], [0, 1], ease)
+              }
+              sad={face.sad}
+            />
+          </group>
+        ) : null}
+        {showClaudia ? (
+          <Claudia
+            frame={g}
+            talking={talk === "claudia"}
+            mouthLevel={talk === "claudia" ? level : undefined}
+            position={isLive ? CLAUDIA_LIVE_POS : CLAUDIA_POS}
+            rotationY={
+              isLive
+                ? CLAUDIA_LIVE_ROT
+                : kind === "wide"
+                  ? -0.75
+                  : kind === "twoShot" || kind === "xmasWide"
+                    ? 0.35
+                    : 0.05
+            }
+            typing={kind === "wide"}
+            lookAway={
+              kind === "claudiaAway" || shot.lookBack
+                ? interpolate(frame, [0, 12], [0, 1], {
+                    ...clamp,
+                    easing: Easing.bezier(0.16, 1, 0.3, 1),
+                  })
+                : 0
+            }
+            offerArm={give}
+            eyeStyle={shot.eyes ?? "normal"}
+            santaHat={ep.xmas}
+          />
+        ) : null}
+        {showAlejandro ? (
           <Alejandro
             frame={g}
             talking={talk === "alejandro"}
             mouthLevel={talk === "alejandro" ? level : undefined}
-            position={[0, -0.7, 0]}
+            position={ALEJANDRO_POS}
             rotationY={Math.PI}
-            sleepy={kind === "phone" ? 1 : face.sleepy}
-            surprised={face.surprised * interpolate(frame, [0, 8], [0, 1], ease)}
+            sleepy={face.sleepy}
+            surprised={
+              face.surprised * interpolate(frame, [0, 8], [0, 1], ease)
+            }
             sad={face.sad}
+            holdingMug={hasCoffee}
           />
-        </group>
-      ) : null}
-      {showClaudia ? (
-        <Claudia
-          frame={g}
-          talking={talk === "claudia"}
-          mouthLevel={talk === "claudia" ? level : undefined}
-          position={isLive ? CLAUDIA_LIVE_POS : CLAUDIA_POS}
-          rotationY={
-            isLive
-              ? CLAUDIA_LIVE_ROT
-              : kind === "wide"
-                ? -0.75
-                : kind === "twoShot" || kind === "xmasWide"
-                  ? 0.35
-                  : 0.05
-          }
-          typing={kind === "wide"}
-          lookAway={
-            kind === "claudiaAway" || shot.lookBack
-              ? interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) })
-              : 0
-          }
-          offerArm={give}
-          eyeStyle={shot.eyes ?? "normal"}
-          santaHat={ep.xmas}
-        />
-      ) : null}
-      {showAlejandro ? (
-        <Alejandro
-          frame={g}
-          talking={talk === "alejandro"}
-          mouthLevel={talk === "alejandro" ? level : undefined}
-          position={ALEJANDRO_POS}
-          rotationY={Math.PI}
-          sleepy={face.sleepy}
-          surprised={face.surprised * interpolate(frame, [0, 8], [0, 1], ease)}
-          sad={face.sad}
-          holdingMug={hasCoffee}
-        />
-      ) : null}
+        ) : null}
+      </StyleProvider>
     </ThreeCanvas>
   );
 };
+
+/**
+ * Extras del estilo suave: luz ambiente de estudio (sin descargar HDRs),
+ * sombras de contacto suaves en el piso y el escritorio, brillo en las luces
+ * y viñeta. Todo estático: no anima por su cuenta.
+ */
+const SmoothExtras: React.FC = () => (
+  <>
+    <Environment resolution={128} frames={1}>
+      <Lightformer
+        intensity={0.6}
+        color="#ffd9ec"
+        position={[0, 3, 2]}
+        scale={[6, 2, 1]}
+      />
+      <Lightformer
+        intensity={0.4}
+        color="#9fb4ff"
+        position={[-3, 1.5, 0]}
+        rotation={[0, Math.PI / 2, 0]}
+        scale={[4, 2, 1]}
+      />
+      <Lightformer
+        intensity={0.3}
+        color="#ffc28a"
+        position={[3, 1, -2]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={[4, 2, 1]}
+      />
+    </Environment>
+    <ContactShadows
+      position={[0.6, 0.002, 0.9]}
+      scale={6}
+      resolution={512}
+      blur={2.4}
+      opacity={0.55}
+      far={2}
+      frames={1}
+    />
+    <ContactShadows
+      position={[0, 0.868, -0.55]}
+      scale={[2, 1]}
+      resolution={256}
+      blur={1.6}
+      opacity={0.45}
+      far={0.6}
+      frames={1}
+    />
+  </>
+);

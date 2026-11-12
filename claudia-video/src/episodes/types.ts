@@ -1,4 +1,5 @@
 import type { EyeStyle } from "../three/Characters";
+import type { VisualStyle } from "../three/style";
 
 export type Speaker = "alejandro" | "claudia" | null;
 
@@ -90,6 +91,8 @@ export type Episode = {
   wordCaptions: boolean;
   /** cuánto avanzó el amanecer al empezar (en frames de 0..1200) */
   dawnStart: number;
+  /** "lowpoly" (por defecto) o "suave": sin facetas, luz ambiente, brillo */
+  style?: VisualStyle;
   /** no incluir el audio de las voces (se doblan aparte, p. ej. ElevenLabs) */
   muteVoices?: boolean;
   /** hay cama en la habitación (y celular en el escritorio) */

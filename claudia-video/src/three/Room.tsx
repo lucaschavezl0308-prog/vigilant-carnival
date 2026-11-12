@@ -1,3 +1,4 @@
+import { useSmooth } from "./style";
 import React, { useLayoutEffect } from "react";
 import { useThree } from "@react-three/fiber";
 import { PerspectiveCamera } from "three";
@@ -10,7 +11,7 @@ const Flat: React.FC<{ color: string; emissive?: string; ei?: number }> = ({
 }) => (
   <meshStandardMaterial
     color={color}
-    flatShading
+    flatShading={!useSmooth()}
     roughness={0.9}
     emissive={emissive ?? "#000000"}
     emissiveIntensity={ei}
