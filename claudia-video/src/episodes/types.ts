@@ -31,7 +31,13 @@ export type ShotKind =
   | "end"
   | "end2"
   | "xmasWide"
-  | "compras";
+  | "compras"
+  | "phone"
+  | "bed"
+  | "alejandroBed"
+  | "pcSaldo"
+  | "vendidos"
+  | "empresa";
 
 export type Sfx = "boom" | "scratch" | "ding" | "pop" | "whoosh";
 
@@ -63,6 +69,8 @@ export type Episode = {
   wordCaptions: boolean;
   /** cuánto avanzó el amanecer al empezar (en frames de 0..1200) */
   dawnStart: number;
+  /** hay cama en la habitación (y celular en el escritorio) */
+  bed?: boolean;
   /** decoración navideña y gorro de Papá Noel */
   xmas?: boolean;
   /** segundos de aire después de cada frase (menos = más ritmo) */

@@ -11,6 +11,7 @@ resulta que hizo cinco páginas web y las vendió.
 | `ClaudiaMadrugada` | 1 — Claudia nunca duerme | `src/episodes/ep1.ts` |
 | `ClaudiaEp2` | 2 — Claudia analizó el mercado | `src/episodes/ep2.ts` |
 | `ClaudiaNavidad` | Ya es Navidad (video suelto) | `src/episodes/navidad.ts` |
+| `ClaudiaAlarma` | Alarma de las 6 (video suelto, sin sonido de alarma) | `src/episodes/alarma.ts` |
 
 Cada toma tiene `line` (subtítulo), `mood` (emoción de la voz), `eyes`
 (expresión de Claudia), `coffee`, `punch` (zoom en el remate) y `sfx`.
@@ -36,6 +37,7 @@ npx remotion studio                 # vista previa
 npx remotion render ClaudiaMadrugada out/claudia-madrugada.mp4
 npx remotion render ClaudiaEp2 out/claudia-ep2.mp4
 npx remotion render ClaudiaNavidad out/claudia-navidad.mp4
+npx remotion render ClaudiaAlarma out/claudia-alarma.mp4
 npx remotion still FotoPerfil out/foto-perfil-claudiasinpermiso.png
 ```
 

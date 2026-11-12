@@ -3,6 +3,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Alejandro, Claudia } from "./Characters";
 import { CameraRig, Room } from "./Room";
+import { Bed, BED_HIP, Phone } from "./Props";
 import { voiceLevel, type Episode, type Shot } from "../script";
 
 type V3 = [number, number, number];
@@ -20,6 +21,9 @@ const CAMS: Record<string, { pos: V3; target: V3; fov: number }> = {
   claudiaClose: { pos: [0.4, 1.5, 0.85], target: [0.35, 1.42, -0.3], fov: 36 },
   xmasWide: { pos: [0.75, 1.55, 2.5], target: [0.55, 1.05, -0.6], fov: 58 },
   twoShot: { pos: [1.55, 1.85, 1.55], target: [0.35, 1.25, -0.25], fov: 48 },
+  phone: { pos: [0.12, 1.12, 0.35], target: [0.0, 1.08, -0.45], fov: 58 },
+  bed: { pos: [0.95, 1.75, -0.12], target: [2.5, 0.95, 1.4], fov: 55 },
+  alejandroBed: { pos: [2.42, 1.48, 0.42], target: [2.5, 1.38, 1.3], fov: 50 },
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -78,8 +82,13 @@ export const Scene3D: React.FC<{
   // Zoom de golpe en el remate.
   const fov = shot.punch ? interpolate(frame, [2, 6], [cam.fov, cam.fov * (kind === "claudiaClose" ? 0.9 : 0.8)], ease) : cam.fov;
 
+  const inBed = kind === "bed" || kind === "alejandroBed";
   const showAlejandro = kind === "twoShot" || kind === "alejandro";
-  const showClaudia = kind !== "alejandro";
+  const showClaudia = kind !== "alejandro" && kind !== "phone" && !inBed;
+  // Alejandro se sienta en la cama: de acostado (1.45 rad) a sentado.
+  const sitUp = kind === "bed" ? interpolate(frame, [4, 26], [1.45, 0.12], ease) : 0.12;
+  // Celular: la pantalla se prende y vibra (sin sonido).
+  const phoneOn = kind === "phone" ? interpolate(frame, [10, 16], [0, 1], clamp) : ep.bed ? 0 : -1;
 
   // Toma del café: Claudia empuja la taza hacia el borde.
   const give = kind === "twoShot" ? interpolate(frame, [20, 70], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) }) : 0;
@@ -90,6 +99,25 @@ export const Scene3D: React.FC<{
     <ThreeCanvas width={width} height={height} style={{ backgroundColor: "#0d0b1a" }}>
       <CameraRig position={pos} target={cam.target} fov={fov} />
       <Room frame={g} mugOnDesk={!hasCoffee} mugX={mugX} mugZ={mugZ} xmas={ep.xmas} />
+      {ep.bed ? <Bed /> : null}
+      {phoneOn >= 0 ? (
+        <Phone position={[0.1, 0.8675, -0.22]} rotationY={0.18} on={phoneOn} frame={frame} buzz={kind === "phone" && frame > 14} />
+      ) : null}
+      {ep.bed && (inBed || kind === "phone" || kind === "wide") ? (
+        // Alejandro en la cama: gira sobre la cadera para sentarse.
+        <group position={BED_HIP} rotation={[sitUp, 0, 0]}>
+          <Alejandro
+            frame={g}
+            talking={talk === "alejandro"}
+            mouthLevel={talk === "alejandro" ? level : undefined}
+            position={[0, -0.7, 0]}
+            rotationY={Math.PI}
+            sleepy={kind === "phone" ? 1 : face.sleepy}
+            surprised={face.surprised * interpolate(frame, [0, 8], [0, 1], ease)}
+            sad={face.sad}
+          />
+        </group>
+      ) : null}
       {showClaudia ? (
         <Claudia
           frame={g}

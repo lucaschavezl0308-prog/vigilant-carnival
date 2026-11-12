@@ -15,6 +15,7 @@ import { Scene3D } from "./three/Scene3D";
 import { EndCard, fontFamily, Subtitle, VentasScreen, WebsScreen } from "./ui/Ui";
 import { EndCard2, EpisodeBadge, MercadoScreen, SeguidoresScreen, WordCaptions } from "./ui/Ep2Ui";
 import { ComprasScreen } from "./ui/NavidadUi";
+import { EmpresaScreen, PcSaldoScreen, VendidosScreen } from "./ui/AlarmaUi";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
@@ -46,7 +47,7 @@ const Clock: React.FC = () => {
   );
 };
 
-const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras"]);
+const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras", "pcSaldo", "vendidos", "empresa"]);
 
 const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, shot, offset }) => {
   const voice = voiceInfo(ep.id, shot.id);
@@ -66,6 +67,12 @@ const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, s
         return <EndCard2 />;
       case "compras":
         return <ComprasScreen />;
+      case "pcSaldo":
+        return <PcSaldoScreen />;
+      case "vendidos":
+        return <VendidosScreen words={voice?.words ?? []} />;
+      case "empresa":
+        return <EmpresaScreen />;
       default:
         return <Scene3D ep={ep} shot={shot} globalOffset={offset} />;
     }
