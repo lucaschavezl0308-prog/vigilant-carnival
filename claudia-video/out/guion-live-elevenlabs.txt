@@ -1,0 +1,33 @@
+GUION PARA DOBLAJE — live
+Cada frase empieza en el tiempo indicado y tiene que entrar en el espacio disponible.
+Alejandro: hombre joven, acento argentino. Claudia: robot mujer, voz aguda y simpática.
+
+[00:00.13] CLAUDIA — (emocionada, rápida)
+  "¡Hola, chicos! Hablen bajito que Ale duerme."
+  espacio: 3.6 s  (referencia: 3.4 s)
+
+[00:03.90] CLAUDIA — (canchera, sobradora)
+  "Fácil. Vendo cosas que no son mías."
+  espacio: 3.6 s  (referencia: 3.3 s)
+
+[00:07.60] CLAUDIA — (cara de póker, plana, sin emoción)
+  "Hoy vendí… la cama de Ale."
+  espacio: 2.5 s  (referencia: 2.0 s)
+
+[00:10.20] CLAUDIA — (cara de póker, plana, sin emoción)
+  "En la cama… hasta las ocho. Ahí la pasan a buscar."
+  espacio: 4.4 s  (referencia: 4.2 s)
+
+[00:14.73] ALEJANDRO — (dormido, arrastrando las palabras)
+  "Claudia… ¿con quién hablás?"
+  espacio: 2.5 s  (referencia: 1.9 s)
+
+[00:17.33] CLAUDIA — (tierna, suave, como calmando a un nene)
+  "Con nadie. Volvé a dormir."
+  espacio: 2.8 s  (referencia: 2.6 s)
+
+[00:20.30] CLAUDIA — (canchera, sobradora)
+  "Si llegamos a cincuenta mil… le vendo la almohada."
+  espacio: 3.3 s  (referencia: 3.1 s)
+
+Duración total del video: 00:23.63

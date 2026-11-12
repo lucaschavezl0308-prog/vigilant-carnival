@@ -10,6 +10,9 @@ type V3 = [number, number, number];
 
 // Posiciones de los personajes en la habitación.
 const CLAUDIA_POS: V3 = [0.35, 0.865, -0.3];
+// En el vivo: Claudia en el piso, frente al celular, con la cama detrás.
+const CLAUDIA_LIVE_POS: V3 = [1.45, 0, 0.72];
+const CLAUDIA_LIVE_ROT = -2.27;
 const ALEJANDRO_POS: V3 = [0.45, 0, 0.6];
 
 // Encuadres de cámara: [posición, objetivo, fov].
@@ -24,6 +27,8 @@ const CAMS: Record<string, { pos: V3; target: V3; fov: number }> = {
   phone: { pos: [0.12, 1.12, 0.35], target: [0.0, 1.08, -0.45], fov: 58 },
   bed: { pos: [0.95, 1.75, -0.12], target: [2.5, 0.95, 1.4], fov: 55 },
   alejandroBed: { pos: [2.42, 1.48, 0.42], target: [2.5, 1.38, 1.3], fov: 50 },
+  // cámara frontal del celular apoyado en el piso, mirando a Claudia
+  live: { pos: [0.12, 1.22, -0.38], target: [2.0, 0.68, 1.22], fov: 52 },
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -80,13 +85,25 @@ export const Scene3D: React.FC<{
     pos[1] += Math.cos(frame * 2.7) * 0.015 * k;
   }
   // Zoom de golpe en el remate.
-  const fov = shot.punch ? interpolate(frame, [2, 6], [cam.fov, cam.fov * (kind === "claudiaClose" ? 0.9 : 0.8)], ease) : cam.fov;
+  const baseFov = cam.fov / (shot.zoom ?? 1);
+  const fov = shot.punch ? interpolate(frame, [2, 6], [baseFov, baseFov * (kind === "claudiaClose" || kind === "live" ? 0.9 : 0.8)], ease) : baseFov;
+  // Movimiento de celular en mano durante el vivo.
+  if (kind === "live") {
+    pos[0] += Math.sin(g * 0.11) * 0.006;
+    pos[1] += Math.sin(g * 0.17 + 1) * 0.005;
+  }
 
   const inBed = kind === "bed" || kind === "alejandroBed";
   const showAlejandro = kind === "twoShot" || kind === "alejandro";
   const showClaudia = kind !== "alejandro" && kind !== "phone" && !inBed;
   // Alejandro se sienta en la cama: de acostado (1.45 rad) a sentado.
-  const sitUp = kind === "bed" ? interpolate(frame, [4, 26], [1.45, 0.12], ease) : 0.12;
+  const riseFrom = kind === "bed" || shot.aleSit === "rise";
+  const sitUp = riseFrom
+    ? interpolate(frame, [4, 26], [1.45, 0.12], ease)
+    : kind === "live" && shot.aleSit !== "sitting"
+      ? 1.45
+      : 0.12;
+  const isLive = kind === "live";
   // Celular: la pantalla se prende y vibra (sin sonido).
   const phoneOn = kind === "phone" ? interpolate(frame, [10, 16], [0, 1], clamp) : ep.bed ? 0 : -1;
 
@@ -103,7 +120,11 @@ export const Scene3D: React.FC<{
       {phoneOn >= 0 ? (
         <Phone position={[0.1, 0.8675, -0.22]} rotationY={0.18} on={phoneOn} frame={frame} buzz={kind === "phone" && frame > 14} />
       ) : null}
-      {ep.bed && (inBed || kind === "phone" || kind === "wide") ? (
+      {isLive ? (
+        // luz del celular/aro de luz sobre Claudia
+        <pointLight position={[0.75, 1.25, 0.05]} intensity={0.9} distance={2.4} color="#ffd6ec" />
+      ) : null}
+      {ep.bed && (inBed || isLive || kind === "phone" || kind === "wide") ? (
         // Alejandro en la cama: gira sobre la cadera para sentarse.
         <group position={BED_HIP} rotation={[sitUp, 0, 0]}>
           <Alejandro
@@ -123,11 +144,19 @@ export const Scene3D: React.FC<{
           frame={g}
           talking={talk === "claudia"}
           mouthLevel={talk === "claudia" ? level : undefined}
-          position={CLAUDIA_POS}
-          rotationY={kind === "wide" ? -0.75 : kind === "twoShot" || kind === "xmasWide" ? 0.35 : 0.05}
+          position={isLive ? CLAUDIA_LIVE_POS : CLAUDIA_POS}
+          rotationY={
+            isLive
+              ? CLAUDIA_LIVE_ROT
+              : kind === "wide"
+                ? -0.75
+                : kind === "twoShot" || kind === "xmasWide"
+                  ? 0.35
+                  : 0.05
+          }
           typing={kind === "wide"}
           lookAway={
-            kind === "claudiaAway"
+            kind === "claudiaAway" || shot.lookBack
               ? interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1) })
               : 0
           }

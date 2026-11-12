@@ -16,6 +16,7 @@ import { EndCard, fontFamily, Subtitle, VentasScreen, WebsScreen } from "./ui/Ui
 import { EndCard2, EpisodeBadge, MercadoScreen, SeguidoresScreen, WordCaptions } from "./ui/Ep2Ui";
 import { ComprasScreen } from "./ui/NavidadUi";
 import { EmpresaScreen, PcSaldoScreen, VendidosScreen } from "./ui/AlarmaUi";
+import { LiveOverlay, PovTitle } from "./ui/LiveUi";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
@@ -96,20 +97,25 @@ const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, s
           <Audio src={staticFile(`sfx/${shot.sfx}.wav`)} volume={shot.sfx === "boom" ? 0.55 : 0.5} />
         </Sequence>
       ) : null}
-      {voice ? (
+      {shot.live ? <LiveOverlay live={shot.live} /> : null}
+      {voice && !ep.muteVoices ? (
         <Sequence from={VOICE_START} layout="none" name={`voz-${shot.id}`}>
           <Audio src={staticFile(`voz/${ep.id}/${shot.id}.mp3`)} volume={1} />
         </Sequence>
       ) : null}
       {shot.line ? (
         ep.wordCaptions && voice ? (
-          <WordCaptions words={voice.words} top={UI_KINDS.has(shot.kind) ? 250 : 1210} />
+          <WordCaptions
+            words={voice.words}
+            top={UI_KINDS.has(shot.kind) ? 250 : shot.kind === "live" ? (shot.pov ? 520 : 330) : 1210}
+          />
         ) : (
           <Sequence from={2} layout="absolute-fill">
             <Subtitle text={shot.line} />
           </Sequence>
         )
       ) : null}
+      {shot.pov ? <PovTitle text={shot.pov} /> : null}
     </AbsoluteFill>
   );
 };

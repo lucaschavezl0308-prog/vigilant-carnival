@@ -12,6 +12,7 @@ resulta que hizo cinco páginas web y las vendió.
 | `ClaudiaEp2` | 2 — Claudia analizó el mercado | `src/episodes/ep2.ts` |
 | `ClaudiaNavidad` | Ya es Navidad (video suelto) | `src/episodes/navidad.ts` |
 | `ClaudiaAlarma` | Alarma de las 6 (video suelto, sin sonido de alarma) | `src/episodes/alarma.ts` |
+| `ClaudiaLive` | POV: live a las 3 a.m. (sin voces, para doblar) | `src/episodes/live.ts` |
 
 Cada toma tiene `line` (subtítulo), `mood` (emoción de la voz), `eyes`
 (expresión de Claudia), `coffee`, `punch` (zoom en el remate) y `sfx`.
@@ -45,6 +46,17 @@ En una máquina sin internet hacia remotion.media, agrega
 `--browser-executable=<ruta a chrome-headless-shell>`.
 
 ## Voces
+
+### Doblaje aparte (ElevenLabs)
+
+Con `muteVoices: true` el video sale sin voces (solo subtítulos, bocas y
+efectos). Para tener los tiempos de cada frase:
+
+```bash
+npx tsx scripts/guion-elevenlabs.ts live > out/guion-live-elevenlabs.txt
+```
+
+### Voces automáticas (edge-tts)
 
 Las voces se generan con edge-tts (voces neuronales de Microsoft, acento
 argentino): Tomás para Alejandro y Elena para Claudia, con un toque robótico.
