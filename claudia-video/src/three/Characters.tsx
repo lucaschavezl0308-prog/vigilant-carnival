@@ -34,15 +34,9 @@ export const blink = (frame: number, offset = 0) => {
   return t < 3 ? 0.12 : 1;
 };
 
-// Material liso (sin facetas) para Alejandro: más volumen y suavidad.
-const Soft: React.FC<{ color: string; rough?: number }> = ({ color, rough = 0.75 }) => (
-  <meshStandardMaterial color={color} roughness={rough} metalness={0} />
-);
-
 // ---------------------------------------------------------------------------
 // ALEJANDRO — recién despertado: pelo de almohada, ojeras, sudadera verde.
-// Modelado con formas redondeadas y sombreado liso (no facetado).
-// Mira hacia +z en su espacio local. Cadera a y=0.7, cabeza a y=1.78.
+// Mira hacia +z en su espacio local.
 // ---------------------------------------------------------------------------
 export const Alejandro: React.FC<{
   frame: number;
@@ -66,84 +60,63 @@ export const Alejandro: React.FC<{
   position = [0, 0, 0],
   rotationY = 0,
 }) => {
-  const skin = "#e0a87c";
-  const skinShade = "#cf9469";
-  const hoodie = "#3f8f6b";
-  const hoodieDark = "#357a5b";
-  const hair = "#2b1d14";
+  const skin = "#d9a377";
   const mouth = mouthLevel ?? mouthOpen(frame, talking);
-  const lid = Math.max(0, sleepy - surprised * 0.9); // párpado caído 0..1
+  const lid = Math.max(0, sleepy - surprised * 0.9); // párpado caído
   const breathe = Math.sin(frame * 0.08) * 0.01;
-  const headTilt = Math.sin(frame * 0.05) * 0.03 + (talking ? Math.sin(frame * 0.3) * 0.02 : 0);
-  const eyeScale = blink(frame, 17) * (1 + surprised * 0.2);
-  // párpado: casquete de esfera que cubre más o menos el ojo
-  const lidTheta = Math.PI * (0.18 + lid * 0.32) + (eyeScale < 0.5 ? Math.PI * 0.4 : 0);
+  const headTilt =
+    Math.sin(frame * 0.05) * 0.03 +
+    (talking ? Math.sin(frame * 0.3) * 0.02 : 0);
+  const eyeScale = blink(frame, 17) * (1 + surprised * 0.25);
 
   return (
     <group position={position} rotation={[0, rotationY, 0]}>
-      {/* Piernas y zapatillas */}
-      {[-0.13, 0.13].map((x) => (
-        <group key={x}>
-          <mesh position={[x, 0.4, 0]}>
-            <capsuleGeometry args={[0.1, 0.5, 8, 16]} />
-            <Soft color="#2d3a52" />
-          </mesh>
-          <mesh position={[x, 0.06, 0.05]} scale={[1, 0.6, 1.5]}>
-            <sphereGeometry args={[0.1, 20, 14]} />
-            <Soft color="#f2f2f5" rough={0.5} />
-          </mesh>
-        </group>
-      ))}
-
+      {/* Piernas */}
+      <mesh position={[-0.13, 0.35, 0]}>
+        <boxGeometry args={[0.2, 0.7, 0.22]} />
+        <Flat color="#2d3a52" />
+      </mesh>
+      <mesh position={[0.13, 0.35, 0]}>
+        <boxGeometry args={[0.2, 0.7, 0.22]} />
+        <Flat color="#2d3a52" />
+      </mesh>
       {/* Torso: sudadera */}
       <group position={[0, 1.08 + breathe, 0]}>
-        <mesh scale={[1.7, 1, 1]}>
-          <capsuleGeometry args={[0.21, 0.36, 12, 24]} />
-          <Soft color={hoodie} rough={0.9} />
+        <mesh>
+          <boxGeometry args={[0.72, 0.78, 0.42]} />
+          <Flat color="#3f8f6b" />
         </mesh>
         {/* bolsillo canguro */}
-        <mesh position={[0, -0.2, 0.17]} rotation={[0, 0, Math.PI / 2]} scale={[1, 1, 0.35]}>
-          <capsuleGeometry args={[0.07, 0.24, 6, 12]} />
-          <Soft color={hoodieDark} rough={0.9} />
+        <mesh position={[0, -0.2, 0.215]}>
+          <boxGeometry args={[0.4, 0.18, 0.02]} />
+          <Flat color="#357a5b" />
         </mesh>
         {/* cordones */}
-        {[-0.07, 0.07].map((x) => (
-          <group key={x} position={[x, 0.16, 0.2]}>
-            <mesh>
-              <cylinderGeometry args={[0.011, 0.011, 0.2, 8]} />
-              <Soft color="#eeeeee" />
-            </mesh>
-            <mesh position={[0, -0.11, 0]}>
-              <sphereGeometry args={[0.016, 10, 8]} />
-              <Soft color="#dddddd" />
-            </mesh>
-          </group>
-        ))}
-        {/* capucha alrededor del cuello */}
-        <mesh position={[0, 0.36, -0.05]} rotation={[Math.PI / 2 - 0.35, 0, 0]}>
-          <torusGeometry args={[0.17, 0.075, 12, 28]} />
-          <Soft color={hoodieDark} rough={0.9} />
+        <mesh position={[-0.08, 0.18, 0.22]}>
+          <boxGeometry args={[0.025, 0.22, 0.02]} />
+          <Flat color="#eeeeee" />
         </mesh>
-        {/* brazo izquierdo */}
-        <group position={[-0.4, 0.27, 0]} rotation={[0, 0, 0.1]}>
-          <mesh position={[0, -0.32, 0]}>
-            <capsuleGeometry args={[0.09, 0.5, 8, 16]} />
-            <Soft color={hoodie} rough={0.9} />
-          </mesh>
-          <mesh position={[0, -0.66, 0]} scale={[1, 1.1, 0.9]}>
-            <sphereGeometry args={[0.075, 16, 12]} />
-            <Soft color={skin} />
-          </mesh>
-        </group>
-        {/* brazo derecho */}
-        <group position={[0.4, 0.27, 0]} rotation={[holdingMug ? -0.9 : 0, 0, holdingMug ? 0.35 : -0.1]}>
-          <mesh position={[0, -0.32, 0]}>
-            <capsuleGeometry args={[0.09, 0.5, 8, 16]} />
-            <Soft color={hoodie} rough={0.9} />
-          </mesh>
-          <mesh position={[0, -0.66, 0]} scale={[1, 1.1, 0.9]}>
-            <sphereGeometry args={[0.075, 16, 12]} />
-            <Soft color={skin} />
+        <mesh position={[0.08, 0.18, 0.22]}>
+          <boxGeometry args={[0.025, 0.22, 0.02]} />
+          <Flat color="#eeeeee" />
+        </mesh>
+        {/* capucha */}
+        <mesh position={[0, 0.38, -0.14]} rotation={[0.3, 0, 0]}>
+          <boxGeometry args={[0.56, 0.18, 0.24]} />
+          <Flat color="#357a5b" />
+        </mesh>
+        {/* brazos */}
+        <mesh position={[-0.44, -0.02, 0]} rotation={[0, 0, 0.08]}>
+          <boxGeometry args={[0.17, 0.72, 0.2]} />
+          <Flat color="#3f8f6b" />
+        </mesh>
+        <group
+          position={[0.44, 0.3, 0]}
+          rotation={[holdingMug ? -0.9 : 0, 0, holdingMug ? 0.35 : -0.08]}
+        >
+          <mesh position={[0, -0.34, 0]}>
+            <boxGeometry args={[0.17, 0.72, 0.2]} />
+            <Flat color="#3f8f6b" />
           </mesh>
         </group>
       </group>
@@ -157,104 +130,109 @@ export const Alejandro: React.FC<{
 
       {/* Cuello */}
       <mesh position={[0, 1.52, 0]}>
-        <cylinderGeometry args={[0.095, 0.105, 0.16, 20]} />
-        <Soft color={skinShade} />
+        <cylinderGeometry args={[0.1, 0.11, 0.12, 6]} />
+        <Flat color={skin} />
       </mesh>
 
       {/* Cabeza */}
-      <group position={[0, 1.78 + breathe, 0]} rotation={[headTilt, 0, headTilt * 0.6]}>
-        <mesh scale={[1, 1.1, 0.97]}>
-          <sphereGeometry args={[0.3, 40, 32]} />
-          <Soft color={skin} rough={0.65} />
+      <group
+        position={[0, 1.78 + breathe, 0]}
+        rotation={[headTilt, 0, headTilt * 0.6]}
+      >
+        <mesh scale={[1, 1.12, 0.95]}>
+          <icosahedronGeometry args={[0.3, 1]} />
+          <Flat color={skin} />
         </mesh>
-        {/* mejillas y mentón para dar volumen */}
-        {[-0.15, 0.15].map((x) => (
-          <mesh key={x} position={[x, -0.07, 0.165]}>
-            <sphereGeometry args={[0.085, 20, 16]} />
-            <Soft color={skin} rough={0.65} />
-          </mesh>
-        ))}
         {/* orejas */}
-        {[-0.295, 0.295].map((x) => (
-          <mesh key={x} position={[x, 0, 0]} scale={[0.45, 1, 0.8]}>
-            <sphereGeometry args={[0.075, 16, 12]} />
-            <Soft color={skinShade} />
-          </mesh>
-        ))}
+        <mesh position={[-0.29, 0, 0]} scale={[0.5, 1, 0.8]}>
+          <icosahedronGeometry args={[0.07, 0]} />
+          <Flat color={skin} />
+        </mesh>
+        <mesh position={[0.29, 0, 0]} scale={[0.5, 1, 0.8]}>
+          <icosahedronGeometry args={[0.07, 0]} />
+          <Flat color={skin} />
+        </mesh>
         {/* nariz */}
-        <mesh position={[0, -0.03, 0.3]} scale={[0.85, 1, 1.05]}>
-          <sphereGeometry args={[0.048, 20, 16]} />
-          <Soft color={skinShade} rough={0.6} />
+        <mesh position={[0, -0.03, 0.29]} rotation={[0.4, 0, 0]}>
+          <coneGeometry args={[0.045, 0.1, 4]} />
+          <Flat color="#c98f63" />
         </mesh>
 
         {/* Ojos */}
         {[-0.11, 0.11].map((x) => (
-          <group key={x} position={[x, 0.06, 0.25]}>
-            <mesh scale={[1, eyeScale, 0.9]}>
-              <sphereGeometry args={[0.06, 24, 18]} />
-              <meshStandardMaterial color="#f7f3ee" roughness={0.3} />
+          <group key={x} position={[x, 0.06, 0.255]}>
+            <mesh scale={[1, eyeScale, 1]}>
+              <sphereGeometry args={[0.058, 8, 6]} />
+              <meshStandardMaterial color="#f7f3ee" roughness={0.4} />
             </mesh>
-            <mesh position={[0, -0.004, 0.045]} scale={[1, eyeScale, 0.6]}>
-              <sphereGeometry args={[0.032, 20, 16]} />
-              <meshStandardMaterial color="#3a2414" roughness={0.2} />
+            <mesh position={[0, -0.005, 0.045]} scale={[1, eyeScale, 1]}>
+              <sphereGeometry args={[0.03, 8, 6]} />
+              <meshStandardMaterial color="#2a1a10" roughness={0.2} />
             </mesh>
-            <mesh position={[0, -0.004, 0.058]} scale={[1, eyeScale, 0.5]}>
-              <sphereGeometry args={[0.017, 16, 12]} />
-              <meshStandardMaterial color="#0d0806" roughness={0.1} />
-            </mesh>
-            <mesh position={[0.013, 0.014, 0.068]}>
-              <sphereGeometry args={[0.008, 10, 8]} />
+            <mesh position={[0.012, 0.012, 0.072]}>
+              <sphereGeometry args={[0.008, 6, 4]} />
               <Glow color="#ffffff" />
             </mesh>
-            {/* párpado superior (casquete de piel) */}
-            <mesh rotation={[0.35, 0, 0]}>
-              <sphereGeometry args={[0.064, 24, 16, 0, Math.PI * 2, 0, lidTheta]} />
-              <Soft color={skinShade} rough={0.65} />
+            {/* párpado superior (sueño) */}
+            <mesh
+              position={[0, 0.06 - lid * 0.055, 0.02]}
+              scale={[1, 0.5 + lid * 0.6, 1]}
+            >
+              <boxGeometry args={[0.13, 0.07, 0.09]} />
+              <Flat color="#cf9a6e" />
             </mesh>
             {/* ojeras */}
-            <mesh position={[0, -0.062, 0.022]} rotation={[0, 0, Math.PI / 2]} scale={[0.5, 1, 0.5]}>
-              <capsuleGeometry args={[0.012, 0.07, 4, 10]} />
-              <Soft color="#b9805e" />
+            <mesh position={[0, -0.07, 0.03]}>
+              <boxGeometry args={[0.1, 0.018, 0.04]} />
+              <Flat color="#a8735a" />
             </mesh>
             {/* lágrima */}
             {sad > 0.5 ? (
               <mesh
-                position={[x < 0 ? -0.02 : 0.02, -0.09 - ((frame * 0.004) % 0.12), 0.05]}
+                position={[
+                  x < 0 ? -0.02 : 0.02,
+                  -0.09 - ((frame * 0.004) % 0.12),
+                  0.05,
+                ]}
                 scale={[0.8, 1.2, 0.8]}
               >
-                <sphereGeometry args={[0.018, 12, 10]} />
-                <meshStandardMaterial color="#8fd8ff" emissive="#5ab8ff" emissiveIntensity={0.6} roughness={0.1} />
+                <sphereGeometry args={[0.018, 6, 4]} />
+                <meshStandardMaterial
+                  color="#8fd8ff"
+                  emissive="#5ab8ff"
+                  emissiveIntensity={0.6}
+                  roughness={0.1}
+                />
               </mesh>
             ) : null}
             {/* ceja */}
             <mesh
-              position={[0, 0.115 + surprised * 0.05, 0.035]}
-              rotation={[0, 0, Math.PI / 2 + (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2 - sad * 0.55)]}
+              position={[0, 0.115 + surprised * 0.05, 0.03]}
+              rotation={[
+                0,
+                0,
+                (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2 - sad * 0.55),
+              ]}
             >
-              <capsuleGeometry args={[0.016, 0.09, 6, 10]} />
-              <Soft color={hair} />
+              <boxGeometry args={[0.12, 0.025, 0.04]} />
+              <Flat color="#2b1d14" />
             </mesh>
           </group>
         ))}
 
         {/* Boca */}
         <mesh
-          position={[0, -0.15, 0.272]}
-          rotation={[0, 0, Math.PI / 2]}
-          scale={[0.35 + mouth * 1.3 + surprised * 0.6, 1 - sad * 0.35, 0.6]}
+          position={[0, -0.15, 0.255]}
+          scale={[1 - sad * 0.35, 0.25 + mouth * 1.4 + surprised * 0.6, 1]}
         >
-          <capsuleGeometry args={[0.024, 0.07, 6, 12]} />
-          <Soft color="#5b1f22" rough={0.5} />
+          <boxGeometry args={[0.12, 0.04, 0.04]} />
+          <Flat color="#5b1f22" />
         </mesh>
 
         {/* Pelo despeinado (de almohada) */}
-        <mesh position={[0, 0.03, -0.03]} rotation={[-0.42, 0, 0]} scale={[1.06, 1.12, 1.06]}>
-          <sphereGeometry args={[0.3, 36, 24, 0, Math.PI * 2, 0, Math.PI * 0.42]} />
-          <Soft color={hair} rough={0.85} />
-        </mesh>
-        <mesh position={[0, 0.06, -0.08]} rotation={[-0.5, 0, 0]} scale={[1.05, 1.05, 1.0]}>
-          <sphereGeometry args={[0.3, 36, 24, 0, Math.PI * 2, 0, Math.PI * 0.5]} />
-          <Soft color={hair} rough={0.85} />
+        <mesh position={[0, 0.2, -0.03]} scale={[1.05, 0.55, 1.05]}>
+          <icosahedronGeometry args={[0.3, 0]} />
+          <Flat color="#2b1d14" />
         </mesh>
         {[
           [0, 0.36, 0, 0, 0, 0],
@@ -264,17 +242,16 @@ export const Alejandro: React.FC<{
           [-0.12, 0.3, -0.14, -0.5, 0, 0.5],
           [0.22, 0.25, 0.1, 0.3, 0, -1.2],
           [-0.06, 0.3, 0.16, 0.7, 0, 0.15],
-          [-0.22, 0.24, 0.06, 0.2, 0, 1.0],
         ].map(([x, y, z, rx, ry, rz], i) => (
           <mesh key={i} position={[x, y, z]} rotation={[rx, ry, rz]}>
-            <coneGeometry args={[0.07, 0.2, 12]} />
-            <Soft color={hair} rough={0.85} />
+            <coneGeometry args={[0.07, 0.2, 4]} />
+            <Flat color="#2b1d14" />
           </mesh>
         ))}
         {/* flequillo */}
-        <mesh position={[-0.05, 0.2, 0.22]} rotation={[0.5, 0, Math.PI / 2 + 0.3]} scale={[1, 1, 0.6]}>
-          <capsuleGeometry args={[0.045, 0.2, 6, 12]} />
-          <Soft color={hair} rough={0.85} />
+        <mesh position={[-0.06, 0.2, 0.22]} rotation={[0.5, 0, 0.3]}>
+          <boxGeometry args={[0.28, 0.07, 0.12]} />
+          <Flat color="#2b1d14" />
         </mesh>
       </group>
     </group>
