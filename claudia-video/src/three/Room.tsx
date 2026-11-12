@@ -41,7 +41,14 @@ const rand = (i: number) => {
   return x - Math.floor(x);
 };
 
-const SKY_BANDS = ["#121a44", "#262c63", "#4b3b7a", "#8d5584", "#d7786c", "#f3a86a"];
+const SKY_BANDS = [
+  "#121a44",
+  "#262c63",
+  "#4b3b7a",
+  "#8d5584",
+  "#d7786c",
+  "#f3a86a",
+];
 
 const Window: React.FC<{ frame: number }> = ({ frame }) => {
   const w = 1.7;
@@ -66,13 +73,20 @@ const Window: React.FC<{ frame: number }> = ({ frame }) => {
       {new Array(28).fill(0).map((_, i) => (
         <mesh
           key={i}
-          position={[(rand(i) - 0.5) * w * 0.95, h / 2 - rand(i + 50) * h * 0.45, 0.002]}
+          position={[
+            (rand(i) - 0.5) * w * 0.95,
+            h / 2 - rand(i + 50) * h * 0.45,
+            0.002,
+          ]}
         >
           <circleGeometry args={[0.006 + rand(i + 9) * 0.006, 4]} />
           <meshBasicMaterial
             color="#ffffff"
             transparent
-            opacity={(0.4 + 0.6 * Math.abs(Math.sin(frame * 0.05 + i))) * (1 - dawn * 0.6)}
+            opacity={
+              (0.4 + 0.6 * Math.abs(Math.sin(frame * 0.05 + i))) *
+              (1 - dawn * 0.6)
+            }
             toneMapped={false}
           />
         </mesh>
@@ -92,7 +106,11 @@ const Window: React.FC<{ frame: number }> = ({ frame }) => {
               rand(i * 10 + j) > 0.45 ? (
                 <mesh
                   key={j}
-                  position={[(rand(j + i) - 0.5) * bw * 0.6, (rand(j * 3 + i) - 0.3) * bh * 0.7, 0.001]}
+                  position={[
+                    (rand(j + i) - 0.5) * bw * 0.6,
+                    (rand(j * 3 + i) - 0.3) * bh * 0.7,
+                    0.001,
+                  ]}
                 >
                   <planeGeometry args={[0.018, 0.022]} />
                   <meshBasicMaterial color="#ffcf6b" toneMapped={false} />
@@ -144,15 +162,31 @@ const Monitor: React.FC<{ frame: number }> = ({ frame }) => (
         key={i}
         position={[-0.32 + (rand(i) * 0.12) / 2, 0.66 - i * 0.05, 0.048]}
       >
-        <planeGeometry args={[0.12 + rand(i + 2) * 0.35 * Math.min(1, ((frame + i * 9) % 140) / 40), 0.018]} />
-        <meshBasicMaterial color={i % 3 === 0 ? "#ff8fbf" : "#8ee8ff"} toneMapped={false} />
+        <planeGeometry
+          args={[
+            0.12 +
+              rand(i + 2) * 0.35 * Math.min(1, ((frame + i * 9) % 140) / 40),
+            0.018,
+          ]}
+        />
+        <meshBasicMaterial
+          color={i % 3 === 0 ? "#ff8fbf" : "#8ee8ff"}
+          toneMapped={false}
+        />
       </mesh>
     ))}
-    <pointLight position={[0, 0.5, 0.4]} intensity={1.6} distance={2.5} color="#7fb8ff" />
+    <pointLight
+      position={[0, 0.5, 0.4]}
+      intensity={1.6}
+      distance={2.5}
+      color="#7fb8ff"
+    />
   </group>
 );
 
-const Plant: React.FC<{ position: [number, number, number] }> = ({ position }) => (
+const Plant: React.FC<{ position: [number, number, number] }> = ({
+  position,
+}) => (
   <group position={position}>
     <mesh position={[0, 0.08, 0]}>
       <cylinderGeometry args={[0.09, 0.07, 0.16, 6]} />
@@ -172,19 +206,31 @@ const Plant: React.FC<{ position: [number, number, number] }> = ({ position }) =
 );
 
 /** Habitación completa al amanecer. */
-export const Room: React.FC<{ frame: number; mugOnDesk?: boolean; mugX?: number; mugZ?: number }> = ({
-  frame,
-  mugOnDesk = true,
-  mugX = 0.75,
-  mugZ = -0.25,
-}) => {
+export const Room: React.FC<{
+  frame: number;
+  mugOnDesk?: boolean;
+  mugX?: number;
+  mugZ?: number;
+  /** decoración navideña (luces, árbol) */
+  xmas?: boolean;
+}> = ({ frame, mugOnDesk = true, mugX = 0.75, mugZ = -0.25, xmas = false }) => {
   return (
     <group>
       {/* Luces */}
-      <ambientLight intensity={0.35} color="#8a8fd0" />
-      <hemisphereLight args={["#ffc9a0", "#20243f", 0.45]} />
-      <directionalLight position={[0.4, 2.2, -2.5]} intensity={1.1} color="#ffb48a" />
-      <pointLight position={[1.4, 2.1, 1.2]} intensity={1.4} distance={5} color="#ffd9a8" />
+      <ambientLight intensity={xmas ? 0.22 : 0.35} color="#8a8fd0" />
+      <hemisphereLight args={["#ffc9a0", "#20243f", xmas ? 0.3 : 0.45]} />
+      {xmas ? <XmasDecor frame={frame} /> : null}
+      <directionalLight
+        position={[0.4, 2.2, -2.5]}
+        intensity={1.1}
+        color="#ffb48a"
+      />
+      <pointLight
+        position={[1.4, 2.1, 1.2]}
+        intensity={1.4}
+        distance={5}
+        color="#ffd9a8"
+      />
 
       {/* Piso */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0.2, 0, 0.8]}>
@@ -247,7 +293,12 @@ export const Room: React.FC<{ frame: number; mugOnDesk?: boolean; mugX?: number;
         <sphereGeometry args={[0.07, 8, 6]} />
         <meshBasicMaterial color="#ffd27a" toneMapped={false} />
       </mesh>
-      <pointLight position={[-1.3, 2.3, 2.7]} intensity={0.8} distance={2.5} color="#ffbf73" />
+      <pointLight
+        position={[-1.3, 2.3, 2.7]}
+        intensity={0.8}
+        distance={2.5}
+        color="#ffbf73"
+      />
 
       <Window frame={frame} />
 
@@ -281,6 +332,215 @@ export const Room: React.FC<{ frame: number; mugOnDesk?: boolean; mugX?: number;
           <Mug steam={frame} />
         </group>
       ) : null}
+    </group>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Navidad: guirnaldas de luces que titilan, árbol con estrella y regalos.
+// ---------------------------------------------------------------------------
+const XMAS_COLORS = ["#ff3b3b", "#2bd96b", "#ffd23f", "#3fa9ff", "#ff6fd8"];
+
+/** ¿Está prendida la luz i en este frame? (patrón de titileo determinista) */
+const lit = (frame: number, i: number) =>
+  Math.sin(frame * 0.22 + i * 1.7) > -0.35;
+
+const Garland: React.FC<{
+  frame: number;
+  from: [number, number, number];
+  to: [number, number, number];
+  count: number;
+  sag?: number;
+  seed?: number;
+}> = ({ frame, from, to, count, sag = 0.12, seed = 0 }) => (
+  <group>
+    {new Array(count).fill(0).map((_, i) => {
+      const t = i / (count - 1);
+      const x = from[0] + (to[0] - from[0]) * t;
+      const z = from[2] + (to[2] - from[2]) * t;
+      // cae en ondas entre clavos
+      const y =
+        from[1] +
+        (to[1] - from[1]) * t -
+        Math.abs(Math.sin(t * Math.PI * 3)) * sag;
+      const on = lit(frame, i + seed);
+      const color = XMAS_COLORS[(i + seed) % XMAS_COLORS.length];
+      return (
+        <mesh key={i} position={[x, y, z]}>
+          <sphereGeometry args={[0.022, 6, 4]} />
+          <meshBasicMaterial
+            color={on ? color : "#2a2433"}
+            toneMapped={false}
+          />
+        </mesh>
+      );
+    })}
+  </group>
+);
+
+const Tree: React.FC<{ frame: number; position: [number, number, number] }> = ({
+  frame,
+  position,
+}) => (
+  <group position={position}>
+    <mesh position={[0, 0.12, 0]}>
+      <cylinderGeometry args={[0.06, 0.07, 0.24, 6]} />
+      <Flat color="#6b4a3a" />
+    </mesh>
+    {[
+      [0.62, 0.55, 0.45],
+      [0.5, 0.5, 0.85],
+      [0.38, 0.45, 1.2],
+      [0.24, 0.38, 1.5],
+    ].map(([r, h, y], i) => (
+      <mesh key={i} position={[0, y, 0]}>
+        <coneGeometry args={[r, h, 7]} />
+        <Flat color={i % 2 ? "#2f8a4c" : "#257a40"} />
+      </mesh>
+    ))}
+    {/* esferas y lucecitas */}
+    {new Array(22).fill(0).map((_, i) => {
+      const y = 0.32 + (i / 22) * 1.25;
+      const r = 0.6 * (1 - (y - 0.2) / 1.55) + 0.04;
+      const a = i * 2.4;
+      const on = lit(frame, i + 40);
+      return (
+        <mesh key={i} position={[Math.cos(a) * r, y, Math.sin(a) * r]}>
+          <sphereGeometry args={[i % 3 === 0 ? 0.045 : 0.025, 6, 4]} />
+          {i % 3 === 0 ? (
+            <Flat
+              color={XMAS_COLORS[i % 5]}
+              emissive={XMAS_COLORS[i % 5]}
+              ei={0.35}
+            />
+          ) : (
+            <meshBasicMaterial
+              color={on ? XMAS_COLORS[i % 5] : "#2a2433"}
+              toneMapped={false}
+            />
+          )}
+        </mesh>
+      );
+    })}
+    {/* estrella */}
+    <mesh
+      position={[0, 1.78, 0]}
+      rotation={[0, 0, Math.PI / 5]}
+      scale={1 + Math.sin(frame * 0.15) * 0.08}
+    >
+      <octahedronGeometry args={[0.1, 0]} />
+      <meshBasicMaterial color="#ffd23f" toneMapped={false} />
+    </mesh>
+    <pointLight
+      position={[0, 1.7, 0.2]}
+      intensity={0.8}
+      distance={1.6}
+      color="#ffd23f"
+    />
+    {/* regalos */}
+    {[
+      [-0.35, 0.3, "#ff3b3b"],
+      [0.32, 0.25, "#3fa9ff"],
+      [0.05, 0.35, "#ff6fd8"],
+    ].map(([x, z, c], i) => (
+      <group
+        key={i}
+        position={[x as number, 0.1, z as number]}
+        rotation={[0, i * 0.6, 0]}
+      >
+        <mesh>
+          <boxGeometry args={[0.22, 0.2, 0.22]} />
+          <Flat color={c as string} />
+        </mesh>
+        <mesh>
+          <boxGeometry args={[0.05, 0.205, 0.225]} />
+          <Flat color="#ffd23f" />
+        </mesh>
+      </group>
+    ))}
+  </group>
+);
+
+export const XmasDecor: React.FC<{ frame: number }> = ({ frame }) => {
+  // luces de color que tiñen la habitación al ritmo del titileo
+  const pulse = (i: number) => (lit(frame, i) ? 1 : 0.35);
+  return (
+    <group>
+      {/* sobre la ventana y la pared del fondo */}
+      <Garland
+        frame={frame}
+        from={[-1.1, 2.38, -1.15]}
+        to={[0.85, 2.38, -1.15]}
+        count={26}
+      />
+      {/* alrededor del marco de la ventana */}
+      <Garland
+        frame={frame}
+        from={[-1.0, 1.0, -1.14]}
+        to={[-1.0, 2.25, -1.14]}
+        count={10}
+        sag={0.0}
+        seed={3}
+      />
+      <Garland
+        frame={frame}
+        from={[0.7, 1.0, -1.14]}
+        to={[0.7, 2.25, -1.14]}
+        count={10}
+        sag={0.0}
+        seed={7}
+      />
+      {/* pared frontal (detrás de Alejandro) */}
+      <Garland
+        frame={frame}
+        from={[-1.7, 2.35, 3.05]}
+        to={[1.9, 2.35, 3.05]}
+        count={34}
+        sag={0.16}
+        seed={11}
+      />
+      <Garland
+        frame={frame}
+        from={[-1.7, 1.75, 3.05]}
+        to={[0.3, 1.75, 3.05]}
+        count={18}
+        sag={0.1}
+        seed={5}
+      />
+      {/* escritorio */}
+      <Garland
+        frame={frame}
+        from={[-0.95, 0.89, -0.1]}
+        to={[0.95, 0.89, -0.1]}
+        count={18}
+        sag={0.05}
+        seed={2}
+      />
+      <Tree frame={frame} position={[1.45, 0, -0.75]} />
+      <pointLight
+        position={[-0.5, 2.1, -0.8]}
+        intensity={1.3 * pulse(1)}
+        distance={3}
+        color="#ff3b3b"
+      />
+      <pointLight
+        position={[0.6, 2.1, -0.8]}
+        intensity={1.3 * pulse(4)}
+        distance={3}
+        color="#2bd96b"
+      />
+      <pointLight
+        position={[0, 2.1, 2.6]}
+        intensity={1.6 * pulse(2)}
+        distance={3}
+        color="#ff6fd8"
+      />
+      <pointLight
+        position={[1.2, 2.0, 2.6]}
+        intensity={1.2 * pulse(6)}
+        distance={3}
+        color="#3fa9ff"
+      />
     </group>
   );
 };

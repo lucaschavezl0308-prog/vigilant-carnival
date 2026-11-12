@@ -18,6 +18,7 @@ const CAMS: Record<string, { pos: V3; target: V3; fov: number }> = {
   claudia: { pos: [0.44, 1.44, 1.0], target: [0.35, 1.3, -0.3], fov: 48 },
   claudiaAway: { pos: [0.5, 1.44, 0.95], target: [0.35, 1.32, -0.3], fov: 46 },
   claudiaClose: { pos: [0.4, 1.5, 0.85], target: [0.35, 1.42, -0.3], fov: 36 },
+  xmasWide: { pos: [0.75, 1.55, 2.5], target: [0.55, 1.05, -0.6], fov: 58 },
   twoShot: { pos: [1.55, 1.85, 1.55], target: [0.35, 1.25, -0.25], fov: 48 },
 };
 
@@ -75,7 +76,7 @@ export const Scene3D: React.FC<{
     pos[1] += Math.cos(frame * 2.7) * 0.015 * k;
   }
   // Zoom de golpe en el remate.
-  const fov = shot.punch ? interpolate(frame, [2, 6], [cam.fov, cam.fov * 0.8], ease) : cam.fov;
+  const fov = shot.punch ? interpolate(frame, [2, 6], [cam.fov, cam.fov * (kind === "claudiaClose" ? 0.9 : 0.8)], ease) : cam.fov;
 
   const showAlejandro = kind === "twoShot" || kind === "alejandro";
   const showClaudia = kind !== "alejandro";
@@ -88,14 +89,14 @@ export const Scene3D: React.FC<{
   return (
     <ThreeCanvas width={width} height={height} style={{ backgroundColor: "#0d0b1a" }}>
       <CameraRig position={pos} target={cam.target} fov={fov} />
-      <Room frame={g} mugOnDesk={!hasCoffee} mugX={mugX} mugZ={mugZ} />
+      <Room frame={g} mugOnDesk={!hasCoffee} mugX={mugX} mugZ={mugZ} xmas={ep.xmas} />
       {showClaudia ? (
         <Claudia
           frame={g}
           talking={talk === "claudia"}
           mouthLevel={talk === "claudia" ? level : undefined}
           position={CLAUDIA_POS}
-          rotationY={kind === "wide" ? -0.75 : kind === "twoShot" ? 0.35 : 0.05}
+          rotationY={kind === "wide" ? -0.75 : kind === "twoShot" || kind === "xmasWide" ? 0.35 : 0.05}
           typing={kind === "wide"}
           lookAway={
             kind === "claudiaAway"
@@ -104,6 +105,7 @@ export const Scene3D: React.FC<{
           }
           offerArm={give}
           eyeStyle={shot.eyes ?? "normal"}
+          santaHat={ep.xmas}
         />
       ) : null}
       {showAlejandro ? (

@@ -64,7 +64,9 @@ export const Alejandro: React.FC<{
   const mouth = mouthLevel ?? mouthOpen(frame, talking);
   const lid = Math.max(0, sleepy - surprised * 0.9); // párpado caído
   const breathe = Math.sin(frame * 0.08) * 0.01;
-  const headTilt = Math.sin(frame * 0.05) * 0.03 + (talking ? Math.sin(frame * 0.3) * 0.02 : 0);
+  const headTilt =
+    Math.sin(frame * 0.05) * 0.03 +
+    (talking ? Math.sin(frame * 0.3) * 0.02 : 0);
   const eyeScale = blink(frame, 17) * (1 + surprised * 0.25);
 
   return (
@@ -133,7 +135,10 @@ export const Alejandro: React.FC<{
       </mesh>
 
       {/* Cabeza */}
-      <group position={[0, 1.78 + breathe, 0]} rotation={[headTilt, 0, headTilt * 0.6]}>
+      <group
+        position={[0, 1.78 + breathe, 0]}
+        rotation={[headTilt, 0, headTilt * 0.6]}
+      >
         <mesh scale={[1, 1.12, 0.95]}>
           <icosahedronGeometry args={[0.3, 1]} />
           <Flat color={skin} />
@@ -184,17 +189,30 @@ export const Alejandro: React.FC<{
             {/* lágrima */}
             {sad > 0.5 ? (
               <mesh
-                position={[x < 0 ? -0.02 : 0.02, -0.09 - ((frame * 0.004) % 0.12), 0.05]}
+                position={[
+                  x < 0 ? -0.02 : 0.02,
+                  -0.09 - ((frame * 0.004) % 0.12),
+                  0.05,
+                ]}
                 scale={[0.8, 1.2, 0.8]}
               >
                 <sphereGeometry args={[0.018, 6, 4]} />
-                <meshStandardMaterial color="#8fd8ff" emissive="#5ab8ff" emissiveIntensity={0.6} roughness={0.1} />
+                <meshStandardMaterial
+                  color="#8fd8ff"
+                  emissive="#5ab8ff"
+                  emissiveIntensity={0.6}
+                  roughness={0.1}
+                />
               </mesh>
             ) : null}
             {/* ceja */}
             <mesh
               position={[0, 0.115 + surprised * 0.05, 0.03]}
-              rotation={[0, 0, (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2 - sad * 0.55)]}
+              rotation={[
+                0,
+                0,
+                (x < 0 ? -1 : 1) * (0.12 - surprised * 0.2 - sad * 0.55),
+              ]}
             >
               <boxGeometry args={[0.12, 0.025, 0.04]} />
               <Flat color="#2b1d14" />
@@ -203,7 +221,10 @@ export const Alejandro: React.FC<{
         ))}
 
         {/* Boca */}
-        <mesh position={[0, -0.15, 0.255]} scale={[1 - sad * 0.35, 0.25 + mouth * 1.4 + surprised * 0.6, 1]}>
+        <mesh
+          position={[0, -0.15, 0.255]}
+          scale={[1 - sad * 0.35, 0.25 + mouth * 1.4 + surprised * 0.6, 1]}
+        >
           <boxGeometry args={[0.12, 0.04, 0.04]} />
           <Flat color="#5b1f22" />
         </mesh>
@@ -250,6 +271,8 @@ export const Claudia: React.FC<{
   mouthLevel?: number;
   /** expresión de los ojos en la pantalla */
   eyeStyle?: EyeStyle;
+  /** gorro de Papá Noel (reemplaza antena y moño) */
+  santaHat?: boolean;
   position?: [number, number, number];
   rotationY?: number;
 }> = ({
@@ -257,6 +280,7 @@ export const Claudia: React.FC<{
   talking,
   mouthLevel,
   eyeStyle = "normal",
+  santaHat = false,
   lookAway = 0,
   typing = false,
   offerArm = 0,
@@ -267,7 +291,9 @@ export const Claudia: React.FC<{
   const eye = blink(frame, 40);
   const bob = Math.sin(frame * 0.12) * 0.01;
   const headYaw = lookAway * 0.7 + Math.sin(frame * 0.06) * 0.04;
-  const headRoll = talking ? Math.sin(frame * 0.25) * 0.05 : Math.sin(frame * 0.05) * 0.03;
+  const headRoll = talking
+    ? Math.sin(frame * 0.25) * 0.05
+    : Math.sin(frame * 0.05) * 0.03;
   const tapL = typing ? Math.max(0, Math.sin(frame * 1.1)) * 0.35 : 0;
   const tapR = typing ? Math.max(0, Math.sin(frame * 1.1 + 2)) * 0.35 : 0;
   const shell = "#f5f1fa";
@@ -356,12 +382,21 @@ export const Claudia: React.FC<{
         {/* Pantalla de la cara */}
         <mesh position={[0, -0.005, 0.171]}>
           <boxGeometry args={[0.38, 0.27, 0.01]} />
-          <meshStandardMaterial color="#17122a" roughness={0.25} metalness={0.2} />
+          <meshStandardMaterial
+            color="#17122a"
+            roughness={0.25}
+            metalness={0.2}
+          />
         </mesh>
         {/* Ojos */}
         {[-0.085, 0.085].map((x) => (
           <group key={x} position={[x, 0.03, 0.178]}>
-            <ClaudiaEye style={eyeStyle} eye={eye} side={x < 0 ? -1 : 1} color={eyeColor} />
+            <ClaudiaEye
+              style={eyeStyle}
+              eye={eye}
+              side={x < 0 ? -1 : 1}
+              color={eyeColor}
+            />
           </group>
         ))}
         {/* Cachetes */}
@@ -373,7 +408,10 @@ export const Claudia: React.FC<{
         ))}
         {/* Boca */}
         {talking ? (
-          <mesh position={[0, -0.075, 0.178]} scale={[1, 0.25 + mouth * 1.2, 1]}>
+          <mesh
+            position={[0, -0.075, 0.178]}
+            scale={[1, 0.25 + mouth * 1.2, 1]}
+          >
             <planeGeometry args={[0.06, 0.04]} />
             <Glow color={eyeColor} />
           </mesh>
@@ -388,29 +426,57 @@ export const Claudia: React.FC<{
           </mesh>
         )}
 
-        {/* Antena con corazón */}
-        <mesh position={[0, 0.25, 0]}>
-          <cylinderGeometry args={[0.008, 0.008, 0.14, 5]} />
-          <Flat color="#b9b3c6" />
-        </mesh>
-        <Heart position={[0, 0.34, 0]} scale={0.045} color={pink} glow />
-        <pointLight position={[0, 0.36, 0.05]} intensity={0.25} distance={0.8} color={pink} />
+        {santaHat ? (
+          <group position={[0, 0.2, 0]} rotation={[0, 0, -0.18]}>
+            <mesh position={[0, 0.16, 0]} rotation={[0, 0, -0.25]}>
+              <coneGeometry args={[0.2, 0.34, 7]} />
+              <Flat color="#e3262f" />
+            </mesh>
+            <mesh rotation={[Math.PI / 2, 0, 0]}>
+              <torusGeometry args={[0.2, 0.045, 5, 10]} />
+              <Flat color="#f7f3ee" />
+            </mesh>
+            <mesh position={[0.07, 0.33, 0]}>
+              <sphereGeometry args={[0.05, 6, 5]} />
+              <Flat color="#f7f3ee" />
+            </mesh>
+          </group>
+        ) : (
+          <>
+            {/* Antena con corazón */}
+            <mesh position={[0, 0.25, 0]}>
+              <cylinderGeometry args={[0.008, 0.008, 0.14, 5]} />
+              <Flat color="#b9b3c6" />
+            </mesh>
+            <Heart position={[0, 0.34, 0]} scale={0.045} color={pink} glow />
+            <pointLight
+              position={[0, 0.36, 0.05]}
+              intensity={0.25}
+              distance={0.8}
+              color={pink}
+            />
 
-        {/* Moño */}
-        <group position={[0.15, 0.2, 0.12]} rotation={[0, 0, -0.3]} scale={1.3}>
-          <mesh position={[-0.045, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-            <coneGeometry args={[0.045, 0.09, 4]} />
-            <Flat color={pink} />
-          </mesh>
-          <mesh position={[0.045, 0, 0]} rotation={[0, 0, -Math.PI / 2]}>
-            <coneGeometry args={[0.045, 0.09, 4]} />
-            <Flat color={pink} />
-          </mesh>
-          <mesh>
-            <sphereGeometry args={[0.022, 6, 4]} />
-            <Flat color="#ff4f8f" />
-          </mesh>
-        </group>
+            {/* Moño */}
+            <group
+              position={[0.15, 0.2, 0.12]}
+              rotation={[0, 0, -0.3]}
+              scale={1.3}
+            >
+              <mesh position={[-0.045, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+                <coneGeometry args={[0.045, 0.09, 4]} />
+                <Flat color={pink} />
+              </mesh>
+              <mesh position={[0.045, 0, 0]} rotation={[0, 0, -Math.PI / 2]}>
+                <coneGeometry args={[0.045, 0.09, 4]} />
+                <Flat color={pink} />
+              </mesh>
+              <mesh>
+                <sphereGeometry args={[0.022, 6, 4]} />
+                <Flat color="#ff4f8f" />
+              </mesh>
+            </group>
+          </>
+        )}
       </group>
     </group>
   );
@@ -423,7 +489,11 @@ export const Heart: React.FC<{
   color: string;
   glow?: boolean;
 }> = ({ position, scale, color, glow }) => {
-  const mat = glow ? <Glow color={color} /> : <Flat color={color} emissive={color} ei={0.4} />;
+  const mat = glow ? (
+    <Glow color={color} />
+  ) : (
+    <Flat color={color} emissive={color} ei={0.4} />
+  );
   return (
     <group position={position} scale={scale}>
       <mesh position={[-0.5, 0.25, 0]}>
@@ -474,18 +544,25 @@ export const Mug: React.FC<{ steam?: number }> = ({ steam = 0 }) => (
   </group>
 );
 
-export type EyeStyle = "normal" | "serious" | "happy" | "hearts" | "smug";
+export type EyeStyle = "normal" | "serious" | "happy" | "hearts" | "smug" | "flat";
 
 /** Un ojo de Claudia según la expresión. `side` = -1 izquierdo, 1 derecho. */
-const ClaudiaEye: React.FC<{ style: EyeStyle; eye: number; side: number; color: string }> = ({
-  style,
-  eye,
-  side,
-  color,
-}) => {
+const ClaudiaEye: React.FC<{
+  style: EyeStyle;
+  eye: number;
+  side: number;
+  color: string;
+}> = ({ style, eye, side, color }) => {
   if (style === "hearts") {
     const beat = 1 + Math.abs(Math.sin(eye * 3)) * 0.05;
-    return <Heart position={[0, 0, 0.001]} scale={0.042 * beat} color="#ff6fa6" glow />;
+    return (
+      <Heart
+        position={[0, 0, 0.001]}
+        scale={0.042 * beat}
+        color="#ff6fa6"
+        glow
+      />
+    );
   }
   if (style === "happy") {
     // ^ ^
@@ -496,29 +573,35 @@ const ClaudiaEye: React.FC<{ style: EyeStyle; eye: number; side: number; color: 
       </mesh>
     );
   }
-  const squash = style === "serious" ? 0.45 : style === "smug" ? 0.5 : 1;
+  const squash = style === "serious" ? 0.45 : style === "smug" || style === "flat" ? 0.5 : 1;
   return (
     <group>
       <mesh scale={[1, eye * squash, 1]}>
         <circleGeometry args={[0.048, 10]} />
         <Glow color={color} />
       </mesh>
-      <mesh position={[0.016, 0.018 * squash, 0.001]} scale={[1, eye * squash, 1]}>
+      <mesh
+        position={[0.016, 0.018 * squash, 0.001]}
+        scale={[1, eye * squash, 1]}
+      >
         <circleGeometry args={[0.014, 8]} />
         <Glow color="#ffffff" />
       </mesh>
-      {style === "serious" || style === "smug" ? (
+      {style === "serious" || style === "smug" || style === "flat" ? (
         // ceja/párpado recto
         <mesh
           position={[0, 0.035, 0.001]}
-          rotation={[0, 0, style === "serious" ? side * -0.25 : side * 0.12]}
+          rotation={[0, 0, style === "serious" ? side * -0.25 : style === "flat" ? 0 : side * 0.12]}
         >
           <planeGeometry args={[0.11, 0.012]} />
           <Glow color={color} />
         </mesh>
       ) : (
         // pestañas
-        <mesh position={[side * 0.045, 0.045 * eye, 0.001]} rotation={[0, 0, side * -0.6]}>
+        <mesh
+          position={[side * 0.045, 0.045 * eye, 0.001]}
+          rotation={[0, 0, side * -0.6]}
+        >
           <planeGeometry args={[0.035, 0.009]} />
           <Glow color={color} />
         </mesh>

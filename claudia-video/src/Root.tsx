@@ -2,6 +2,7 @@ import React from "react";
 import { Composition, Still } from "remotion";
 import { EP1 } from "./episodes/ep1";
 import { EP2 } from "./episodes/ep2";
+import { NAVIDAD } from "./episodes/navidad";
 import { EpisodeVideo } from "./Episode";
 import { ProfilePic } from "./ProfilePic";
 import { episodeFrames, FPS } from "./script";
@@ -23,6 +24,15 @@ export const RemotionRoot: React.FC = () => {
         component={EpisodeVideo}
         defaultProps={{ ep: EP2 }}
         durationInFrames={episodeFrames(EP2)}
+        fps={FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="ClaudiaNavidad"
+        component={EpisodeVideo}
+        defaultProps={{ ep: NAVIDAD }}
+        durationInFrames={episodeFrames(NAVIDAD)}
         fps={FPS}
         width={1080}
         height={1920}

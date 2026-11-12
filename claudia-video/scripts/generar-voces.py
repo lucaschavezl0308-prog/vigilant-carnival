@@ -36,6 +36,7 @@ MOODS = {
     "tender": (-4, -4, -10),
     "smug": (-6, -6, 0),
     "excited": (16, 12, 15),
+    "deadpan": (-8, -12, -5),
 }
 # Toque robótico sutil para Claudia (chorus corto + brillo).
 ROBOT_FX = "chorus=0.6:0.85:18|26:0.35|0.25:0.4|0.6:2|1.5,highpass=f=140,treble=g=3"

@@ -14,7 +14,8 @@ export type Mood =
   | "proud"
   | "tender"
   | "smug"
-  | "excited";
+  | "excited"
+  | "deadpan";
 
 export type ShotKind =
   | "wide"
@@ -28,7 +29,9 @@ export type ShotKind =
   | "mercado"
   | "seguidores"
   | "end"
-  | "end2";
+  | "end2"
+  | "xmasWide"
+  | "compras";
 
 export type Sfx = "boom" | "scratch" | "ding" | "pop" | "whoosh";
 
@@ -60,6 +63,8 @@ export type Episode = {
   wordCaptions: boolean;
   /** cuánto avanzó el amanecer al empezar (en frames de 0..1200) */
   dawnStart: number;
+  /** decoración navideña y gorro de Papá Noel */
+  xmas?: boolean;
   /** segundos de aire después de cada frase (menos = más ritmo) */
   voiceTail?: number;
   shots: Shot[];
