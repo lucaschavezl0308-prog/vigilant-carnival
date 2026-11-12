@@ -18,6 +18,7 @@ import { ComprasScreen } from "./ui/NavidadUi";
 import { EmpresaScreen, PcSaldoScreen, VendidosScreen } from "./ui/AlarmaUi";
 import { LiveOverlay, PovTitle } from "./ui/LiveUi";
 import { ReciboScreen } from "./ui/JefaUi";
+import { ChatScreen, NotifScreen } from "./ui/MaquinaUi";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
@@ -49,7 +50,7 @@ const Clock: React.FC = () => {
   );
 };
 
-const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras", "pcSaldo", "vendidos", "empresa", "recibo"]);
+const UI_KINDS = new Set(["webs", "ventas", "mercado", "seguidores", "end", "end2", "compras", "pcSaldo", "vendidos", "empresa", "recibo", "notif", "chat"]);
 
 const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, shot, offset }) => {
   const voice = voiceInfo(ep.id, shot.id);
@@ -77,6 +78,10 @@ const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, s
         return <EmpresaScreen />;
       case "recibo":
         return <ReciboScreen />;
+      case "notif":
+        return <NotifScreen from={shot.notif?.from ?? ""} text={shot.notif?.text ?? ""} />;
+      case "chat":
+        return <ChatScreen />;
       default:
         return <Scene3D ep={ep} shot={shot} globalOffset={offset} />;
     }
@@ -110,7 +115,7 @@ const ShotView: React.FC<{ ep: Episode; shot: Shot; offset: number }> = ({ ep, s
         ep.wordCaptions && voice ? (
           <WordCaptions
             words={voice.words}
-            top={UI_KINDS.has(shot.kind) ? 250 : shot.kind === "live" ? (shot.pov ? 520 : 330) : 1210}
+            top={shot.kind === "notif" ? 1500 : UI_KINDS.has(shot.kind) ? 250 : shot.kind === "live" ? (shot.pov ? 520 : 330) : 1210}
           />
         ) : (
           <Sequence from={2} layout="absolute-fill">

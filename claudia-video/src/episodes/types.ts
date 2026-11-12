@@ -40,7 +40,9 @@ export type ShotKind =
   | "vendidos"
   | "empresa"
   | "live"
-  | "recibo";
+  | "recibo"
+  | "notif"
+  | "chat";
 
 export type Sfx = "boom" | "scratch" | "ding" | "pop" | "whoosh";
 
@@ -80,6 +82,8 @@ export type Shot = {
   lookBack?: boolean;
   /** texto "POV: ..." al inicio de la toma */
   pov?: string;
+  /** notificación que aparece en el celular (toma "notif") */
+  notif?: { from: string; text: string };
   /** acercamiento extra de la cámara (1 = normal) */
   zoom?: number;
 };
