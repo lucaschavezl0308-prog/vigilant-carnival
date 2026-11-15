@@ -1,0 +1,860 @@
+{
+ "id": "01",
+ "slug": "hora-de-lanzamiento",
+ "fps": 30,
+ "durationInFrames": 6750,
+ "audio": "audio/01.wav",
+ "title": "¿A qué hora sale GTA 6? Horario por países (España y Latinoamérica)",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 544,
+   "beats": [
+    16,
+    127,
+    296,
+    496
+   ],
+   "data": {
+    "kicker": "GTA 6 · jueves 19 de noviembre",
+    "title": "¿A qué hora puedes jugar?",
+    "subtitle": "Horarios por país y qué hacer si no arranca"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "stat",
+   "from": 544,
+   "duration": 713,
+   "beats": [
+    9,
+    201,
+    357,
+    485
+   ],
+   "data": {
+    "value": "00:00",
+    "label": "Hora local · jueves 19",
+    "sub": "Cada tienda abre a medianoche en su región",
+    "icon": "clock"
+   },
+   "chapter": "La regla general",
+   "reveals": []
+  },
+  {
+   "type": "table",
+   "from": 1257,
+   "duration": 570,
+   "beats": [
+    9,
+    58,
+    294
+   ],
+   "data": {
+    "heading": "España",
+    "columns": [
+     "Zona",
+     "Hora",
+     "Día"
+    ],
+    "rows": [
+     [
+      "Península y Baleares",
+      "00:00",
+      "jueves 19"
+     ],
+     [
+      "Canarias",
+      "23:00",
+      "miércoles 18"
+     ]
+    ],
+    "note": "Según los horarios publicados por región. Compruébalo en la ficha de tu tienda."
+   },
+   "chapter": "España",
+   "reveals": [
+    58,
+    294
+   ]
+  },
+  {
+   "type": "table",
+   "from": 1827,
+   "duration": 1007,
+   "beats": [
+    9,
+    129,
+    271,
+    406,
+    545,
+    744
+   ],
+   "data": {
+    "heading": "Latinoamérica y EE. UU.",
+    "columns": [
+     "País",
+     "Hora local",
+     "Hora en España"
+    ],
+    "rows": [
+     [
+      "México (centro)",
+      "00:00",
+      "07:00"
+     ],
+     [
+      "Colombia y Perú",
+      "00:00",
+      "06:00"
+     ],
+     [
+      "Argentina y Chile",
+      "00:00",
+      "04:00"
+     ],
+     [
+      "EE. UU. (costa este)",
+      "00:00",
+      "06:00"
+     ]
+    ],
+    "note": "Siempre medianoche del jueves 19 en tu hora local."
+   },
+   "chapter": "Latinoamérica",
+   "reveals": [
+    129,
+    271,
+    406,
+    545
+   ]
+  },
+  {
+   "type": "stat",
+   "from": 2834,
+   "duration": 603,
+   "beats": [
+    9,
+    94,
+    279,
+    451
+   ],
+   "data": {
+    "value": "12:00",
+    "label": "Miércoles 18, hora de España",
+    "sub": "Nueva Zelanda es la primera en llegar a la medianoche del jueves",
+    "icon": "globe"
+   },
+   "chapter": "Quién juega primero",
+   "reveals": []
+  },
+  {
+   "type": "warning",
+   "from": 3437,
+   "duration": 930,
+   "beats": [
+    9,
+    103,
+    347,
+    561,
+    759
+   ],
+   "data": {
+    "heading": "¿Cambiar la región a Nueva Zelanda?",
+    "items": [
+     "En Xbox ha funcionado con otros lanzamientos por hora local",
+     "No hay garantía de que funcione con GTA 6",
+     "Cambia la tienda y los precios que ves: vuelve a tu región",
+     "En PlayStation la región va con tu cuenta: no aplica"
+    ]
+   },
+   "chapter": "¿Se puede jugar antes?",
+   "reveals": [
+    103,
+    347,
+    561,
+    759
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 4367,
+   "duration": 769,
+   "beats": [
+    9,
+    80,
+    305,
+    542
+   ],
+   "data": {
+    "heading": "Precarga: lo que debes saber",
+    "items": [
+     {
+      "icon": "download",
+      "text": "Disponible si reservaste en digital"
+     },
+     {
+      "icon": "hard-drive",
+      "text": "Ocupa hasta 212 GB"
+     },
+     {
+      "icon": "lock",
+      "text": "No permite jugar antes de la hora"
+     },
+     {
+      "icon": "wifi",
+      "text": "¿Compras el día 19? Descarga completa"
+     }
+    ]
+   },
+   "chapter": "La precarga",
+   "reveals": [
+    9,
+    80,
+    305,
+    542
+   ]
+  },
+  {
+   "type": "checklist",
+   "from": 5136,
+   "duration": 1033,
+   "beats": [
+    9,
+    141,
+    323,
+    389,
+    614,
+    855
+   ],
+   "data": {
+    "heading": "Si a medianoche no arranca",
+    "items": [
+     "Descarga al 100 % y sin parches pendientes",
+     "Reinicia la consola",
+     "PS5: Restaurar licencias",
+     "Mira el estado de PSN o Xbox",
+     "Paciencia: los servidores se saturan"
+    ]
+   },
+   "chapter": "Si no te deja jugar",
+   "reveals": [
+    141,
+    323,
+    389,
+    614,
+    855
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 6169,
+   "duration": 581,
+   "beats": [
+    9,
+    291,
+    467
+   ],
+   "data": {
+    "title": "Resumen rápido",
+    "points": [
+     "Medianoche, hora local, del jueves 19",
+     "Nueva Zelanda primero",
+     "España a las 00:00 · Latinoamérica unas horas después"
+    ],
+    "next": "¿Cuánto ocupa GTA 6?",
+    "cta": "Suscríbete para no perderte nada"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 96,
+   "text": "GTA 6 ya tiene día: el jueves 19 de"
+  },
+  {
+   "from": 96,
+   "to": 118,
+   "text": "noviembre."
+  },
+  {
+   "from": 127,
+   "to": 187,
+   "text": "Pero la pregunta que todo el mundo se"
+  },
+  {
+   "from": 187,
+   "to": 247,
+   "text": "hace es otra: ¿a qué hora exactamente"
+  },
+  {
+   "from": 247,
+   "to": 283,
+   "text": "puedo empezar a jugar?"
+  },
+  {
+   "from": 296,
+   "to": 355,
+   "text": "Aquí tienes el horario de España y de"
+  },
+  {
+   "from": 355,
+   "to": 414,
+   "text": "Latinoamérica, quién juega primero, y"
+  },
+  {
+   "from": 414,
+   "to": 487,
+   "text": "qué hacer si a medianoche el juego no arranca."
+  },
+  {
+   "from": 496,
+   "to": 528,
+   "text": "Vamos al grano."
+  },
+  {
+   "from": 553,
+   "to": 627,
+   "text": "La regla general es sencilla: GTA 6 se"
+  },
+  {
+   "from": 627,
+   "to": 705,
+   "text": "desbloquea a medianoche, hora local, del"
+  },
+  {
+   "from": 705,
+   "to": 736,
+   "text": "19 de noviembre."
+  },
+  {
+   "from": 745,
+   "to": 805,
+   "text": "No hay una hora mundial única. Cada"
+  },
+  {
+   "from": 805,
+   "to": 870,
+   "text": "tienda abre cuando llega la medianoche"
+  },
+  {
+   "from": 870,
+   "to": 892,
+   "text": "en su región."
+  },
+  {
+   "from": 901,
+   "to": 960,
+   "text": "Por eso unos países juegan antes que"
+  },
+  {
+   "from": 960,
+   "to": 1020,
+   "text": "otros, aunque la fecha sea la misma."
+  },
+  {
+   "from": 1029,
+   "to": 1101,
+   "text": "Y recuerda: hablamos de PS5 y Xbox"
+  },
+  {
+   "from": 1101,
+   "to": 1173,
+   "text": "Series X|S, las únicas plataformas"
+  },
+  {
+   "from": 1173,
+   "to": 1241,
+   "text": "confirmadas para el lanzamiento."
+  },
+  {
+   "from": 1266,
+   "to": 1306,
+   "text": "Empezamos por España."
+  },
+  {
+   "from": 1315,
+   "to": 1397,
+   "text": "En la península y en Baleares, GTA 6 se"
+  },
+  {
+   "from": 1397,
+   "to": 1479,
+   "text": "desbloquea a las 00:00, justo cuando el"
+  },
+  {
+   "from": 1479,
+   "to": 1542,
+   "text": "miércoles 18 pasa a jueves 19."
+  },
+  {
+   "from": 1551,
+   "to": 1623,
+   "text": "En Canarias, como la tienda española usa"
+  },
+  {
+   "from": 1623,
+   "to": 1692,
+   "text": "la hora peninsular, según los horarios"
+  },
+  {
+   "from": 1692,
+   "to": 1763,
+   "text": "publicados podrás jugar una hora antes:"
+  },
+  {
+   "from": 1763,
+   "to": 1810,
+   "text": "a las 23:00 del miércoles."
+  },
+  {
+   "from": 1836,
+   "to": 1900,
+   "text": "En Latinoamérica la regla es la misma:"
+  },
+  {
+   "from": 1900,
+   "to": 1947,
+   "text": "medianoche en tu hora local."
+  },
+  {
+   "from": 1956,
+   "to": 2018,
+   "text": "En el centro de México, eso equivale a"
+  },
+  {
+   "from": 2018,
+   "to": 2089,
+   "text": "las siete de la mañana del jueves en España."
+  },
+  {
+   "from": 2098,
+   "to": 2161,
+   "text": "En Colombia y en Perú, medianoche local,"
+  },
+  {
+   "from": 2161,
+   "to": 2224,
+   "text": "que son las seis de la mañana en España."
+  },
+  {
+   "from": 2233,
+   "to": 2291,
+   "text": "En Argentina y en Chile, medianoche"
+  },
+  {
+   "from": 2291,
+   "to": 2363,
+   "text": "local, las cuatro de la madrugada en España."
+  },
+  {
+   "from": 2372,
+   "to": 2431,
+   "text": "Y en la costa este de Estados Unidos,"
+  },
+  {
+   "from": 2431,
+   "to": 2490,
+   "text": "también a medianoche, que en la costa"
+  },
+  {
+   "from": 2490,
+   "to": 2546,
+   "text": "oeste son las nueve de la noche del"
+  },
+  {
+   "from": 2546,
+   "to": 2562,
+   "text": "miércoles."
+  },
+  {
+   "from": 2571,
+   "to": 2637,
+   "text": "Un detalle: si vives en Baja California,"
+  },
+  {
+   "from": 2637,
+   "to": 2701,
+   "text": "la tienda mexicana suele ir con la hora"
+  },
+  {
+   "from": 2701,
+   "to": 2766,
+   "text": "del centro, así que podrías jugar a las"
+  },
+  {
+   "from": 2766,
+   "to": 2817,
+   "text": "diez de la noche del miércoles."
+  },
+  {
+   "from": 2843,
+   "to": 2919,
+   "text": "¿Y quién juega antes que nadie? Nueva Zelanda."
+  },
+  {
+   "from": 2928,
+   "to": 2994,
+   "text": "Por su zona horaria, allí la medianoche"
+  },
+  {
+   "from": 2994,
+   "to": 3049,
+   "text": "del jueves llega cuando en España"
+  },
+  {
+   "from": 3049,
+   "to": 3104,
+   "text": "todavía es miércoles a mediodía."
+  },
+  {
+   "from": 3113,
+   "to": 3184,
+   "text": "Así que durante ese miércoles empezarás"
+  },
+  {
+   "from": 3184,
+   "to": 3250,
+   "text": "a ver los primeros vídeos y capturas"
+  },
+  {
+   "from": 3250,
+   "to": 3276,
+   "text": "desde Oceanía."
+  },
+  {
+   "from": 3285,
+   "to": 3340,
+   "text": "Si no quieres spoilers, ese es el"
+  },
+  {
+   "from": 3340,
+   "to": 3404,
+   "text": "momento de silenciar palabras clave en"
+  },
+  {
+   "from": 3404,
+   "to": 3421,
+   "text": "tus redes."
+  },
+  {
+   "from": 3446,
+   "to": 3509,
+   "text": "Seguro que has oído hablar del truco de"
+  },
+  {
+   "from": 3509,
+   "to": 3531,
+   "text": "Nueva Zelanda."
+  },
+  {
+   "from": 3540,
+   "to": 3599,
+   "text": "En Xbox, con algunos juegos que se"
+  },
+  {
+   "from": 3599,
+   "to": 3665,
+   "text": "desbloquean por hora local, cambiar la"
+  },
+  {
+   "from": 3665,
+   "to": 3733,
+   "text": "región de la consola a Nueva Zelanda ha"
+  },
+  {
+   "from": 3733,
+   "to": 3775,
+   "text": "permitido empezar antes."
+  },
+  {
+   "from": 3784,
+   "to": 3846,
+   "text": "Pero no hay ninguna garantía de que"
+  },
+  {
+   "from": 3846,
+   "to": 3907,
+   "text": "funcione con GTA 6: depende de cómo"
+  },
+  {
+   "from": 3907,
+   "to": 3971,
+   "text": "configuren el lanzamiento Rockstar y"
+  },
+  {
+   "from": 3971,
+   "to": 3989,
+   "text": "Microsoft."
+  },
+  {
+   "from": 3998,
+   "to": 4057,
+   "text": "Además, cambiar de región afecta a la"
+  },
+  {
+   "from": 4057,
+   "to": 4119,
+   "text": "tienda y a los precios que ves, así que"
+  },
+  {
+   "from": 4119,
+   "to": 4187,
+   "text": "acuérdate de volver a dejarla como estaba."
+  },
+  {
+   "from": 4196,
+   "to": 4261,
+   "text": "En PlayStation la región va ligada a tu"
+  },
+  {
+   "from": 4261,
+   "to": 4324,
+   "text": "cuenta, no a la consola, así que este"
+  },
+  {
+   "from": 4324,
+   "to": 4351,
+   "text": "truco no aplica."
+  },
+  {
+   "from": 4376,
+   "to": 4438,
+   "text": "Un detalle importante: la precarga."
+  },
+  {
+   "from": 4447,
+   "to": 4531,
+   "text": "Si reservaste GTA 6 en formato digital,"
+  },
+  {
+   "from": 4531,
+   "to": 4590,
+   "text": "puedes descargarlo antes del"
+  },
+  {
+   "from": 4590,
+   "to": 4663,
+   "text": "lanzamiento, y ocupa hasta 212 GB."
+  },
+  {
+   "from": 4672,
+   "to": 4735,
+   "text": "La precarga no te deja jugar antes de"
+  },
+  {
+   "from": 4735,
+   "to": 4803,
+   "text": "tiempo: el juego se desbloquea a la hora"
+  },
+  {
+   "from": 4803,
+   "to": 4870,
+   "text": "oficial, y en ese momento puede pedirte"
+  },
+  {
+   "from": 4870,
+   "to": 4900,
+   "text": "una actualización."
+  },
+  {
+   "from": 4909,
+   "to": 4973,
+   "text": "Si lo compras el mismo jueves, tendrás"
+  },
+  {
+   "from": 4973,
+   "to": 5038,
+   "text": "que descargarlo entero, así que con una"
+  },
+  {
+   "from": 5038,
+   "to": 5103,
+   "text": "conexión normal cuenta con varias horas"
+  },
+  {
+   "from": 5103,
+   "to": 5120,
+   "text": "de espera."
+  },
+  {
+   "from": 5145,
+   "to": 5197,
+   "text": "¿Y si llega la hora y el juego no"
+  },
+  {
+   "from": 5197,
+   "to": 5268,
+   "text": "arranca? Antes de entrar en pánico, haz esto."
+  },
+  {
+   "from": 5277,
+   "to": 5347,
+   "text": "Primero, comprueba que la descarga está"
+  },
+  {
+   "from": 5347,
+   "to": 5419,
+   "text": "de verdad al 100 % y que no queda ningún"
+  },
+  {
+   "from": 5419,
+   "to": 5450,
+   "text": "parche pendiente."
+  },
+  {
+   "from": 5459,
+   "to": 5516,
+   "text": "Segundo, reinicia la consola."
+  },
+  {
+   "from": 5525,
+   "to": 5587,
+   "text": "Tercero, si en PlayStation te dice que"
+  },
+  {
+   "from": 5587,
+   "to": 5647,
+   "text": "no tienes licencia, prueba la opción"
+  },
+  {
+   "from": 5647,
+   "to": 5710,
+   "text": "Restaurar licencias, en los ajustes de"
+  },
+  {
+   "from": 5710,
+   "to": 5741,
+   "text": "usuarios y cuentas."
+  },
+  {
+   "from": 5750,
+   "to": 5811,
+   "text": "Cuarto, mira la página de estado de"
+  },
+  {
+   "from": 5811,
+   "to": 5869,
+   "text": "PlayStation Network o de Xbox. Con"
+  },
+  {
+   "from": 5869,
+   "to": 5937,
+   "text": "millones de personas entrando a la vez,"
+  },
+  {
+   "from": 5937,
+   "to": 5982,
+   "text": "es normal que haya caídas."
+  },
+  {
+   "from": 5991,
+   "to": 6062,
+   "text": "Y si nada de eso funciona, paciencia: en"
+  },
+  {
+   "from": 6062,
+   "to": 6131,
+   "text": "lanzamientos así, la primera hora suele"
+  },
+  {
+   "from": 6131,
+   "to": 6153,
+   "text": "ser un caos."
+  },
+  {
+   "from": 6178,
+   "to": 6252,
+   "text": "Resumen rápido: medianoche, hora local,"
+  },
+  {
+   "from": 6252,
+   "to": 6315,
+   "text": "del jueves 19 de noviembre. Nueva"
+  },
+  {
+   "from": 6315,
+   "to": 6388,
+   "text": "Zelanda primero, España a las 00:00, y"
+  },
+  {
+   "from": 6388,
+   "to": 6451,
+   "text": "Latinoamérica unas horas después."
+  },
+  {
+   "from": 6460,
+   "to": 6516,
+   "text": "En el canal tienes guías para hacer"
+  },
+  {
+   "from": 6516,
+   "to": 6576,
+   "text": "sitio en la consola, elegir edición y"
+  },
+  {
+   "from": 6576,
+   "to": 6627,
+   "text": "llegar listo a la primera noche."
+  },
+  {
+   "from": 6636,
+   "to": 6703,
+   "text": "Suscríbete para no perderte nada. Nos"
+  },
+  {
+   "from": 6703,
+   "to": 6734,
+   "text": "vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 544,
+   "title": "La regla general"
+  },
+  {
+   "from": 1257,
+   "title": "España"
+  },
+  {
+   "from": 1827,
+   "title": "Latinoamérica"
+  },
+  {
+   "from": 2834,
+   "title": "Quién juega primero"
+  },
+  {
+   "from": 3437,
+   "title": "¿Se puede jugar antes?"
+  },
+  {
+   "from": 4367,
+   "title": "La precarga"
+  },
+  {
+   "from": 5136,
+   "title": "Si no te deja jugar"
+  },
+  {
+   "from": 6169,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿A QUÉ HORA",
+  "big": "SALE?",
+  "tag": "GTA 6",
+  "accent": "00:00",
+  "visual": "clock"
+ }
+}

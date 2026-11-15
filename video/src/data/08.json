@@ -1,0 +1,534 @@
+{
+ "id": "08",
+ "slug": "mapa-leonida",
+ "fps": 30,
+ "durationInFrames": 3413,
+ "audio": "audio/08.wav",
+ "title": "El mapa de GTA 6: Leonida zona por zona (y sus lugares reales)",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 455,
+   "beats": [
+    16,
+    148,
+    292
+   ],
+   "data": {
+    "kicker": "GTA 6 · el mapa",
+    "title": "Leonida, zona por zona",
+    "subtitle": "Las 6 regiones que ha mostrado Rockstar"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "map",
+   "from": 455,
+   "duration": 598,
+   "beats": [
+    9,
+    113,
+    306
+   ],
+   "data": {
+    "heading": "El sur",
+    "note": "Mapa ilustrativo: posiciones aproximadas.",
+    "regions": [
+     {
+      "id": "vice-city",
+      "name": "Vice City",
+      "real": "Miami",
+      "desc": "La gran ciudad: playas, neones, coches de lujo y vida nocturna sin descanso."
+     },
+     {
+      "id": "keys",
+      "name": "Leonida Keys",
+      "real": "Cayos de Florida",
+      "desc": "Cadena de islas al sur, entre puentes, barcos y contrabando."
+     }
+    ]
+   },
+   "chapter": "Vice City y los Keys",
+   "reveals": [
+    113,
+    306
+   ]
+  },
+  {
+   "type": "map",
+   "from": 1053,
+   "duration": 463,
+   "beats": [
+    9,
+    101,
+    284
+   ],
+   "data": {
+    "heading": "Pantanos y golfo",
+    "note": "Mapa ilustrativo: posiciones aproximadas.",
+    "context": [
+     "vice-city",
+     "keys"
+    ],
+    "regions": [
+     {
+      "id": "grassrivers",
+      "name": "Grassrivers",
+      "real": "Everglades",
+      "desc": "Pantanos salvajes: caimanes, hidrodeslizadores y muy poca ley."
+     },
+     {
+      "id": "port-gellhorn",
+      "name": "Port Gellhorn",
+      "real": "Costa del Golfo",
+      "desc": "Un pueblo costero que vivió tiempos mejores."
+     }
+    ]
+   },
+   "chapter": "Pantanos y golfo",
+   "reveals": [
+    101,
+    284
+   ]
+  },
+  {
+   "type": "map",
+   "from": 1516,
+   "duration": 485,
+   "beats": [
+    9,
+    77,
+    289
+   ],
+   "data": {
+    "heading": "Interior y norte",
+    "note": "Mapa ilustrativo: posiciones aproximadas.",
+    "context": [
+     "vice-city",
+     "keys",
+     "grassrivers",
+     "port-gellhorn"
+    ],
+    "regions": [
+     {
+      "id": "ambrosia",
+      "name": "Ambrosia",
+      "real": "Interior agrícola",
+      "desc": "Zona industrial del interior, marcada por su refinería de azúcar."
+     },
+     {
+      "id": "kalaga",
+      "name": "Mount Kalaga",
+      "real": "Bosques del norte",
+      "desc": "Parque nacional: bosque, ríos, caza y caminos de tierra."
+     }
+    ]
+   },
+   "chapter": "Interior y norte",
+   "reveals": [
+    77,
+    289
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2001,
+   "duration": 537,
+   "beats": [
+    9,
+    115,
+    263,
+    335,
+    423
+   ],
+   "data": {
+    "heading": "Lo que ya hemos visto de Leonida",
+    "items": [
+     {
+      "icon": "phone",
+      "text": "Vídeos virales al estilo redes sociales"
+     },
+     {
+      "icon": "music",
+      "text": "Fiesta y vida nocturna en Vice City"
+     },
+     {
+      "icon": "car",
+      "text": "Coches tuneados, atascos y persecuciones"
+     },
+     {
+      "icon": "waves",
+      "text": "Playas, barcos y lanchas por toda la costa"
+     }
+    ]
+   },
+   "chapter": "Lo visto en los tráileres",
+   "reveals": [
+    115,
+    263,
+    335,
+    423
+   ]
+  },
+  {
+   "type": "stat",
+   "from": 2538,
+   "duration": 457,
+   "beats": [
+    9,
+    127,
+    319
+   ],
+   "data": {
+    "value": "6",
+    "label": "Regiones mostradas",
+    "sub": "Ojo con las comparaciones de tamaño: muchas son estimaciones de fans",
+    "icon": "pin"
+   },
+   "chapter": "¿Cómo de grande es?",
+   "reveals": []
+  },
+  {
+   "type": "outro",
+   "from": 2995,
+   "duration": 418,
+   "beats": [
+    9,
+    244,
+    363
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "Vice City y Leonida Keys al sur",
+     "Grassrivers y Port Gellhorn",
+     "Ambrosia y Mount Kalaga"
+    ],
+    "next": "Personajes: quién es quién",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 85,
+   "text": "GTA 6 nos lleva al estado de Leonida, la"
+  },
+  {
+   "from": 85,
+   "to": 139,
+   "text": "versión de Rockstar de Florida."
+  },
+  {
+   "from": 148,
+   "to": 211,
+   "text": "Y no es solo Vice City: hay pantanos,"
+  },
+  {
+   "from": 211,
+   "to": 283,
+   "text": "islas, pueblos de costa y bosques enormes."
+  },
+  {
+   "from": 292,
+   "to": 348,
+   "text": "Vamos a recorrer las seis zonas que"
+  },
+  {
+   "from": 348,
+   "to": 408,
+   "text": "Rockstar ha mostrado, y en qué lugares"
+  },
+  {
+   "from": 408,
+   "to": 439,
+   "text": "reales se inspiran."
+  },
+  {
+   "from": 464,
+   "to": 526,
+   "text": "Empezamos por el sur, que es donde está"
+  },
+  {
+   "from": 526,
+   "to": 559,
+   "text": "el corazón del juego."
+  },
+  {
+   "from": 568,
+   "to": 632,
+   "text": "Vice City es la gran ciudad, inspirada"
+  },
+  {
+   "from": 632,
+   "to": 698,
+   "text": "en Miami: playas, neones, coches de lujo"
+  },
+  {
+   "from": 698,
+   "to": 752,
+   "text": "y una vida nocturna que no para."
+  },
+  {
+   "from": 761,
+   "to": 821,
+   "text": "Justo debajo, los Leonida Keys, una"
+  },
+  {
+   "from": 821,
+   "to": 886,
+   "text": "cadena de islas inspirada en los cayos"
+  },
+  {
+   "from": 886,
+   "to": 954,
+   "text": "de Florida. Allí arranca buena parte de"
+  },
+  {
+   "from": 954,
+   "to": 1016,
+   "text": "la historia de Jason, entre barcos y"
+  },
+  {
+   "from": 1016,
+   "to": 1036,
+   "text": "contrabando."
+  },
+  {
+   "from": 1062,
+   "to": 1145,
+   "text": "Hacia el interior, el paisaje cambia por completo."
+  },
+  {
+   "from": 1154,
+   "to": 1211,
+   "text": "Grassrivers es la zona de pantanos,"
+  },
+  {
+   "from": 1211,
+   "to": 1274,
+   "text": "inspirada en los Everglades: caimanes,"
+  },
+  {
+   "from": 1274,
+   "to": 1328,
+   "text": "hidrodeslizadores y muy poca ley."
+  },
+  {
+   "from": 1337,
+   "to": 1397,
+   "text": "Y al noroeste, en la costa del Golfo,"
+  },
+  {
+   "from": 1397,
+   "to": 1457,
+   "text": "está Port Gellhorn, un pueblo costero"
+  },
+  {
+   "from": 1457,
+   "to": 1499,
+   "text": "que vivió tiempos mejores."
+  },
+  {
+   "from": 1525,
+   "to": 1584,
+   "text": "Subimos hacia el centro y el norte."
+  },
+  {
+   "from": 1593,
+   "to": 1650,
+   "text": "Ambrosia es la zona industrial del"
+  },
+  {
+   "from": 1650,
+   "to": 1713,
+   "text": "interior, marcada por su refinería de"
+  },
+  {
+   "from": 1713,
+   "to": 1796,
+   "text": "azúcar, y por gente con la que mejor no cruzarse."
+  },
+  {
+   "from": 1805,
+   "to": 1873,
+   "text": "Y arriba del todo, el parque nacional de"
+  },
+  {
+   "from": 1873,
+   "to": 1930,
+   "text": "Mount Kalaga: bosque, ríos, caza y"
+  },
+  {
+   "from": 1930,
+   "to": 1984,
+   "text": "caminos de tierra para perderse."
+  },
+  {
+   "from": 2010,
+   "to": 2057,
+   "text": "Y por lo que se ha visto en los"
+  },
+  {
+   "from": 2057,
+   "to": 2107,
+   "text": "tráileres, Leonida está muy viva."
+  },
+  {
+   "from": 2116,
+   "to": 2172,
+   "text": "Hay vídeos virales al estilo de las"
+  },
+  {
+   "from": 2172,
+   "to": 2236,
+   "text": "redes sociales, con la sátira de siempre"
+  },
+  {
+   "from": 2236,
+   "to": 2255,
+   "text": "de Rockstar."
+  },
+  {
+   "from": 2264,
+   "to": 2327,
+   "text": "Fiesta y vida nocturna en Vice City."
+  },
+  {
+   "from": 2336,
+   "to": 2387,
+   "text": "Coches tuneados, atascos y"
+  },
+  {
+   "from": 2387,
+   "to": 2415,
+   "text": "persecuciones."
+  },
+  {
+   "from": 2424,
+   "to": 2489,
+   "text": "Y mucho mar: playas, barcos y lanchas"
+  },
+  {
+   "from": 2489,
+   "to": 2521,
+   "text": "por toda la costa."
+  },
+  {
+   "from": 2547,
+   "to": 2609,
+   "text": "Seis regiones, cada una con su propia"
+  },
+  {
+   "from": 2609,
+   "to": 2656,
+   "text": "identidad, en un único mapa."
+  },
+  {
+   "from": 2665,
+   "to": 2717,
+   "text": "Ojo con las cifras de tamaño que"
+  },
+  {
+   "from": 2717,
+   "to": 2762,
+   "text": "circulan por ahí: muchas son"
+  },
+  {
+   "from": 2762,
+   "to": 2825,
+   "text": "estimaciones de fans hechas a partir de"
+  },
+  {
+   "from": 2825,
+   "to": 2848,
+   "text": "los tráileres."
+  },
+  {
+   "from": 2857,
+   "to": 2918,
+   "text": "Lo que está claro es que habrá mucho más"
+  },
+  {
+   "from": 2918,
+   "to": 2978,
+   "text": "que descubrir de lo que se ha enseñado."
+  },
+  {
+   "from": 3004,
+   "to": 3064,
+   "text": "Resumen: Vice City y los Keys al sur,"
+  },
+  {
+   "from": 3064,
+   "to": 3117,
+   "text": "los pantanos de Grassrivers, Port"
+  },
+  {
+   "from": 3117,
+   "to": 3175,
+   "text": "Gellhorn en el golfo, Ambrosia en el"
+  },
+  {
+   "from": 3175,
+   "to": 3230,
+   "text": "interior, y Mount Kalaga al norte."
+  },
+  {
+   "from": 3239,
+   "to": 3292,
+   "text": "¿Cuál es la primera zona que vas a"
+  },
+  {
+   "from": 3292,
+   "to": 3349,
+   "text": "explorar? Te leo en los comentarios."
+  },
+  {
+   "from": 3358,
+   "to": 3397,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 455,
+   "title": "Vice City y los Keys"
+  },
+  {
+   "from": 1053,
+   "title": "Pantanos y golfo"
+  },
+  {
+   "from": 1516,
+   "title": "Interior y norte"
+  },
+  {
+   "from": 2001,
+   "title": "Lo visto en los tráileres"
+  },
+  {
+   "from": 2538,
+   "title": "¿Cómo de grande es?"
+  },
+  {
+   "from": 2995,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "EL MAPA DE",
+  "big": "GTA 6",
+  "tag": "6 ZONAS",
+  "visual": "map"
+ }
+}

@@ -1,0 +1,485 @@
+{
+ "id": "06",
+ "slug": "gta-6-pc",
+ "fps": 30,
+ "durationInFrames": 3638,
+ "audio": "audio/06.wav",
+ "title": "¿GTA 6 en PC? Lo que se sabe y cuidado con las descargas falsas",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 414,
+   "beats": [
+    16,
+    146
+   ],
+   "data": {
+    "kicker": "GTA 6 · PC",
+    "title": "¿Sale en PC?",
+    "subtitle": "Lo que se sabe y cuánto podrías esperar"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "stat",
+   "from": 414,
+   "duration": 489,
+   "beats": [
+    9,
+    112,
+    257
+   ],
+   "data": {
+    "value": "NO",
+    "label": "Hay versión de PC anunciada",
+    "sub": "Plataformas confirmadas: PS5 y Xbox Series X|S",
+    "icon": "monitor"
+   },
+   "chapter": "Lo confirmado",
+   "reveals": []
+  },
+  {
+   "type": "timeline",
+   "from": 903,
+   "duration": 720,
+   "beats": [
+    9,
+    155,
+    256,
+    413,
+    501
+   ],
+   "data": {
+    "heading": "Cuánto tardaron en llegar a PC",
+    "points": [
+     {
+      "date": "7 meses",
+      "label": "GTA IV",
+      "sub": "2008"
+     },
+     {
+      "date": "19 meses",
+      "label": "GTA V",
+      "sub": "2013 → 2015"
+     },
+     {
+      "date": "12 meses",
+      "label": "Red Dead 2",
+      "sub": "2018 → 2019"
+     },
+     {
+      "date": "¿?",
+      "label": "GTA 6",
+      "sub": "Sin anunciar"
+     }
+    ],
+    "note": "Las previsiones de 2027 o 2028 son estimaciones de analistas, no anuncios."
+   },
+   "chapter": "El patrón de Rockstar",
+   "reveals": [
+    155,
+    256,
+    413,
+    501
+   ]
+  },
+  {
+   "type": "warning",
+   "from": 1623,
+   "duration": 895,
+   "beats": [
+    9,
+    177,
+    440,
+    590,
+    739
+   ],
+   "data": {
+    "heading": "Cuidado con las estafas",
+    "icon": "shield",
+    "items": [
+     "No existe ninguna descarga de GTA 6 para PC",
+     "Tampoco hay versión de móvil: los APK son falsos",
+     "Desconfía de 'requisitos oficiales' y 'betas'",
+     "Compra solo en tiendas oficiales"
+    ]
+   },
+   "chapter": "Cuidado con las estafas",
+   "reveals": [
+    177,
+    440,
+    590,
+    739
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2518,
+   "duration": 683,
+   "beats": [
+    9,
+    96,
+    250,
+    397,
+    517
+   ],
+   "data": {
+    "heading": "Si solo tienes PC",
+    "items": [
+     {
+      "icon": "gamepad",
+      "text": "Hazte con una consola",
+      "sub": "Las ofertas de estas fechas ayudan"
+     },
+     {
+      "icon": "hourglass",
+      "text": "O espera a la versión de PC"
+     },
+     {
+      "icon": "eye-off",
+      "text": "Silencia palabras clave: cero spoilers"
+     },
+     {
+      "icon": "bell",
+      "text": "Sigue los anuncios oficiales de Rockstar"
+     }
+    ]
+   },
+   "chapter": "Si solo tienes PC",
+   "reveals": [
+    96,
+    250,
+    397,
+    517
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 3201,
+   "duration": 437,
+   "beats": [
+    9,
+    271,
+    381
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "Sin versión de PC anunciada",
+     "Historial: de 7 a 19 meses de espera",
+     "Ninguna descarga para PC es real"
+    ],
+    "next": "¿GTA 6 tiene online?",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 85,
+   "text": "Si juegas en PC, el 19 de noviembre"
+  },
+  {
+   "from": 85,
+   "to": 137,
+   "text": "puede ser un día agridulce."
+  },
+  {
+   "from": 146,
+   "to": 213,
+   "text": "Vamos a ver qué hay confirmado sobre GTA"
+  },
+  {
+   "from": 213,
+   "to": 281,
+   "text": "6 en ordenador, qué nos dice la historia"
+  },
+  {
+   "from": 281,
+   "to": 331,
+   "text": "de Rockstar, y una advertencia"
+  },
+  {
+   "from": 331,
+   "to": 397,
+   "text": "importante para no acabar con un virus."
+  },
+  {
+   "from": 423,
+   "to": 490,
+   "text": "Lo primero: a día de hoy, no hay versión"
+  },
+  {
+   "from": 490,
+   "to": 517,
+   "text": "de PC anunciada."
+  },
+  {
+   "from": 526,
+   "to": 613,
+   "text": "Rockstar y Take-Two solo han confirmado"
+  },
+  {
+   "from": 613,
+   "to": 662,
+   "text": "PS5 y Xbox Series X|S."
+  },
+  {
+   "from": 671,
+   "to": 735,
+   "text": "No hay fecha, ni ventana, ni requisitos"
+  },
+  {
+   "from": 735,
+   "to": 792,
+   "text": "oficiales. Y Take-Two ha dicho que"
+  },
+  {
+   "from": 792,
+   "to": 858,
+   "text": "cualquier novedad sobre PC llegará de la"
+  },
+  {
+   "from": 858,
+   "to": 886,
+   "text": "mano de Rockstar."
+  },
+  {
+   "from": 912,
+   "to": 972,
+   "text": "¿Y qué podemos esperar? Mirando atrás,"
+  },
+  {
+   "from": 972,
+   "to": 1049,
+   "text": "Rockstar siempre ha lanzado primero en consolas."
+  },
+  {
+   "from": 1058,
+   "to": 1150,
+   "text": "GTA IV llegó a PC unos siete meses después."
+  },
+  {
+   "from": 1159,
+   "to": 1224,
+   "text": "GTA V tardó bastante más: unos"
+  },
+  {
+   "from": 1224,
+   "to": 1307,
+   "text": "diecinueve meses, hasta abril de 2015."
+  },
+  {
+   "from": 1316,
+   "to": 1395,
+   "text": "Y Red Dead Redemption 2, alrededor de un año."
+  },
+  {
+   "from": 1404,
+   "to": 1490,
+   "text": "Con GTA 6, muchos analistas hablan de"
+  },
+  {
+   "from": 1490,
+   "to": 1581,
+   "text": "2027 o 2028. Pero es una estimación, no"
+  },
+  {
+   "from": 1581,
+   "to": 1606,
+   "text": "un anuncio."
+  },
+  {
+   "from": 1632,
+   "to": 1711,
+   "text": "Y ahora, lo importante. Estos días van a"
+  },
+  {
+   "from": 1711,
+   "to": 1791,
+   "text": "circular muchos enlaces de GTA 6 para PC."
+  },
+  {
+   "from": 1800,
+   "to": 1871,
+   "text": "No existe ninguna descarga legítima de"
+  },
+  {
+   "from": 1871,
+   "to": 1943,
+   "text": "GTA 6 para PC. Cualquier archivo que te"
+  },
+  {
+   "from": 1943,
+   "to": 2015,
+   "text": "ofrezcan es, como mínimo, sospechoso, y"
+  },
+  {
+   "from": 2015,
+   "to": 2054,
+   "text": "muchas veces malware."
+  },
+  {
+   "from": 2063,
+   "to": 2126,
+   "text": "Lo mismo con el móvil: no hay versión"
+  },
+  {
+   "from": 2126,
+   "to": 2204,
+   "text": "para teléfono, así que cualquier APK es falso."
+  },
+  {
+   "from": 2213,
+   "to": 2266,
+   "text": "Desconfía también de listas de"
+  },
+  {
+   "from": 2266,
+   "to": 2328,
+   "text": "requisitos oficiales o de supuestas"
+  },
+  {
+   "from": 2328,
+   "to": 2353,
+   "text": "betas para PC."
+  },
+  {
+   "from": 2362,
+   "to": 2429,
+   "text": "Cuando haya versión de PC, la anunciará"
+  },
+  {
+   "from": 2429,
+   "to": 2484,
+   "text": "Rockstar y se venderá en tiendas"
+  },
+  {
+   "from": 2484,
+   "to": 2501,
+   "text": "oficiales."
+  },
+  {
+   "from": 2527,
+   "to": 2601,
+   "text": "¿Qué opciones tienes si solo juegas en PC?"
+  },
+  {
+   "from": 2614,
+   "to": 2678,
+   "text": "Una, hacerte con una consola. Con las"
+  },
+  {
+   "from": 2678,
+   "to": 2759,
+   "text": "ofertas de estas fechas, puede ser el momento."
+  },
+  {
+   "from": 2768,
+   "to": 2830,
+   "text": "Dos, esperar. Y si esperas, protégete,"
+  },
+  {
+   "from": 2830,
+   "to": 2906,
+   "text": "porque la historia va a estar por todas partes."
+  },
+  {
+   "from": 2915,
+   "to": 2978,
+   "text": "Silencia palabras clave en tus redes y"
+  },
+  {
+   "from": 2978,
+   "to": 3026,
+   "text": "evita los vídeos de la trama."
+  },
+  {
+   "from": 3035,
+   "to": 3092,
+   "text": "Y sigue los canales oficiales de"
+  },
+  {
+   "from": 3092,
+   "to": 3160,
+   "text": "Rockstar: ahí será donde se anuncie la"
+  },
+  {
+   "from": 3160,
+   "to": 3184,
+   "text": "versión de PC."
+  },
+  {
+   "from": 3210,
+   "to": 3279,
+   "text": "Resumen: no hay GTA 6 para PC anunciado,"
+  },
+  {
+   "from": 3279,
+   "to": 3341,
+   "text": "la historia de Rockstar apunta a una"
+  },
+  {
+   "from": 3341,
+   "to": 3405,
+   "text": "espera de uno o dos años, y cualquier"
+  },
+  {
+   "from": 3405,
+   "to": 3463,
+   "text": "descarga que veas ahora es falsa."
+  },
+  {
+   "from": 3472,
+   "to": 3535,
+   "text": "Si te ha servido, compártelo con ese"
+  },
+  {
+   "from": 3535,
+   "to": 3573,
+   "text": "amigo que juega en PC."
+  },
+  {
+   "from": 3582,
+   "to": 3622,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 414,
+   "title": "Lo confirmado"
+  },
+  {
+   "from": 903,
+   "title": "El patrón de Rockstar"
+  },
+  {
+   "from": 1623,
+   "title": "Cuidado con las estafas"
+  },
+  {
+   "from": 2518,
+   "title": "Si solo tienes PC"
+  },
+  {
+   "from": 3201,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿GTA 6",
+  "big": "EN PC?",
+  "tag": "OJO",
+  "visual": "pc"
+ }
+}

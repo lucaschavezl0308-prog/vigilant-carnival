@@ -1,0 +1,662 @@
+{
+ "id": "02",
+ "slug": "cuanto-ocupa",
+ "fps": 30,
+ "durationInFrames": 5481,
+ "audio": "audio/02.wav",
+ "title": "¿Cuánto ocupa GTA 6? Espacio en PS5 y Xbox y cómo hacer sitio",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 583,
+   "beats": [
+    16,
+    183,
+    401
+   ],
+   "data": {
+    "kicker": "GTA 6 · espacio y descarga",
+    "title": "¿Te cabe GTA 6?",
+    "subtitle": "Cuánto ocupa y cómo hacer sitio sin perder nada"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "stat",
+   "from": 583,
+   "duration": 602,
+   "beats": [
+    9,
+    114,
+    260,
+    436
+   ],
+   "data": {
+    "value": "212",
+    "unit": "GB",
+    "countUp": true,
+    "label": "Tamaño máximo de descarga",
+    "sub": "Cifra máxima indicada para PS5 y Xbox Series. Los parches pueden sumar más.",
+    "icon": "hard-drive"
+   },
+   "chapter": "Cuánto ocupa",
+   "reveals": []
+  },
+  {
+   "type": "storage",
+   "from": 1185,
+   "duration": 1053,
+   "beats": [
+    9,
+    151,
+    426,
+    620,
+    789
+   ],
+   "data": {
+    "heading": "¿Cuánto te queda después?",
+    "game": 212,
+    "consoles": [
+     {
+      "name": "PS5 (825 GB)",
+      "usable": 667
+     },
+     {
+      "name": "PS5 Slim (1 TB)",
+      "usable": 848
+     },
+     {
+      "name": "Xbox Series X",
+      "usable": 802,
+      "label": "1 TB · 802 GB útiles"
+     },
+     {
+      "name": "Xbox Series S",
+      "usable": 364,
+      "label": "512 GB · 364 GB útiles"
+     }
+    ],
+    "note": "Espacio útil aproximado de fábrica, sin otros juegos instalados."
+   },
+   "chapter": "Espacio en cada consola",
+   "reveals": [
+    151,
+    426,
+    620,
+    789
+   ]
+  },
+  {
+   "type": "table",
+   "from": 2238,
+   "duration": 737,
+   "beats": [
+    9,
+    109,
+    220,
+    298,
+    380,
+    469
+   ],
+   "data": {
+    "heading": "¿Cuánto tarda en bajar?",
+    "columns": [
+     "Tu conexión",
+     "Tiempo teórico"
+    ],
+    "rows": [
+     [
+      "100 megas",
+      "≈ 4 h 45 min"
+     ],
+     [
+      "300 megas",
+      "≈ 1 h 35 min"
+     ],
+     [
+      "600 megas",
+      "≈ 47 min"
+     ],
+     [
+      "1 giga",
+      "≈ 28 min"
+     ]
+    ],
+    "note": "Cálculo para 212 GB a velocidad máxima. El día del lanzamiento irá más lento."
+   },
+   "chapter": "Tiempo de descarga",
+   "reveals": [
+    109,
+    220,
+    380,
+    469
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2975,
+   "duration": 963,
+   "beats": [
+    9,
+    87,
+    330,
+    454,
+    663
+   ],
+   "data": {
+    "heading": "Cómo hacer sitio sin perder nada",
+    "items": [
+     {
+      "icon": "sliders",
+      "text": "Mira qué ocupa más en Almacenamiento"
+     },
+     {
+      "icon": "camera",
+      "text": "Borra o pasa al móvil capturas y clips"
+     },
+     {
+      "icon": "x",
+      "text": "Desinstala lo que no juegas",
+      "sub": "Tus partidas guardadas no se borran"
+     },
+     {
+      "icon": "hard-drive",
+      "text": "Mueve juegos a un disco USB",
+      "sub": "Para guardarlos, no para jugarlos"
+     }
+    ]
+   },
+   "chapter": "Cómo hacer sitio",
+   "reveals": [
+    87,
+    330,
+    454,
+    663
+   ]
+  },
+  {
+   "type": "compare",
+   "from": 3938,
+   "duration": 953,
+   "beats": [
+    9,
+    118,
+    419,
+    668
+   ],
+   "data": {
+    "heading": "¿Necesitas ampliar?",
+    "left": {
+     "title": "PS5",
+     "icon": "gamepad",
+     "items": [
+      "SSD M.2 NVMe PCIe 4.0",
+      "Sony recomienda 5.500 MB/s o más",
+      "Con disipador",
+      "Va en la ranura de expansión"
+     ]
+    },
+    "right": {
+     "title": "Xbox Series",
+     "icon": "gamepad",
+     "items": [
+      "Tarjeta de expansión compatible",
+      "Se conecta por detrás, sin abrir nada",
+      "Los juegos se ejecutan desde ella",
+      "Suele salir más cara por GB"
+     ]
+    },
+    "verdict": "Un disco USB normal sirve para guardar juegos, no para jugar a GTA 6"
+   },
+   "chapter": "Ampliar almacenamiento",
+   "reveals": [
+    118,
+    419,
+    668
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 4891,
+   "duration": 590,
+   "beats": [
+    9,
+    252,
+    443
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "Hasta 212 GB: deja 230-250 libres",
+     "Series S: el caso más justo",
+     "Empieza la descarga cuanto antes"
+    ],
+    "next": "¿Estándar o Ultimate?",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 81,
+   "text": "Antes de pensar en Vice City, hay una"
+  },
+  {
+   "from": 81,
+   "to": 152,
+   "text": "pregunta muy terrenal: ¿te cabe GTA 6 en"
+  },
+  {
+   "from": 152,
+   "to": 171,
+   "text": "la consola?"
+  },
+  {
+   "from": 183,
+   "to": 249,
+   "text": "Porque este juego es enorme, y si tienes"
+  },
+  {
+   "from": 249,
+   "to": 315,
+   "text": "el disco lleno, la noche del lanzamiento"
+  },
+  {
+   "from": 315,
+   "to": 392,
+   "text": "puede convertirse en una noche borrando juegos."
+  },
+  {
+   "from": 401,
+   "to": 465,
+   "text": "Te cuento cuánto ocupa, cuánto espacio"
+  },
+  {
+   "from": 465,
+   "to": 529,
+   "text": "te queda en cada consola, y cómo hacer"
+  },
+  {
+   "from": 529,
+   "to": 566,
+   "text": "sitio sin perder nada."
+  },
+  {
+   "from": 592,
+   "to": 688,
+   "text": "La cifra que se ha dado es de hasta 212 GB."
+  },
+  {
+   "from": 697,
+   "to": 757,
+   "text": "Es un máximo: según la consola, la"
+  },
+  {
+   "from": 757,
+   "to": 834,
+   "text": "instalación puede quedarse algo por debajo."
+  },
+  {
+   "from": 843,
+   "to": 897,
+   "text": "Pero ojo, porque los parches del"
+  },
+  {
+   "from": 897,
+   "to": 953,
+   "text": "lanzamiento y las actualizaciones"
+  },
+  {
+   "from": 953,
+   "to": 1010,
+   "text": "posteriores pueden hacerlo crecer."
+  },
+  {
+   "from": 1019,
+   "to": 1129,
+   "text": "Así que lo sensato es tener entre 230 y"
+  },
+  {
+   "from": 1129,
+   "to": 1168,
+   "text": "250 GB libres."
+  },
+  {
+   "from": 1194,
+   "to": 1262,
+   "text": "Ahora, la realidad de cada consola, con"
+  },
+  {
+   "from": 1262,
+   "to": 1327,
+   "text": "el espacio útil que traen de fábrica."
+  },
+  {
+   "from": 1336,
+   "to": 1443,
+   "text": "Una PS5 original tiene unos 667 GB"
+  },
+  {
+   "from": 1443,
+   "to": 1602,
+   "text": "útiles: con GTA 6 instalado te quedarían unos 455."
+  },
+  {
+   "from": 1611,
+   "to": 1709,
+   "text": "La PS5 Slim, con alrededor de 848 GB"
+  },
+  {
+   "from": 1709,
+   "to": 1796,
+   "text": "útiles, va bastante más holgada."
+  },
+  {
+   "from": 1805,
+   "to": 1885,
+   "text": "La Xbox Series X ofrece unos 802 GB"
+  },
+  {
+   "from": 1885,
+   "to": 1965,
+   "text": "útiles, así que también hay margen."
+  },
+  {
+   "from": 1974,
+   "to": 2074,
+   "text": "Y el caso delicado es la Series S de 512"
+  },
+  {
+   "from": 2074,
+   "to": 2159,
+   "text": "GB: solo unos 364 útiles. GTA 6 se"
+  },
+  {
+   "from": 2159,
+   "to": 2222,
+   "text": "llevaría más de la mitad."
+  },
+  {
+   "from": 2247,
+   "to": 2312,
+   "text": "¿Y cuánto tarda en descargarse? Depende"
+  },
+  {
+   "from": 2312,
+   "to": 2338,
+   "text": "de tu conexión."
+  },
+  {
+   "from": 2347,
+   "to": 2412,
+   "text": "Con 100 megas, en teoría, unas cuatro"
+  },
+  {
+   "from": 2412,
+   "to": 2449,
+   "text": "horas y tres cuartos."
+  },
+  {
+   "from": 2458,
+   "to": 2527,
+   "text": "Con 300 megas, hora y media larga."
+  },
+  {
+   "from": 2536,
+   "to": 2609,
+   "text": "Con 600 megas, algo menos de una hora."
+  },
+  {
+   "from": 2618,
+   "to": 2679,
+   "text": "Y con fibra de un giga, alrededor de"
+  },
+  {
+   "from": 2679,
+   "to": 2698,
+   "text": "media hora."
+  },
+  {
+   "from": 2707,
+   "to": 2770,
+   "text": "Pero eso es en condiciones ideales. El"
+  },
+  {
+   "from": 2770,
+   "to": 2831,
+   "text": "día del lanzamiento, con millones de"
+  },
+  {
+   "from": 2831,
+   "to": 2894,
+   "text": "descargas a la vez, irá más lento, así"
+  },
+  {
+   "from": 2894,
+   "to": 2958,
+   "text": "que no lo dejes para el último minuto."
+  },
+  {
+   "from": 2984,
+   "to": 3053,
+   "text": "Si te falta espacio, haz esto en orden."
+  },
+  {
+   "from": 3062,
+   "to": 3109,
+   "text": "Primero, entra en el menú de"
+  },
+  {
+   "from": 3109,
+   "to": 3174,
+   "text": "almacenamiento de la consola y mira qué"
+  },
+  {
+   "from": 3174,
+   "to": 3239,
+   "text": "ocupa más. Muchas veces la sorpresa son"
+  },
+  {
+   "from": 3239,
+   "to": 3296,
+   "text": "las capturas y los clips de vídeo."
+  },
+  {
+   "from": 3305,
+   "to": 3368,
+   "text": "Segundo, borra o pasa al móvil esas"
+  },
+  {
+   "from": 3368,
+   "to": 3420,
+   "text": "capturas que ya no necesitas."
+  },
+  {
+   "from": 3429,
+   "to": 3494,
+   "text": "Tercero, desinstala los juegos que no"
+  },
+  {
+   "from": 3494,
+   "to": 3561,
+   "text": "estás jugando. Tranquilo: tus partidas"
+  },
+  {
+   "from": 3561,
+   "to": 3629,
+   "text": "guardadas no se borran al desinstalar."
+  },
+  {
+   "from": 3638,
+   "to": 3704,
+   "text": "Y cuarto, si tienes un disco USB, mueve"
+  },
+  {
+   "from": 3704,
+   "to": 3766,
+   "text": "ahí los juegos que quieras conservar."
+  },
+  {
+   "from": 3766,
+   "to": 3825,
+   "text": "Los de esta generación no se pueden"
+  },
+  {
+   "from": 3825,
+   "to": 3884,
+   "text": "jugar desde el USB, pero te ahorras"
+  },
+  {
+   "from": 3884,
+   "to": 3922,
+   "text": "volver a descargarlos."
+  },
+  {
+   "from": 3947,
+   "to": 4013,
+   "text": "Y si la solución pasa por ampliar, esto"
+  },
+  {
+   "from": 4013,
+   "to": 4047,
+   "text": "es lo que necesitas."
+  },
+  {
+   "from": 4056,
+   "to": 4166,
+   "text": "En PS5, un SSD M.2 NVMe de tipo PCIe"
+  },
+  {
+   "from": 4166,
+   "to": 4288,
+   "text": "4.0. Sony recomienda 5.500 MB/s o más, y"
+  },
+  {
+   "from": 4288,
+   "to": 4348,
+   "text": "que lleve disipador."
+  },
+  {
+   "from": 4357,
+   "to": 4428,
+   "text": "En Xbox Series, una tarjeta de expansión"
+  },
+  {
+   "from": 4428,
+   "to": 4494,
+   "text": "compatible, que se conecta por detrás"
+  },
+  {
+   "from": 4494,
+   "to": 4565,
+   "text": "sin abrir la consola, aunque suele salir"
+  },
+  {
+   "from": 4565,
+   "to": 4597,
+   "text": "más cara por giga."
+  },
+  {
+   "from": 4606,
+   "to": 4677,
+   "text": "Y recuerda: un disco USB normal sirve"
+  },
+  {
+   "from": 4677,
+   "to": 4747,
+   "text": "para almacenar, pero GTA 6 tendrá que"
+  },
+  {
+   "from": 4747,
+   "to": 4814,
+   "text": "ejecutarse desde el disco interno o"
+  },
+  {
+   "from": 4814,
+   "to": 4875,
+   "text": "desde una ampliación compatible."
+  },
+  {
+   "from": 4900,
+   "to": 5002,
+   "text": "Resumen: GTA 6 ocupa hasta 212 GB, así"
+  },
+  {
+   "from": 5002,
+   "to": 5107,
+   "text": "que deja libres entre 230 y 250 para ir"
+  },
+  {
+   "from": 5107,
+   "to": 5134,
+   "text": "tranquilo."
+  },
+  {
+   "from": 5143,
+   "to": 5219,
+   "text": "Si tienes una Series S de 512, prepárate"
+  },
+  {
+   "from": 5219,
+   "to": 5282,
+   "text": "para hacer limpieza, y empieza la"
+  },
+  {
+   "from": 5282,
+   "to": 5325,
+   "text": "descarga cuanto antes."
+  },
+  {
+   "from": 5334,
+   "to": 5386,
+   "text": "En el siguiente vídeo: Estándar o"
+  },
+  {
+   "from": 5386,
+   "to": 5465,
+   "text": "Ultimate, cuál te conviene. Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 583,
+   "title": "Cuánto ocupa"
+  },
+  {
+   "from": 1185,
+   "title": "Espacio en cada consola"
+  },
+  {
+   "from": 2238,
+   "title": "Tiempo de descarga"
+  },
+  {
+   "from": 2975,
+   "title": "Cómo hacer sitio"
+  },
+  {
+   "from": 3938,
+   "title": "Ampliar almacenamiento"
+  },
+  {
+   "from": 4891,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿CUÁNTO",
+  "big": "OCUPA?",
+  "tag": "GTA 6",
+  "accent": "212 GB",
+  "visual": "storage"
+ }
+}

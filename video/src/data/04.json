@@ -1,0 +1,481 @@
+{
+ "id": "04",
+ "slug": "fisico-sin-disco",
+ "fps": 30,
+ "durationInFrames": 3486,
+ "audio": "audio/04.wav",
+ "title": "GTA 6 en físico NO trae disco: qué hay en la caja y si te conviene",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 487,
+   "beats": [
+    16,
+    213,
+    306
+   ],
+   "data": {
+    "kicker": "GTA 6 · formato físico",
+    "title": "La caja sin disco",
+    "subtitle": "Qué trae, por qué y si te conviene"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "stat",
+   "from": 487,
+   "duration": 433,
+   "beats": [
+    9,
+    128,
+    292
+   ],
+   "data": {
+    "value": "0",
+    "label": "Discos dentro de la caja",
+    "sub": "Lo que trae es un código para descargar el juego",
+    "icon": "box"
+   },
+   "chapter": "Qué hay en la caja",
+   "reveals": []
+  },
+  {
+   "type": "bullets",
+   "from": 920,
+   "duration": 809,
+   "beats": [
+    9,
+    75,
+    261,
+    398,
+    561
+   ],
+   "data": {
+    "heading": "Qué implica",
+    "items": [
+     {
+      "icon": "download",
+      "text": "Descargar hasta 212 GB igualmente"
+     },
+     {
+      "icon": "wifi",
+      "text": "Conexión para canjear y descargar"
+     },
+     {
+      "icon": "gamepad",
+      "text": "Vale para consolas sin lector de discos"
+     },
+     {
+      "icon": "ban",
+      "text": "Un código canjeado no se revende"
+     }
+    ]
+   },
+   "chapter": "Qué implica",
+   "reveals": [
+    75,
+    261,
+    398,
+    561
+   ]
+  },
+  {
+   "type": "stat",
+   "from": 1729,
+   "duration": 653,
+   "beats": [
+    9,
+    172,
+    332,
+    539
+   ],
+   "data": {
+    "value": "100",
+    "unit": "GB",
+    "countUp": true,
+    "label": "Capacidad de un disco de PS5 o Series X",
+    "sub": "GTA 6 ocupa hasta 212 GB",
+    "icon": "disc"
+   },
+   "chapter": "¿Por qué sin disco?",
+   "reveals": []
+  },
+  {
+   "type": "compare",
+   "from": 2382,
+   "duration": 657,
+   "beats": [
+    9,
+    70,
+    264,
+    497
+   ],
+   "data": {
+    "heading": "¿Caja o digital?",
+    "left": {
+     "title": "Caja con código",
+     "icon": "box",
+     "items": [
+      "Puede salir más barata en ofertas de tiendas",
+      "Ideal para regalar",
+      "La tienes en la estantería"
+     ]
+    },
+    "right": {
+     "title": "Digital",
+     "icon": "download",
+     "items": [
+      "Lo compras y empieza a bajar al momento",
+      "Sin depender de stock ni de envíos",
+      "Las reservas digitales permitían precargar"
+     ]
+    },
+    "verdict": "Mismo juego, misma descarga: elige por precio y comodidad"
+   },
+   "chapter": "¿Caja o digital?",
+   "reveals": [
+    70,
+    264,
+    497
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 3039,
+   "duration": 447,
+   "beats": [
+    9,
+    274,
+    392
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "La caja trae un código, no un disco",
+     "Hay que descargar hasta 212 GB",
+     "Mismo juego que en digital"
+    ],
+    "next": "¿GTA 6 va a 60 fps?",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 84,
+   "text": "Si pensabas comprar GTA 6 en una tienda"
+  },
+  {
+   "from": 84,
+   "to": 145,
+   "text": "y meterlo en la consola como toda la"
+  },
+  {
+   "from": 145,
+   "to": 204,
+   "text": "vida, tengo que darte una noticia."
+  },
+  {
+   "from": 213,
+   "to": 297,
+   "text": "La edición física de GTA 6 no trae disco."
+  },
+  {
+   "from": 306,
+   "to": 367,
+   "text": "Te explico qué hay dentro de la caja,"
+  },
+  {
+   "from": 367,
+   "to": 422,
+   "text": "qué implica, y cuándo puede tener"
+  },
+  {
+   "from": 422,
+   "to": 471,
+   "text": "sentido comprarla igualmente."
+  },
+  {
+   "from": 496,
+   "to": 563,
+   "text": "Lo ha confirmado Rockstar: la versión"
+  },
+  {
+   "from": 563,
+   "to": 606,
+   "text": "física no incluye disco."
+  },
+  {
+   "from": 615,
+   "to": 671,
+   "text": "Lo que encuentras en la caja es un"
+  },
+  {
+   "from": 671,
+   "to": 735,
+   "text": "código para descargar el juego desde la"
+  },
+  {
+   "from": 735,
+   "to": 770,
+   "text": "tienda de tu consola."
+  },
+  {
+   "from": 779,
+   "to": 844,
+   "text": "Es decir, a efectos prácticos, es una"
+  },
+  {
+   "from": 844,
+   "to": 903,
+   "text": "compra digital que viene con caja."
+  },
+  {
+   "from": 929,
+   "to": 982,
+   "text": "¿Qué implica esto en la práctica?"
+  },
+  {
+   "from": 995,
+   "to": 1057,
+   "text": "Primero, que aunque lo compres en"
+  },
+  {
+   "from": 1057,
+   "to": 1129,
+   "text": "tienda, tendrás que descargar el juego"
+  },
+  {
+   "from": 1129,
+   "to": 1172,
+   "text": "completo: hasta 212 GB."
+  },
+  {
+   "from": 1181,
+   "to": 1235,
+   "text": "Segundo, que necesitas conexión a"
+  },
+  {
+   "from": 1235,
+   "to": 1289,
+   "text": "internet para canjear el código y"
+  },
+  {
+   "from": 1289,
+   "to": 1309,
+   "text": "descargarlo."
+  },
+  {
+   "from": 1318,
+   "to": 1385,
+   "text": "Tercero, una ventaja: como es un código,"
+  },
+  {
+   "from": 1385,
+   "to": 1444,
+   "text": "te sirve aunque tu consola no tenga"
+  },
+  {
+   "from": 1444,
+   "to": 1472,
+   "text": "lector de discos."
+  },
+  {
+   "from": 1481,
+   "to": 1537,
+   "text": "Y cuarto, la parte mala: una vez"
+  },
+  {
+   "from": 1537,
+   "to": 1601,
+   "text": "canjeado, el código queda ligado a tu"
+  },
+  {
+   "from": 1601,
+   "to": 1669,
+   "text": "cuenta, así que olvídate de prestarlo o"
+  },
+  {
+   "from": 1669,
+   "to": 1713,
+   "text": "venderlo de segunda mano."
+  },
+  {
+   "from": 1738,
+   "to": 1798,
+   "text": "¿Y por qué sin disco? Rockstar no lo ha"
+  },
+  {
+   "from": 1798,
+   "to": 1857,
+   "text": "explicado en detalle, pero hay un dato"
+  },
+  {
+   "from": 1857,
+   "to": 1892,
+   "text": "que ayuda a entenderlo."
+  },
+  {
+   "from": 1901,
+   "to": 1983,
+   "text": "Los discos de PS5 y de Xbox Series X"
+  },
+  {
+   "from": 1983,
+   "to": 2052,
+   "text": "admiten como mucho unos 100 GB."
+  },
+  {
+   "from": 2061,
+   "to": 2134,
+   "text": "GTA 6 ocupa hasta 212. Harían falta"
+  },
+  {
+   "from": 2134,
+   "to": 2206,
+   "text": "varios discos, y aun así habría que"
+  },
+  {
+   "from": 2206,
+   "to": 2259,
+   "text": "descargar actualizaciones."
+  },
+  {
+   "from": 2268,
+   "to": 2338,
+   "text": "No es la explicación oficial, pero tiene"
+  },
+  {
+   "from": 2338,
+   "to": 2366,
+   "text": "bastante lógica."
+  },
+  {
+   "from": 2391,
+   "to": 2440,
+   "text": "Entonces, ¿caja o digital?"
+  },
+  {
+   "from": 2452,
+   "to": 2515,
+   "text": "La caja tiene sentido si la encuentras"
+  },
+  {
+   "from": 2515,
+   "to": 2570,
+   "text": "más barata, porque algunas tiendas"
+  },
+  {
+   "from": 2570,
+   "to": 2637,
+   "text": "aplican descuentos, o si es para regalar."
+  },
+  {
+   "from": 2646,
+   "to": 2712,
+   "text": "El formato digital tiene a su favor la"
+  },
+  {
+   "from": 2712,
+   "to": 2771,
+   "text": "inmediatez: lo compras y empieza a"
+  },
+  {
+   "from": 2771,
+   "to": 2840,
+   "text": "descargar al momento, y quien lo reservó"
+  },
+  {
+   "from": 2840,
+   "to": 2870,
+   "text": "pudo precargarlo."
+  },
+  {
+   "from": 2879,
+   "to": 2943,
+   "text": "Al final es el mismo juego y la misma"
+  },
+  {
+   "from": 2943,
+   "to": 3005,
+   "text": "descarga, así que elige por precio y"
+  },
+  {
+   "from": 3005,
+   "to": 3022,
+   "text": "comodidad."
+  },
+  {
+   "from": 3048,
+   "to": 3116,
+   "text": "Resumen: la edición física de GTA 6 es"
+  },
+  {
+   "from": 3116,
+   "to": 3179,
+   "text": "una caja con un código. Tendrás que"
+  },
+  {
+   "from": 3179,
+   "to": 3250,
+   "text": "descargar el juego igualmente, y una vez"
+  },
+  {
+   "from": 3250,
+   "to": 3304,
+   "text": "canjeado no se puede revender."
+  },
+  {
+   "from": 3313,
+   "to": 3372,
+   "text": "¿Qué te parece? ¿Te molesta que no haya"
+  },
+  {
+   "from": 3372,
+   "to": 3422,
+   "text": "disco? Te leo en los comentarios."
+  },
+  {
+   "from": 3431,
+   "to": 3470,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 487,
+   "title": "Qué hay en la caja"
+  },
+  {
+   "from": 920,
+   "title": "Qué implica"
+  },
+  {
+   "from": 1729,
+   "title": "¿Por qué sin disco?"
+  },
+  {
+   "from": 2382,
+   "title": "¿Caja o digital?"
+  },
+  {
+   "from": 3039,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "GTA 6 FÍSICO",
+  "big": "SIN DISCO",
+  "tag": "OJO",
+  "visual": "disc"
+ }
+}
