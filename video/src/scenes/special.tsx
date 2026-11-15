@@ -9,7 +9,7 @@ import {Shell} from './Shell';
 // ---------------------------------------------------------------------- Mapa
 // Silueta estilizada y ficticia de "Leonida" (no es un calco de ningún mapa oficial).
 export const LEONIDA_PATH =
-  'M40 120 L520 108 L640 128 L700 170 C722 300 700 420 762 560 L742 640 C700 702 600 702 560 662 C500 600 440 520 400 440 C360 360 330 300 300 262 C250 232 180 232 120 252 L40 244 Z';
+  'M30 96 L560 88 C592 88 612 98 628 120 C664 200 694 320 738 450 C762 520 776 590 762 642 C746 694 690 714 638 696 C576 672 512 610 470 528 C432 452 404 372 384 306 C368 262 346 228 300 212 C238 192 150 188 30 186 Z';
 
 export const REGION_NAMES: Record<string, string> = {
   'kalaga': 'Mount Kalaga',
@@ -21,17 +21,27 @@ export const REGION_NAMES: Record<string, string> = {
 };
 
 export const REGION_POS: Record<string, [number, number]> = {
-  'kalaga': [470, 175],
-  'port-gellhorn': [150, 205],
-  'ambrosia': [540, 318],
-  'grassrivers': [585, 520],
-  'vice-city': [722, 575],
-  'keys': [500, 748],
+  'kalaga': [360, 135],
+  'port-gellhorn': [140, 160],
+  'ambrosia': [548, 392],
+  'grassrivers': [628, 590],
+  'vice-city': [752, 548],
+  'keys': [598, 742],
+};
+
+// Desplazamiento y alineación de cada etiqueta para que no se pisen
+const LABEL: Record<string, [number, number, 'start' | 'middle' | 'end']> = {
+  'kalaga': [24, 10, 'start'],
+  'port-gellhorn': [0, -24, 'middle'],
+  'ambrosia': [-26, 10, 'end'],
+  'grassrivers': [-26, 10, 'end'],
+  'vice-city': [-6, -26, 'end'],
+  'keys': [0, 46, 'middle'],
 };
 
 const KEYS = Array.from({length: 9}, (_, i) => {
   const t = i / 8;
-  return [600 - t * 190 + Math.sin(t * 3) * 8, 708 + t * 70 - t * t * 20, 9 - t * 3] as const;
+  return [690 - t * 200, 716 + t * 52 - t * t * 14, 9 - t * 3] as const;
 });
 
 export const LeonidaMap: React.FC<{active?: string; shown?: string[]; size?: number; labels?: Record<string, string>; pulse?: number}> = ({
@@ -50,7 +60,7 @@ export const LeonidaMap: React.FC<{active?: string; shown?: string[]; size?: num
     <path d={LEONIDA_PATH} fill="url(#land)" />
     <path d={LEONIDA_PATH} fill="url(#mgrid)" />
     <path d={LEONIDA_PATH} fill="none" stroke={C.cyan} strokeWidth={4} strokeLinejoin="round" />
-    <ellipse cx={520} cy={395} rx={52} ry={40} fill="rgba(34,228,212,0.25)" stroke={C.cyan} strokeWidth={2} />
+    <ellipse cx={600} cy={470} rx={46} ry={36} fill="rgba(34,228,212,0.25)" stroke={C.cyan} strokeWidth={2} />
     {KEYS.map(([x, y, r], i) => (
       <circle key={i} cx={x} cy={y} r={r} fill="#2B1460" stroke={C.cyan} strokeWidth={2.5} />
     ))}
@@ -64,15 +74,15 @@ export const LeonidaMap: React.FC<{active?: string; shown?: string[]; size?: num
           <circle cx={x} cy={y} r={isActive ? 18 : 12} fill={isActive ? C.magenta : C.yellow} stroke={C.night} strokeWidth={4} />
           {labels[id] ? (
             <text
-              x={x + (x > 600 ? -24 : 24)}
-              y={y + 10}
-              textAnchor={x > 600 ? 'end' : 'start'}
+              x={x + LABEL[id][0]}
+              y={y + LABEL[id][1]}
+              textAnchor={LABEL[id][2]}
               fontFamily={F.body}
               fontWeight={800}
-              fontSize={isActive ? 34 : 26}
+              fontSize={isActive ? 36 : 28}
               fill={isActive ? C.white : C.muted}
               stroke={C.night}
-              strokeWidth={6}
+              strokeWidth={7}
               paintOrder="stroke"
             >
               {labels[id]}
@@ -212,13 +222,13 @@ export const Cast: React.FC<SceneProps> = ({scene}) => {
           const at = scene.reveals[i] ?? 0;
           const s = pop(frame, fps, at, 15);
           return (
-            <Panel key={i} style={{padding: '22px 22px', display: 'flex', alignItems: 'center', gap: 18, scale: String(s), opacity: frame >= at ? 1 : 0}}>
-              <div style={{width: 92, height: 92, borderRadius: 46, flexShrink: 0, background: p.color ? `linear-gradient(135deg, ${p.color}, ${C.violet})` : GRADIENT, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: F.display, fontSize: 40, color: C.white}}>
+            <Panel key={i} style={{padding: '26px 24px', display: 'flex', alignItems: 'center', gap: 18, scale: String(s), opacity: frame >= at ? 1 : 0}}>
+              <div style={{width: 104, height: 104, borderRadius: 52, flexShrink: 0, background: p.color ? `linear-gradient(135deg, ${p.color}, ${C.violet})` : GRADIENT, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: F.display, fontSize: 40, color: C.white}}>
                 {p.initials}
               </div>
               <div>
-                <div style={{fontFamily: F.display, fontSize: 38, color: C.white, textTransform: 'uppercase', lineHeight: 1.05}}>{p.name}</div>
-                <div style={{fontFamily: F.body, fontWeight: 600, fontSize: 24, color: C.muted, marginTop: 4, lineHeight: 1.2}}>{p.role}</div>
+                <div style={{fontFamily: F.display, fontSize: 46, color: C.white, textTransform: 'uppercase', lineHeight: 1.05}}>{p.name}</div>
+                <div style={{fontFamily: F.body, fontWeight: 600, fontSize: 29, color: '#D9D4F2', marginTop: 6, lineHeight: 1.2}}>{p.role}</div>
               </div>
             </Panel>
           );
