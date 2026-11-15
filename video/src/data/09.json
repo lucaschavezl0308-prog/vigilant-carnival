@@ -1,0 +1,571 @@
+{
+ "id": "09",
+ "slug": "personajes",
+ "fps": 30,
+ "durationInFrames": 3843,
+ "audio": "audio/09.wav",
+ "title": "Personajes de GTA 6: quién es quién (Lucia, Jason y más) sin spoilers",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 347,
+   "beats": [
+    16,
+    141
+   ],
+   "data": {
+    "kicker": "GTA 6 · personajes",
+    "title": "¿Quién es quién?",
+    "subtitle": "Protagonistas y secundarios, sin spoilers"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "character",
+   "from": 347,
+   "duration": 562,
+   "beats": [
+    9,
+    98,
+    291,
+    446
+   ],
+   "data": {
+    "name": "Lucia Caminos",
+    "role": "Protagonista",
+    "initials": "LC",
+    "color": "#FF2D8A",
+    "variant": "b",
+    "traits": [
+     "Aprendió a pelear desde niña",
+     "Pasó por la prisión de Leonida",
+     "Ahora, solo jugadas inteligentes"
+    ]
+   },
+   "chapter": "Lucia Caminos",
+   "reveals": [
+    98,
+    291,
+    446
+   ]
+  },
+  {
+   "type": "character",
+   "from": 909,
+   "duration": 603,
+   "beats": [
+    9,
+    88,
+    320,
+    465
+   ],
+   "data": {
+    "name": "Jason Duval",
+    "role": "Protagonista",
+    "initials": "JD",
+    "color": "#22E4D4",
+    "traits": [
+     "Creció entre timadores",
+     "Pasó por el ejército",
+     "Trabaja para contrabandistas en los Keys"
+    ]
+   },
+   "chapter": "Jason Duval",
+   "reveals": [
+    88,
+    320,
+    465
+   ]
+  },
+  {
+   "type": "quote",
+   "from": 1512,
+   "duration": 459,
+   "beats": [
+    9,
+    175
+   ],
+   "data": {
+    "text": "Siempre han sabido que juegan con las cartas en contra",
+    "source": "Sinopsis oficial de Rockstar sobre Jason y Lucia"
+   },
+   "chapter": "La pareja",
+   "reveals": []
+  },
+  {
+   "type": "cast",
+   "from": 1971,
+   "duration": 1009,
+   "beats": [
+    9,
+    104,
+    295,
+    471,
+    582,
+    682,
+    835
+   ],
+   "data": {
+    "heading": "Los secundarios presentados",
+    "people": [
+     {
+      "name": "Cal Hampton",
+      "role": "Amigo de Jason. Se cree todo lo de internet",
+      "initials": "CH",
+      "color": "#FFD23F"
+     },
+     {
+      "name": "Boobie Ike",
+      "role": "Leyenda de Vice City: club, estudio e inmuebles",
+      "initials": "BI",
+      "color": "#FF8A1F"
+     },
+     {
+      "name": "Dre'Quan Priest",
+      "role": "Quiere triunfar en la música",
+      "initials": "DP",
+      "color": "#FF2D8A"
+     },
+     {
+      "name": "Real Dimez",
+      "role": "Dúo de rap: Bae-Luxe y Roxy",
+      "initials": "RD",
+      "color": "#B26BFF"
+     },
+     {
+      "name": "Raul Bautista",
+      "role": "Atracador veterano que busca talento",
+      "initials": "RB",
+      "color": "#22E4D4"
+     },
+     {
+      "name": "Brian Heder",
+      "role": "Contrabandista de la vieja escuela",
+      "initials": "BH",
+      "color": "#7CFF6B"
+     }
+    ]
+   },
+   "chapter": "Los secundarios",
+   "reveals": [
+    104,
+    295,
+    471,
+    582,
+    682,
+    835
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2980,
+   "duration": 507,
+   "beats": [
+    9,
+    128,
+    297,
+    398
+   ],
+   "data": {
+    "heading": "Cómo esquivar spoilers",
+    "items": [
+     {
+      "icon": "eye-off",
+      "text": "Silencia «GTA 6», «Lucia» y «Jason»"
+     },
+     {
+      "icon": "mute",
+      "text": "Quita la reproducción automática"
+     },
+     {
+      "icon": "users",
+      "text": "Avisa a tus amigos"
+     }
+    ]
+   },
+   "chapter": "Cero spoilers",
+   "reveals": [
+    128,
+    297,
+    398
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 3487,
+   "duration": 356,
+   "beats": [
+    9,
+    201,
+    300
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "Lucia y Jason, pareja protagonista",
+     "Seis secundarios ya presentados",
+     "Silencia palabras clave: cero spoilers"
+    ],
+    "next": "Checklist de la noche del lanzamiento",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 79,
+   "text": "Antes de empezar la historia, conviene"
+  },
+  {
+   "from": 79,
+   "to": 132,
+   "text": "saber con quién te vas a cruzar."
+  },
+  {
+   "from": 141,
+   "to": 205,
+   "text": "Aquí tienes a los protagonistas y a los"
+  },
+  {
+   "from": 205,
+   "to": 252,
+   "text": "personajes que Rockstar ya ha"
+  },
+  {
+   "from": 252,
+   "to": 331,
+   "text": "presentado, solo con lo oficial, y sin spoilers."
+  },
+  {
+   "from": 356,
+   "to": 411,
+   "text": "Lucia Caminos es una de las dos"
+  },
+  {
+   "from": 411,
+   "to": 436,
+   "text": "protagonistas."
+  },
+  {
+   "from": 445,
+   "to": 502,
+   "text": "Según Rockstar, su padre le enseñó a"
+  },
+  {
+   "from": 502,
+   "to": 564,
+   "text": "pelear en cuanto aprendió a andar, y la"
+  },
+  {
+   "from": 564,
+   "to": 629,
+   "text": "vida no le ha dado tregua desde entonces."
+  },
+  {
+   "from": 638,
+   "to": 695,
+   "text": "Luchar por su familia la llevó a la"
+  },
+  {
+   "from": 695,
+   "to": 760,
+   "text": "prisión de Leonida, y salió de allí con"
+  },
+  {
+   "from": 760,
+   "to": 784,
+   "text": "algo de suerte."
+  },
+  {
+   "from": 793,
+   "to": 857,
+   "text": "Su lema ahora: a partir de aquí, solo"
+  },
+  {
+   "from": 857,
+   "to": 893,
+   "text": "jugadas inteligentes."
+  },
+  {
+   "from": 918,
+   "to": 988,
+   "text": "El otro protagonista es Jason Duval."
+  },
+  {
+   "from": 997,
+   "to": 1062,
+   "text": "Jason creció rodeado de timadores y"
+  },
+  {
+   "from": 1062,
+   "to": 1128,
+   "text": "delincuentes, y pasó por el ejército"
+  },
+  {
+   "from": 1128,
+   "to": 1200,
+   "text": "intentando dejar atrás una adolescencia"
+  },
+  {
+   "from": 1200,
+   "to": 1220,
+   "text": "complicada."
+  },
+  {
+   "from": 1229,
+   "to": 1297,
+   "text": "Acabó en los Keys, haciendo lo que mejor"
+  },
+  {
+   "from": 1297,
+   "to": 1365,
+   "text": "sabe: trabajar para traficantes locales."
+  },
+  {
+   "from": 1374,
+   "to": 1436,
+   "text": "Lo que él quiere es una vida fácil. El"
+  },
+  {
+   "from": 1436,
+   "to": 1495,
+   "text": "problema es que todo se le complica."
+  },
+  {
+   "from": 1521,
+   "to": 1584,
+   "text": "Y juntos, según la sinopsis oficial,"
+  },
+  {
+   "from": 1584,
+   "to": 1648,
+   "text": "siempre han sabido que juegan con las"
+  },
+  {
+   "from": 1648,
+   "to": 1678,
+   "text": "cartas en contra."
+  },
+  {
+   "from": 1687,
+   "to": 1750,
+   "text": "Cuando un golpe fácil sale mal, acaban"
+  },
+  {
+   "from": 1750,
+   "to": 1816,
+   "text": "metidos en una conspiración criminal que"
+  },
+  {
+   "from": 1816,
+   "to": 1881,
+   "text": "se extiende por todo Leonida, y tendrán"
+  },
+  {
+   "from": 1881,
+   "to": 1954,
+   "text": "que confiar el uno en el otro más que nunca."
+  },
+  {
+   "from": 1980,
+   "to": 2044,
+   "text": "Y estos son los secundarios que Rockstar"
+  },
+  {
+   "from": 2044,
+   "to": 2066,
+   "text": "ha presentado."
+  },
+  {
+   "from": 2075,
+   "to": 2128,
+   "text": "Cal Hampton, amigo de Jason, que"
+  },
+  {
+   "from": 2128,
+   "to": 2194,
+   "text": "prefiere quedarse en casa y que cree que"
+  },
+  {
+   "from": 2194,
+   "to": 2257,
+   "text": "todo lo que lee en internet es verdad."
+  },
+  {
+   "from": 2266,
+   "to": 2327,
+   "text": "Boobie Ike, una leyenda de Vice City,"
+  },
+  {
+   "from": 2327,
+   "to": 2389,
+   "text": "con su club, su estudio de grabación y"
+  },
+  {
+   "from": 2389,
+   "to": 2433,
+   "text": "sus negocios inmobiliarios."
+  },
+  {
+   "from": 2442,
+   "to": 2498,
+   "text": "Dre'Quan Priest, que quiere hacerse un"
+  },
+  {
+   "from": 2498,
+   "to": 2544,
+   "text": "nombre en la industria musical."
+  },
+  {
+   "from": 2553,
+   "to": 2616,
+   "text": "Real Dimez, el dúo de rap formado por"
+  },
+  {
+   "from": 2616,
+   "to": 2644,
+   "text": "Bae-Luxe y Roxy."
+  },
+  {
+   "from": 2653,
+   "to": 2715,
+   "text": "Raul Bautista, un atracador veterano"
+  },
+  {
+   "from": 2715,
+   "to": 2780,
+   "text": "siempre a la caza de gente dispuesta a"
+  },
+  {
+   "from": 2780,
+   "to": 2797,
+   "text": "arriesgar."
+  },
+  {
+   "from": 2806,
+   "to": 2870,
+   "text": "Y Brian Heder, un contrabandista de la"
+  },
+  {
+   "from": 2870,
+   "to": 2923,
+   "text": "vieja escuela que lleva décadas"
+  },
+  {
+   "from": 2923,
+   "to": 2963,
+   "text": "moviéndose por los Keys."
+  },
+  {
+   "from": 2989,
+   "to": 3055,
+   "text": "Y un consejo, ahora que ya los conoces:"
+  },
+  {
+   "from": 3055,
+   "to": 3099,
+   "text": "protégete de los spoilers."
+  },
+  {
+   "from": 3108,
+   "to": 3181,
+   "text": "Silencia en tus redes palabras como GTA"
+  },
+  {
+   "from": 3181,
+   "to": 3268,
+   "text": "6, Lucia o Jason durante las primeras semanas."
+  },
+  {
+   "from": 3277,
+   "to": 3337,
+   "text": "Quita la reproducción automática de"
+  },
+  {
+   "from": 3337,
+   "to": 3369,
+   "text": "vídeos en las apps."
+  },
+  {
+   "from": 3378,
+   "to": 3438,
+   "text": "Y avisa a tus amigos: quien cuente el"
+  },
+  {
+   "from": 3438,
+   "to": 3471,
+   "text": "final, paga la cena."
+  },
+  {
+   "from": 3496,
+   "to": 3563,
+   "text": "Resumen: Lucia y Jason, una pareja con"
+  },
+  {
+   "from": 3563,
+   "to": 3628,
+   "text": "las cartas en contra, y un reparto de"
+  },
+  {
+   "from": 3628,
+   "to": 3679,
+   "text": "secundarios muy de Vice City."
+  },
+  {
+   "from": 3688,
+   "to": 3748,
+   "text": "¿Quién es tu favorito por ahora? Te leo"
+  },
+  {
+   "from": 3748,
+   "to": 3778,
+   "text": "en los comentarios."
+  },
+  {
+   "from": 3787,
+   "to": 3826,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 347,
+   "title": "Lucia Caminos"
+  },
+  {
+   "from": 909,
+   "title": "Jason Duval"
+  },
+  {
+   "from": 1512,
+   "title": "La pareja"
+  },
+  {
+   "from": 1971,
+   "title": "Los secundarios"
+  },
+  {
+   "from": 2980,
+   "title": "Cero spoilers"
+  },
+  {
+   "from": 3487,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿QUIÉN ES",
+  "big": "QUIÉN?",
+  "tag": "GTA 6",
+  "visual": "cast"
+ }
+}

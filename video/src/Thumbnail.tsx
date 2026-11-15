@@ -145,7 +145,7 @@ export const Thumbnail: React.FC<{t: ThumbnailData}> = ({t}) => (
         <div style={{fontFamily: F.display, fontSize: Math.min(168, Math.round(1800 / Math.max(t.top.length, 1))), lineHeight: 0.98, color: C.white, textTransform: 'uppercase', ...outline(12)}}>
           {t.top}
         </div>
-        <div style={{fontFamily: F.display, fontSize: Math.min(290, Math.round(1900 / Math.max(t.big.length, 1))), lineHeight: 0.95, textTransform: 'uppercase', ...gradientText(GRADIENT_V), filter: 'drop-shadow(0 12px 0 #05030F) drop-shadow(0 0 40px rgba(255,45,138,0.5))'}}>
+        <div style={{fontFamily: F.display, fontSize: Math.min(290, Math.round(1900 / Math.max(t.big.length, 1))), lineHeight: 0.95, paddingTop: '0.14em', marginTop: '-0.14em', textTransform: 'uppercase', ...gradientText(GRADIENT_V), filter: 'drop-shadow(0 12px 0 #05030F) drop-shadow(0 0 40px rgba(255,45,138,0.5))'}}>
           {t.big}
         </div>
       </div>
