@@ -1,0 +1,109 @@
+id: "04"
+slug: fisico-sin-disco
+youtube:
+  title: "GTA 6 en físico NO trae disco: qué hay en la caja y si te conviene"
+  description: |
+    La edición física de GTA 6 no incluye disco: dentro de la caja hay un código de descarga. Te explicamos qué implica (descarga de hasta 212 GB, conexión, reventa), por qué tiene lógica con el tamaño del juego y cuándo compensa comprar la caja o la versión digital.
+  tags: [gta 6, gta 6 fisico, gta 6 sin disco, gta 6 edicion fisica, gta 6 codigo descarga, gta 6 caja, gta 6 disco, gta 6 digital o fisico, gta 6 ps5 digital, gta vi]
+  hashtags: ["#GTA6", "#GTAVI", "#GTA6Fisico"]
+  pinned: "La caja de GTA 6 trae un código, no un disco: hay que descargar hasta 212 GB igualmente. ¿Te molesta o te da igual? 👇"
+  next: "¿GTA 6 va a 60 fps?"
+thumbnail:
+  top: "GTA 6 FÍSICO"
+  big: "SIN DISCO"
+  tag: "OJO"
+  visual: disc
+scenes:
+  - type: intro
+    data:
+      kicker: "GTA 6 · formato físico"
+      title: "La caja sin disco"
+      subtitle: "Qué trae, por qué y si te conviene"
+    lines:
+      - "Si pensabas comprar GTA 6 en una tienda y meterlo en la consola como toda la vida, tengo que darte una noticia."
+      - "La edición física de GTA 6 no trae disco."
+      - "Te explico qué hay dentro de la caja, qué implica, y cuándo puede tener sentido comprarla igualmente."
+
+  - type: stat
+    chapter: "Qué hay en la caja"
+    data:
+      value: "0"
+      label: "Discos dentro de la caja"
+      sub: "Lo que trae es un código para descargar el juego"
+      icon: box
+    lines:
+      - "Lo ha confirmado Rockstar: la versión física no incluye disco."
+      - "Lo que encuentras en la caja es un código para descargar el juego desde la tienda de tu consola."
+      - "Es decir, a efectos prácticos, es una compra digital que viene con caja."
+
+  - type: bullets
+    chapter: "Qué implica"
+    data:
+      heading: "Qué implica"
+      items:
+        - { icon: download, text: "Descargar hasta 212 GB igualmente" }
+        - { icon: wifi, text: "Conexión para canjear y descargar" }
+        - { icon: gamepad, text: "Vale para consolas sin lector de discos" }
+        - { icon: ban, text: "Un código canjeado no se revende" }
+    lines:
+      - "¿Qué implica esto en la práctica?"
+      - "Primero, que aunque lo compres en tienda, tendrás que descargar el juego completo: hasta 212 GB."
+      - "Segundo, que necesitas conexión a internet para canjear el código y descargarlo."
+      - "Tercero, una ventaja: como es un código, te sirve aunque tu consola no tenga lector de discos."
+      - "Y cuarto, la parte mala: una vez canjeado, el código queda ligado a tu cuenta, así que olvídate de prestarlo o venderlo de segunda mano."
+
+  - type: stat
+    chapter: "¿Por qué sin disco?"
+    data:
+      value: "100"
+      unit: "GB"
+      countUp: true
+      label: "Capacidad de un disco de PS5 o Series X"
+      sub: "GTA 6 ocupa hasta 212 GB"
+      icon: disc
+    lines:
+      - "¿Y por qué sin disco? Rockstar no lo ha explicado en detalle, pero hay un dato que ayuda a entenderlo."
+      - "Los discos de PS5 y de Xbox Series X admiten como mucho unos 100 GB."
+      - "GTA 6 ocupa hasta 212. Harían falta varios discos, y aun así habría que descargar actualizaciones."
+      - "No es la explicación oficial, pero tiene bastante lógica."
+
+  - type: compare
+    chapter: "¿Caja o digital?"
+    data:
+      heading: "¿Caja o digital?"
+      left:
+        title: "Caja con código"
+        icon: box
+        items:
+          - "Puede salir más barata en ofertas de tiendas"
+          - "Ideal para regalar"
+          - "La tienes en la estantería"
+      right:
+        title: "Digital"
+        icon: download
+        items:
+          - "Lo compras y empieza a bajar al momento"
+          - "Sin depender de stock ni de envíos"
+          - "Las reservas digitales permitían precargar"
+      verdict: "Mismo juego, misma descarga: elige por precio y comodidad"
+    reveal: [1, 2, 3]
+    lines:
+      - "Entonces, ¿caja o digital?"
+      - "La caja tiene sentido si la encuentras más barata, porque algunas tiendas aplican descuentos, o si es para regalar."
+      - "El formato digital tiene a su favor la inmediatez: lo compras y empieza a descargar al momento, y quien lo reservó pudo precargarlo."
+      - "Al final es el mismo juego y la misma descarga, así que elige por precio y comodidad."
+
+  - type: outro
+    chapter: "Resumen"
+    data:
+      title: "Resumen"
+      points:
+        - "La caja trae un código, no un disco"
+        - "Hay que descargar hasta 212 GB"
+        - "Mismo juego que en digital"
+      next: "¿GTA 6 va a 60 fps?"
+      cta: "Suscríbete"
+    lines:
+      - "Resumen: la edición física de GTA 6 es una caja con un código. Tendrás que descargar el juego igualmente, y una vez canjeado no se puede revender."
+      - "¿Qué te parece? ¿Te molesta que no haya disco? Te leo en los comentarios."
+      - "Nos vemos en Leonida."

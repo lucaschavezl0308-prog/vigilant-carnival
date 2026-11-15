@@ -1,0 +1,440 @@
+{
+ "id": "07",
+ "slug": "gta-6-online",
+ "fps": 30,
+ "durationInFrames": 3081,
+ "audio": "audio/07.wav",
+ "title": "¿GTA 6 tiene online? Lo que hay el día 19 (y lo que no)",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 495,
+   "beats": [
+    16,
+    184,
+    298
+   ],
+   "data": {
+    "kicker": "GTA 6 · multijugador",
+    "title": "¿Tiene online?",
+    "subtitle": "Qué hay el día 19 y qué viene después"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "quote",
+   "from": 495,
+   "duration": 481,
+   "beats": [
+    9,
+    171,
+    293
+   ],
+   "data": {
+    "text": "Una experiencia para un jugador",
+    "source": "Así presenta Rockstar GTA 6 en el anuncio de reservas y en las tiendas"
+   },
+   "chapter": "Lo confirmado",
+   "reveals": []
+  },
+  {
+   "type": "bullets",
+   "from": 976,
+   "duration": 425,
+   "beats": [
+    9,
+    96,
+    162,
+    231,
+    346
+   ],
+   "data": {
+    "heading": "Lo que NO está confirmado",
+    "items": [
+     {
+      "icon": "calendar",
+      "text": "Fecha del modo online"
+     },
+     {
+      "icon": "chat",
+      "text": "Nombre o formato"
+     },
+     {
+      "icon": "users",
+      "text": "Juego cruzado entre consolas"
+     },
+     {
+      "icon": "sliders",
+      "text": "Cómo se jugaría"
+     }
+    ]
+   },
+   "chapter": "Lo que no se sabe",
+   "reveals": [
+    96,
+    162,
+    231,
+    346
+   ]
+  },
+  {
+   "type": "warning",
+   "from": 1401,
+   "duration": 652,
+   "beats": [
+    9,
+    100,
+    289,
+    547
+   ],
+   "data": {
+    "heading": "Lo que se rumorea",
+    "icon": "info",
+    "items": [
+     "Muchos esperan el online en 2027",
+     "Un documental lo sugirió… pero era una frase del guion",
+     "Rockstar no ha dado ninguna fecha"
+    ]
+   },
+   "chapter": "Los rumores",
+   "reveals": [
+    100,
+    289,
+    547
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2053,
+   "duration": 643,
+   "beats": [
+    9,
+    95,
+    276,
+    387
+   ],
+   "data": {
+    "heading": "¿Y el GTA Online de siempre?",
+    "items": [
+     {
+      "icon": "globe",
+      "text": "Sigue funcionando con GTA V"
+     },
+     {
+      "icon": "gamepad",
+      "text": "Tu progreso sigue ahí",
+      "sub": "Rockstar no ha anunciado ningún cierre"
+     },
+     {
+      "icon": "shield",
+      "text": "Ojo con 'betas' e invitaciones falsas"
+     }
+    ]
+   },
+   "chapter": "¿Y GTA Online?",
+   "reveals": [
+    95,
+    276,
+    387
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 2696,
+   "duration": 385,
+   "beats": [
+    9,
+    226,
+    309
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "GTA 6 sale solo con historia",
+     "Sin fecha para el online",
+     "GTA Online sigue con GTA V"
+    ],
+    "next": "El mapa de GTA 6",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 85,
+   "text": "Mucha gente da por hecho que el día 19"
+  },
+  {
+   "from": 85,
+   "to": 157,
+   "text": "podrá entrar con sus amigos a liarla por"
+  },
+  {
+   "from": 157,
+   "to": 175,
+   "text": "Vice City."
+  },
+  {
+   "from": 184,
+   "to": 259,
+   "text": "Pero ojo, porque el lanzamiento de GTA 6"
+  },
+  {
+   "from": 259,
+   "to": 289,
+   "text": "no funciona así."
+  },
+  {
+   "from": 298,
+   "to": 363,
+   "text": "Te explico qué hay confirmado sobre el"
+  },
+  {
+   "from": 363,
+   "to": 429,
+   "text": "online, qué se rumorea, y qué pasa con"
+  },
+  {
+   "from": 429,
+   "to": 478,
+   "text": "el GTA Online que ya conoces."
+  },
+  {
+   "from": 504,
+   "to": 578,
+   "text": "Lo confirmado es esto: Rockstar presenta"
+  },
+  {
+   "from": 578,
+   "to": 657,
+   "text": "GTA 6 como una experiencia para un jugador."
+  },
+  {
+   "from": 666,
+   "to": 716,
+   "text": "Así aparece en el anuncio de las"
+  },
+  {
+   "from": 716,
+   "to": 779,
+   "text": "reservas y en las fichas de las tiendas."
+  },
+  {
+   "from": 788,
+   "to": 840,
+   "text": "En otras palabras: el día del"
+  },
+  {
+   "from": 840,
+   "to": 904,
+   "text": "lanzamiento, GTA 6 es la historia de"
+  },
+  {
+   "from": 904,
+   "to": 959,
+   "text": "Jason y Lucia, sin modo online."
+  },
+  {
+   "from": 985,
+   "to": 1063,
+   "text": "¿Y qué no se sabe? Prácticamente todo lo demás."
+  },
+  {
+   "from": 1072,
+   "to": 1129,
+   "text": "No hay fecha para un modo online."
+  },
+  {
+   "from": 1138,
+   "to": 1198,
+   "text": "No hay nombre ni formato oficial."
+  },
+  {
+   "from": 1207,
+   "to": 1278,
+   "text": "No se ha confirmado juego cruzado entre"
+  },
+  {
+   "from": 1278,
+   "to": 1313,
+   "text": "PlayStation y Xbox."
+  },
+  {
+   "from": 1322,
+   "to": 1385,
+   "text": "Y no hay detalles de cómo se jugaría."
+  },
+  {
+   "from": 1410,
+   "to": 1473,
+   "text": "Ahora, los rumores, que hay que tomar"
+  },
+  {
+   "from": 1473,
+   "to": 1492,
+   "text": "con pinzas."
+  },
+  {
+   "from": 1501,
+   "to": 1565,
+   "text": "La expectativa general es que el"
+  },
+  {
+   "from": 1565,
+   "to": 1641,
+   "text": "multijugador llegue más adelante, y se"
+  },
+  {
+   "from": 1641,
+   "to": 1681,
+   "text": "habla mucho de 2027."
+  },
+  {
+   "from": 1690,
+   "to": 1748,
+   "text": "Un documental de Bloomberg lo dio a"
+  },
+  {
+   "from": 1748,
+   "to": 1804,
+   "text": "entender, pero el periodista Jason"
+  },
+  {
+   "from": 1804,
+   "to": 1866,
+   "text": "Schreier aclaró después que esa frase"
+  },
+  {
+   "from": 1866,
+   "to": 1921,
+   "text": "era del guionista, no información"
+  },
+  {
+   "from": 1921,
+   "to": 1939,
+   "text": "confirmada."
+  },
+  {
+   "from": 1948,
+   "to": 2010,
+   "text": "Así que, a día de hoy, cualquier fecha"
+  },
+  {
+   "from": 2010,
+   "to": 2036,
+   "text": "es especulación."
+  },
+  {
+   "from": 2062,
+   "to": 2135,
+   "text": "¿Y qué pasa con el GTA Online de siempre?"
+  },
+  {
+   "from": 2148,
+   "to": 2218,
+   "text": "Sigue funcionando con GTA V, así que si"
+  },
+  {
+   "from": 2218,
+   "to": 2291,
+   "text": "quieres jugar con amigos mientras tanto,"
+  },
+  {
+   "from": 2291,
+   "to": 2320,
+   "text": "ese es tu sitio."
+  },
+  {
+   "from": 2329,
+   "to": 2392,
+   "text": "Tu progreso sigue ahí, y Rockstar no ha"
+  },
+  {
+   "from": 2392,
+   "to": 2431,
+   "text": "anunciado ningún cierre."
+  },
+  {
+   "from": 2440,
+   "to": 2508,
+   "text": "Y un aviso: si alguien te ofrece acceso"
+  },
+  {
+   "from": 2508,
+   "to": 2569,
+   "text": "a una beta o una invitación para el"
+  },
+  {
+   "from": 2569,
+   "to": 2639,
+   "text": "online de GTA 6, desconfía. Es la estafa"
+  },
+  {
+   "from": 2639,
+   "to": 2679,
+   "text": "típica de estas fechas."
+  },
+  {
+   "from": 2705,
+   "to": 2771,
+   "text": "Resumen: GTA 6 sale como experiencia"
+  },
+  {
+   "from": 2771,
+   "to": 2838,
+   "text": "para un jugador, no hay fecha para el"
+  },
+  {
+   "from": 2838,
+   "to": 2913,
+   "text": "online, y GTA Online sigue ahí con GTA V."
+  },
+  {
+   "from": 2922,
+   "to": 2996,
+   "text": "Cuando Rockstar anuncie algo, lo verás aquí."
+  },
+  {
+   "from": 3005,
+   "to": 3065,
+   "text": "Suscríbete, y nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 495,
+   "title": "Lo confirmado"
+  },
+  {
+   "from": 976,
+   "title": "Lo que no se sabe"
+  },
+  {
+   "from": 1401,
+   "title": "Los rumores"
+  },
+  {
+   "from": 2053,
+   "title": "¿Y GTA Online?"
+  },
+  {
+   "from": 2696,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿GTA 6",
+  "big": "ONLINE?",
+  "tag": "DÍA 1",
+  "visual": "online"
+ }
+}

@@ -1,0 +1,575 @@
+{
+ "id": "05",
+ "slug": "fps-y-consolas",
+ "fps": 30,
+ "durationInFrames": 4515,
+ "audio": "audio/05.wav",
+ "title": "GTA 6 a 30 FPS: PS5 vs PS5 Pro vs Xbox Series X y S, ¿dónde jugarlo?",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 506,
+   "beats": [
+    16,
+    165,
+    292
+   ],
+   "data": {
+    "kicker": "GTA 6 · rendimiento",
+    "title": "¿Va a 60 fps?",
+    "subtitle": "PS5, PS5 Pro, Series X y Series S"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "stat",
+   "from": 506,
+   "duration": 569,
+   "beats": [
+    9,
+    224,
+    372
+   ],
+   "data": {
+    "value": "30",
+    "unit": "FPS",
+    "countUp": true,
+    "label": "Objetivo en todas las consolas",
+    "sub": "PS5, PS5 Pro y Xbox Series X|S. Sin modo rendimiento anunciado.",
+    "icon": "zap"
+   },
+   "chapter": "Lo confirmado",
+   "reveals": []
+  },
+  {
+   "type": "bullets",
+   "from": 1075,
+   "duration": 607,
+   "beats": [
+    9,
+    132,
+    263,
+    365
+   ],
+   "data": {
+    "heading": "¿Por qué 30 y no 60?",
+    "items": [
+     {
+      "icon": "building",
+      "text": "Prioridad: detalle en cada calle"
+     },
+     {
+      "icon": "users",
+      "text": "Más gente, tráfico y vida a la vez"
+     },
+     {
+      "icon": "trend",
+      "text": "Red Dead Redemption 2 ya salió así"
+     }
+    ]
+   },
+   "chapter": "¿Por qué 30?",
+   "reveals": [
+    132,
+    263,
+    365
+   ]
+  },
+  {
+   "type": "compare",
+   "from": 1682,
+   "duration": 747,
+   "beats": [
+    9,
+    102,
+    337,
+    649
+   ],
+   "data": {
+    "heading": "¿Qué gana la PS5 Pro?",
+    "left": {
+     "title": "PS5 · Series X",
+     "icon": "gamepad",
+     "items": [
+      "30 fps",
+      "Buena calidad de imagen",
+      "Resoluciones sin detallar"
+     ]
+    },
+    "right": {
+     "title": "PS5 Pro",
+     "icon": "sparkles",
+     "tag": "Exclusivo",
+     "items": [
+      "Los mismos 30 fps",
+      "Sombras con ray tracing",
+      "Reescalado PSSR: imagen más nítida"
+     ]
+    },
+    "verdict": "La Pro gana en imagen, no en fluidez"
+   },
+   "chapter": "PS5 Pro",
+   "reveals": [
+    102,
+    337,
+    649
+   ]
+  },
+  {
+   "type": "warning",
+   "from": 2429,
+   "duration": 789,
+   "beats": [
+    9,
+    171,
+    279,
+    481,
+    679
+   ],
+   "data": {
+    "heading": "¿Y la Xbox Series S?",
+    "icon": "info",
+    "items": [
+     "También apunta a 30 fps",
+     "Resolución sin confirmar: previsiblemente menor",
+     "512 GB de disco para un juego de hasta 212",
+     "Compatible, pero la opción más justa"
+    ]
+   },
+   "chapter": "Xbox Series S",
+   "reveals": [
+    171,
+    279,
+    481,
+    679
+   ]
+  },
+  {
+   "type": "table",
+   "from": 3218,
+   "duration": 841,
+   "beats": [
+    9,
+    76,
+    250,
+    403,
+    522
+   ],
+   "data": {
+    "heading": "Mi consejo según tu consola",
+    "columns": [
+     "Si tienes…",
+     "Qué hacer"
+    ],
+    "rows": [
+     [
+      "PS5 o Series X",
+      "Juega ahí: experiencia completa"
+     ],
+     [
+      "PS5 Pro",
+      "La mejor imagen en consola"
+     ],
+     [
+      "Series S",
+      "Adelante, pero libera espacio"
+     ],
+     [
+      "Ninguna aún",
+      "PS5 o Series X cumplen de sobra"
+     ]
+    ]
+   },
+   "chapter": "¿Dónde lo juego?",
+   "reveals": [
+    76,
+    250,
+    403,
+    522
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 4059,
+   "duration": 456,
+   "beats": [
+    9,
+    271,
+    400
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "30 fps en todas las consolas",
+     "PS5 Pro: mejor imagen, no más fluidez",
+     "Series S: compatible, pero justa"
+    ],
+    "next": "¿GTA 6 sale en PC?",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 91,
+   "text": "Es la pregunta técnica que más se"
+  },
+  {
+   "from": 91,
+   "to": 153,
+   "text": "repite: ¿GTA 6 va a 60 fps?"
+  },
+  {
+   "from": 165,
+   "to": 217,
+   "text": "Rockstar ya ha respondido, y la"
+  },
+  {
+   "from": 217,
+   "to": 283,
+   "text": "respuesta no es la que muchos esperaban."
+  },
+  {
+   "from": 292,
+   "to": 363,
+   "text": "Te cuento qué ha confirmado, qué gana la"
+  },
+  {
+   "from": 363,
+   "to": 432,
+   "text": "PS5 Pro, qué pasa con la Series S, y en"
+  },
+  {
+   "from": 432,
+   "to": 489,
+   "text": "qué consola te conviene jugarlo."
+  },
+  {
+   "from": 515,
+   "to": 579,
+   "text": "La respuesta corta: no. Rockstar ha"
+  },
+  {
+   "from": 579,
+   "to": 638,
+   "text": "confirmado que GTA 6 apunta a 30"
+  },
+  {
+   "from": 638,
+   "to": 721,
+   "text": "fotogramas por segundo en todas las consolas."
+  },
+  {
+   "from": 730,
+   "to": 834,
+   "text": "Eso incluye PS5, PS5 Pro, y Xbox Series"
+  },
+  {
+   "from": 834,
+   "to": 869,
+   "text": "X y Series S."
+  },
+  {
+   "from": 878,
+   "to": 933,
+   "text": "Y de momento no hay ningún modo"
+  },
+  {
+   "from": 933,
+   "to": 1000,
+   "text": "rendimiento a 60 anunciado, ni para el"
+  },
+  {
+   "from": 1000,
+   "to": 1059,
+   "text": "lanzamiento ni para más adelante."
+  },
+  {
+   "from": 1084,
+   "to": 1144,
+   "text": "¿Por qué? Según Rockstar, la idea es"
+  },
+  {
+   "from": 1144,
+   "to": 1198,
+   "text": "exprimir las consolas al máximo."
+  },
+  {
+   "from": 1207,
+   "to": 1277,
+   "text": "La prioridad es el mundo: más detalle en"
+  },
+  {
+   "from": 1277,
+   "to": 1329,
+   "text": "cada calle y en cada edificio."
+  },
+  {
+   "from": 1338,
+   "to": 1401,
+   "text": "Más gente, más tráfico, y más cosas"
+  },
+  {
+   "from": 1401,
+   "to": 1431,
+   "text": "pasando a la vez."
+  },
+  {
+   "from": 1440,
+   "to": 1497,
+   "text": "Y no es la primera vez: Red Dead"
+  },
+  {
+   "from": 1497,
+   "to": 1557,
+   "text": "Redemption 2 también salió a 30 en"
+  },
+  {
+   "from": 1557,
+   "to": 1618,
+   "text": "consolas, y es de los juegos mejor"
+  },
+  {
+   "from": 1618,
+   "to": 1666,
+   "text": "valorados de su generación."
+  },
+  {
+   "from": 1691,
+   "to": 1771,
+   "text": "Entonces, ¿para qué sirve la PS5 Pro aquí?"
+  },
+  {
+   "from": 1784,
+   "to": 1865,
+   "text": "En PS5 y en Series X tendrás 30 fps con"
+  },
+  {
+   "from": 1865,
+   "to": 1949,
+   "text": "buena calidad de imagen, aunque Rockstar"
+  },
+  {
+   "from": 1949,
+   "to": 2010,
+   "text": "no ha detallado resoluciones."
+  },
+  {
+   "from": 2019,
+   "to": 2093,
+   "text": "La PS5 Pro se queda en los mismos 30,"
+  },
+  {
+   "from": 2093,
+   "to": 2172,
+   "text": "pero añade dos cosas exclusivas: sombras"
+  },
+  {
+   "from": 2172,
+   "to": 2252,
+   "text": "con ray tracing, y el reescalado PSSR de"
+  },
+  {
+   "from": 2252,
+   "to": 2322,
+   "text": "Sony, que da una imagen más nítida."
+  },
+  {
+   "from": 2331,
+   "to": 2412,
+   "text": "En resumen: la Pro gana en imagen, no en fluidez."
+  },
+  {
+   "from": 2438,
+   "to": 2497,
+   "text": "¿Y la Series S? Es la consola más"
+  },
+  {
+   "from": 2497,
+   "to": 2566,
+   "text": "modesta de esta generación, y aquí toca"
+  },
+  {
+   "from": 2566,
+   "to": 2591,
+   "text": "ser realistas."
+  },
+  {
+   "from": 2600,
+   "to": 2699,
+   "text": "Rockstar confirma el mismo objetivo de 30 fps."
+  },
+  {
+   "from": 2708,
+   "to": 2776,
+   "text": "La resolución no se ha confirmado, pero"
+  },
+  {
+   "from": 2776,
+   "to": 2844,
+   "text": "lo previsible, como en otros juegos, es"
+  },
+  {
+   "from": 2844,
+   "to": 2901,
+   "text": "que sea más baja que en Series X."
+  },
+  {
+   "from": 2910,
+   "to": 2993,
+   "text": "Y luego está el espacio: con 512 GB de"
+  },
+  {
+   "from": 2993,
+   "to": 3078,
+   "text": "disco y un juego de hasta 212, vas a ir"
+  },
+  {
+   "from": 3078,
+   "to": 3099,
+   "text": "muy justo."
+  },
+  {
+   "from": 3108,
+   "to": 3168,
+   "text": "Se puede jugar, sin duda, pero es la"
+  },
+  {
+   "from": 3168,
+   "to": 3201,
+   "text": "opción más ajustada."
+  },
+  {
+   "from": 3227,
+   "to": 3285,
+   "text": "Y mi consejo, según lo que tengas."
+  },
+  {
+   "from": 3294,
+   "to": 3366,
+   "text": "Si ya tienes una PS5 o una Series X,"
+  },
+  {
+   "from": 3366,
+   "to": 3459,
+   "text": "juega ahí: vas a tener la experiencia completa."
+  },
+  {
+   "from": 3468,
+   "to": 3533,
+   "text": "Si tienes una PS5 Pro, es la mejor"
+  },
+  {
+   "from": 3533,
+   "to": 3612,
+   "text": "versión en consola por calidad de imagen."
+  },
+  {
+   "from": 3621,
+   "to": 3684,
+   "text": "Si tienes una Series S, adelante, pero"
+  },
+  {
+   "from": 3684,
+   "to": 3731,
+   "text": "prepara espacio en el disco."
+  },
+  {
+   "from": 3740,
+   "to": 3803,
+   "text": "Y si aún no tienes consola y estás"
+  },
+  {
+   "from": 3803,
+   "to": 3878,
+   "text": "mirando ofertas de Black Friday, una PS5"
+  },
+  {
+   "from": 3878,
+   "to": 3953,
+   "text": "o una Series X cumplen de sobra. La Pro,"
+  },
+  {
+   "from": 3953,
+   "to": 4043,
+   "text": "solo si quieres lo máximo y te encaja el precio."
+  },
+  {
+   "from": 4068,
+   "to": 4144,
+   "text": "Resumen: 30 fps en todas las consolas."
+  },
+  {
+   "from": 4144,
+   "to": 4220,
+   "text": "La PS5 Pro mejora la imagen pero no la"
+  },
+  {
+   "from": 4220,
+   "to": 4293,
+   "text": "fluidez, y la Series S cumple, con el"
+  },
+  {
+   "from": 4293,
+   "to": 4321,
+   "text": "espacio justo."
+  },
+  {
+   "from": 4330,
+   "to": 4392,
+   "text": "Y si eres de PC, en el siguiente vídeo"
+  },
+  {
+   "from": 4392,
+   "to": 4450,
+   "text": "te cuento qué se sabe de tu versión."
+  },
+  {
+   "from": 4459,
+   "to": 4498,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 506,
+   "title": "Lo confirmado"
+  },
+  {
+   "from": 1075,
+   "title": "¿Por qué 30?"
+  },
+  {
+   "from": 1682,
+   "title": "PS5 Pro"
+  },
+  {
+   "from": 2429,
+   "title": "Xbox Series S"
+  },
+  {
+   "from": 3218,
+   "title": "¿Dónde lo juego?"
+  },
+  {
+   "from": 4059,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿Y LOS",
+  "big": "60 FPS?",
+  "tag": "GTA 6",
+  "accent": "30",
+  "visual": "fps"
+ }
+}

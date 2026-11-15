@@ -60,3 +60,14 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# --- Producción de vídeo (Modo Leonida) ---
+node_modules/
+video/out/
+video/public/audio/
+pipeline/.models/
+pipeline/.cache/
+__pycache__/
+salida/
+*.mp4
+*.raw.wav

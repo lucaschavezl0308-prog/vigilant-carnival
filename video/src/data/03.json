@@ -1,0 +1,581 @@
+{
+ "id": "03",
+ "slug": "estandar-o-ultimate",
+ "fps": 30,
+ "durationInFrames": 4401,
+ "audio": "audio/03.wav",
+ "title": "GTA 6: ¿Estándar o Ultimate? Precio, qué incluye y cuál comprar",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 409,
+   "beats": [
+    16,
+    202
+   ],
+   "data": {
+    "kicker": "GTA 6 · ediciones",
+    "title": "¿Estándar o Ultimate?",
+    "subtitle": "Qué trae cada una y cuál te conviene"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "table",
+   "from": 409,
+   "duration": 826,
+   "beats": [
+    9,
+    60,
+    316,
+    509,
+    692
+   ],
+   "data": {
+    "heading": "Precios oficiales",
+    "columns": [
+     "Mercado",
+     "Estándar",
+     "Ultimate"
+    ],
+    "rows": [
+     [
+      "España y zona euro",
+      "79,99 €",
+      "99,99 €"
+     ],
+     [
+      "Estados Unidos",
+      "$79.99",
+      "$99.99"
+     ],
+     [
+      "Reino Unido",
+      "£69.99",
+      "£89.99"
+     ]
+    ],
+    "note": "En México, la Estándar sale por 1.499 pesos. Consulta tu tienda para otros países."
+   },
+   "chapter": "Precios",
+   "reveals": [
+    60,
+    316,
+    509
+   ]
+  },
+  {
+   "type": "compare",
+   "from": 1235,
+   "duration": 787,
+   "beats": [
+    9,
+    242,
+    542
+   ],
+   "data": {
+    "heading": "Qué trae cada edición",
+    "left": {
+     "title": "Estándar",
+     "price": "79,99 €",
+     "items": [
+      "El juego completo",
+      "Toda la historia de Jason y Lucia",
+      "Bonus si compras antes del 20 de noviembre"
+     ]
+    },
+    "right": {
+     "title": "Ultimate",
+     "price": "99,99 €",
+     "tag": "+20 €",
+     "items": [
+      "Todo lo de la Estándar",
+      "4 coches clásicos exclusivos",
+      "La tienda exclusiva Stock 305",
+      "Más extras, como un patrón de arma",
+      "Se desbloquea al avanzar la historia"
+     ]
+    }
+   },
+   "chapter": "Qué incluye cada una",
+   "reveals": [
+    9,
+    242
+   ]
+  },
+  {
+   "type": "bullets",
+   "from": 2022,
+   "duration": 754,
+   "beats": [
+    9,
+    83,
+    341,
+    527
+   ],
+   "data": {
+    "heading": "Bonus y mejoras",
+    "items": [
+     {
+      "icon": "gift",
+      "text": "Pack Vintage Vice City",
+      "sub": "Compras hechas antes del 20 de noviembre"
+     },
+     {
+      "icon": "star",
+      "text": "1 mes de GTA+",
+      "sub": "Reservas digitales en PlayStation Store y Microsoft Store"
+     },
+     {
+      "icon": "refresh",
+      "text": "Puedes pasar a Ultimate después",
+      "sub": "Sin volver a comprar el juego"
+     }
+    ]
+   },
+   "chapter": "Bonus",
+   "reveals": [
+    83,
+    341,
+    527
+   ]
+  },
+  {
+   "type": "warning",
+   "from": 2776,
+   "duration": 486,
+   "beats": [
+    9,
+    91,
+    166,
+    347
+   ],
+   "data": {
+    "heading": "Ojo con el formato físico",
+    "items": [
+     "La caja no incluye disco",
+     "Dentro hay un código de descarga",
+     "En tiendas españolas, la Ultimate aparece solo en digital"
+    ]
+   },
+   "chapter": "Ojo con el formato físico",
+   "reveals": [
+    91,
+    166,
+    347
+   ]
+  },
+  {
+   "type": "compare",
+   "from": 3262,
+   "duration": 620,
+   "beats": [
+    9,
+    65,
+    292,
+    447
+   ],
+   "data": {
+    "heading": "¿Cuál te recomiendo?",
+    "left": {
+     "title": "Estándar si…",
+     "icon": "check",
+     "items": [
+      "Vienes por la historia",
+      "Te dan igual los coches y cosméticos extra",
+      "Prefieres ahorrarte 20 €"
+     ]
+    },
+    "right": {
+     "title": "Ultimate si…",
+     "icon": "crown",
+     "items": [
+      "Eres de coleccionarlo todo",
+      "Los extras te hacen ilusión",
+      "Le vas a echar cientos de horas"
+     ]
+    },
+    "verdict": "¿Dudas? Empieza por la Estándar: puedes mejorar más tarde"
+   },
+   "chapter": "Cuál te recomiendo",
+   "reveals": [
+    65,
+    292,
+    447
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 3882,
+   "duration": 519,
+   "beats": [
+    9,
+    256,
+    463
+   ],
+   "data": {
+    "title": "Resumen",
+    "points": [
+     "Mismo juego en las dos ediciones",
+     "Ultimate: +20 € en extras",
+     "Pack Vintage Vice City antes del 20"
+    ],
+    "next": "La caja sin disco, explicada",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 89,
+   "text": "Vas a comprar GTA 6 y te encuentras dos"
+  },
+  {
+   "from": 89,
+   "to": 156,
+   "text": "botones: Estándar y Ultimate. Veinte"
+  },
+  {
+   "from": 156,
+   "to": 193,
+   "text": "euros de diferencia."
+  },
+  {
+   "from": 202,
+   "to": 265,
+   "text": "¿Merece la pena pagar más? Vamos a ver"
+  },
+  {
+   "from": 265,
+   "to": 330,
+   "text": "qué trae cada edición, cuánto cuesta, y"
+  },
+  {
+   "from": 330,
+   "to": 393,
+   "text": "cuál te recomiendo según cómo juegues."
+  },
+  {
+   "from": 418,
+   "to": 460,
+   "text": "Empecemos por el dinero."
+  },
+  {
+   "from": 469,
+   "to": 583,
+   "text": "En España y en la zona euro, la Estándar"
+  },
+  {
+   "from": 583,
+   "to": 716,
+   "text": "cuesta 79,99 euros, y la Ultimate, 99,99 euros."
+  },
+  {
+   "from": 725,
+   "to": 909,
+   "text": "En Estados Unidos, 79,99 dólares y 99,99 dólares."
+  },
+  {
+   "from": 918,
+   "to": 1092,
+   "text": "En Reino Unido, 69,99 libras y 89,99 libras."
+  },
+  {
+   "from": 1101,
+   "to": 1219,
+   "text": "Y en México, la Estándar está en 1.499 pesos."
+  },
+  {
+   "from": 1244,
+   "to": 1301,
+   "text": "Lo importante primero: el juego es"
+  },
+  {
+   "from": 1301,
+   "to": 1353,
+   "text": "exactamente el mismo en las dos"
+  },
+  {
+   "from": 1353,
+   "to": 1419,
+   "text": "ediciones. La historia de Jason y Lucia"
+  },
+  {
+   "from": 1419,
+   "to": 1468,
+   "text": "está completa en la Estándar."
+  },
+  {
+   "from": 1477,
+   "to": 1551,
+   "text": "La Ultimate añade contenido extra dentro"
+  },
+  {
+   "from": 1551,
+   "to": 1612,
+   "text": "del juego: cuatro coches clásicos"
+  },
+  {
+   "from": 1612,
+   "to": 1687,
+   "text": "exclusivos, la tienda Stock 305, y otros"
+  },
+  {
+   "from": 1687,
+   "to": 1768,
+   "text": "extras, como un patrón exclusivo para armas."
+  },
+  {
+   "from": 1777,
+   "to": 1831,
+   "text": "Y un detalle: según Rockstar, ese"
+  },
+  {
+   "from": 1831,
+   "to": 1894,
+   "text": "contenido se va desbloqueando a medida"
+  },
+  {
+   "from": 1894,
+   "to": 1959,
+   "text": "que avanzas en la historia. No lo tienes"
+  },
+  {
+   "from": 1959,
+   "to": 2005,
+   "text": "todo desde el primer minuto."
+  },
+  {
+   "from": 2031,
+   "to": 2096,
+   "text": "Ahora, los extras por comprar pronto."
+  },
+  {
+   "from": 2105,
+   "to": 2168,
+   "text": "Las compras hechas antes del 20 de"
+  },
+  {
+   "from": 2168,
+   "to": 2241,
+   "text": "noviembre incluyen el pack Vintage Vice"
+  },
+  {
+   "from": 2241,
+   "to": 2311,
+   "text": "City. Es decir: si lo compras el mismo"
+  },
+  {
+   "from": 2311,
+   "to": 2354,
+   "text": "día 19, todavía entras."
+  },
+  {
+   "from": 2363,
+   "to": 2426,
+   "text": "Además, las reservas digitales en"
+  },
+  {
+   "from": 2426,
+   "to": 2494,
+   "text": "PlayStation Store y Microsoft Store"
+  },
+  {
+   "from": 2494,
+   "to": 2540,
+   "text": "incluían un mes de GTA+."
+  },
+  {
+   "from": 2549,
+   "to": 2615,
+   "text": "Y si empiezas con la Estándar y luego te"
+  },
+  {
+   "from": 2615,
+   "to": 2675,
+   "text": "pica el gusanillo, puedes pasar a la"
+  },
+  {
+   "from": 2675,
+   "to": 2732,
+   "text": "Ultimate más adelante sin volver a"
+  },
+  {
+   "from": 2732,
+   "to": 2760,
+   "text": "comprar el juego."
+  },
+  {
+   "from": 2785,
+   "to": 2858,
+   "text": "Y un aviso si pensabas comprarlo en tienda."
+  },
+  {
+   "from": 2867,
+   "to": 2933,
+   "text": "La edición física no incluye disco."
+  },
+  {
+   "from": 2942,
+   "to": 2997,
+   "text": "Dentro de la caja hay un código de"
+  },
+  {
+   "from": 2997,
+   "to": 3049,
+   "text": "descarga, así que, compres donde"
+  },
+  {
+   "from": 3049,
+   "to": 3114,
+   "text": "compres, tendrás que descargar el juego."
+  },
+  {
+   "from": 3123,
+   "to": 3190,
+   "text": "Y en las tiendas españolas, la Ultimate"
+  },
+  {
+   "from": 3190,
+   "to": 3246,
+   "text": "aparece solo en formato digital."
+  },
+  {
+   "from": 3271,
+   "to": 3314,
+   "text": "Entonces, ¿cuál compro?"
+  },
+  {
+   "from": 3327,
+   "to": 3395,
+   "text": "La Estándar, si vienes por la historia y"
+  },
+  {
+   "from": 3395,
+   "to": 3456,
+   "text": "te dan igual los coches y cosméticos"
+  },
+  {
+   "from": 3456,
+   "to": 3523,
+   "text": "extra. Es el juego completo y te ahorras"
+  },
+  {
+   "from": 3523,
+   "to": 3545,
+   "text": "veinte euros."
+  },
+  {
+   "from": 3554,
+   "to": 3607,
+   "text": "La Ultimate, si eres de los que lo"
+  },
+  {
+   "from": 3607,
+   "to": 3665,
+   "text": "coleccionan todo, o sabes que le vas a"
+  },
+  {
+   "from": 3665,
+   "to": 3700,
+   "text": "echar cientos de horas."
+  },
+  {
+   "from": 3709,
+   "to": 3771,
+   "text": "Y si dudas, empieza por la Estándar:"
+  },
+  {
+   "from": 3771,
+   "to": 3837,
+   "text": "como puedes mejorar después, no pierdes"
+  },
+  {
+   "from": 3837,
+   "to": 3866,
+   "text": "nada por esperar."
+  },
+  {
+   "from": 3891,
+   "to": 3948,
+   "text": "Resumen: el juego es el mismo, la"
+  },
+  {
+   "from": 3948,
+   "to": 4013,
+   "text": "Ultimate son veinte euros en extras, y"
+  },
+  {
+   "from": 4013,
+   "to": 4071,
+   "text": "el pack Vintage Vice City entra si"
+  },
+  {
+   "from": 4071,
+   "to": 4129,
+   "text": "compras antes del 20 de noviembre."
+  },
+  {
+   "from": 4138,
+   "to": 4191,
+   "text": "Dime en los comentarios cuál has"
+  },
+  {
+   "from": 4191,
+   "to": 4253,
+   "text": "elegido. Y si quieres entender bien lo"
+  },
+  {
+   "from": 4253,
+   "to": 4336,
+   "text": "de la caja sin disco, tienes el vídeo en el canal."
+  },
+  {
+   "from": 4345,
+   "to": 4384,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 409,
+   "title": "Precios"
+  },
+  {
+   "from": 1235,
+   "title": "Qué incluye cada una"
+  },
+  {
+   "from": 2022,
+   "title": "Bonus"
+  },
+  {
+   "from": 2776,
+   "title": "Ojo con el formato físico"
+  },
+  {
+   "from": 3262,
+   "title": "Cuál te recomiendo"
+  },
+  {
+   "from": 3882,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "¿CUÁL",
+  "big": "COMPRO?",
+  "tag": "GTA 6",
+  "accent": "79,99€|99,99€",
+  "visual": "compare"
+ }
+}
