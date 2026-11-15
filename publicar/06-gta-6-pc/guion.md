@@ -3,16 +3,14 @@
 Duración total: **2:01**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · PC
-title: ¿Sale en PC?
-subtitle: Lo que se sabe y cuánto podrías esperar
-```
+- **kicker:** GTA 6 · PC
+- **title:** ¿Sale en PC?
+- **subtitle:** Lo que se sabe y cuánto podrías esperar
 
 **Voz:**
 
@@ -24,12 +22,10 @@ subtitle: Lo que se sabe y cuánto podrías esperar
 
 **En pantalla:**
 
-```yaml
-value: 'NO'
-label: Hay versión de PC anunciada
-sub: 'Plataformas confirmadas: PS5 y Xbox Series X|S'
-icon: monitor
-```
+- **value:** NO
+- **label:** Hay versión de PC anunciada
+- **sub:** Plataformas confirmadas: PS5 y Xbox Series X|S
+- **icon:** monitor
 
 **Voz:**
 
@@ -42,23 +38,13 @@ icon: monitor
 
 **En pantalla:**
 
-```yaml
-heading: Cuánto tardaron en llegar a PC
-points:
-- date: 7 meses
-  label: GTA IV
-  sub: '2008'
-- date: 19 meses
-  label: GTA V
-  sub: 2013 → 2015
-- date: 12 meses
-  label: Red Dead 2
-  sub: 2018 → 2019
-- date: ¿?
-  label: GTA 6
-  sub: Sin anunciar
-note: Las previsiones de 2027 o 2028 son estimaciones de analistas, no anuncios.
-```
+- **heading:** Cuánto tardaron en llegar a PC
+- **points:**
+  - GTA IV (date: 7 meses; sub: 2008)
+  - GTA V (date: 19 meses; sub: 2013 → 2015)
+  - Red Dead 2 (date: 12 meses; sub: 2018 → 2019)
+  - GTA 6 (date: ¿?; sub: Sin anunciar)
+- **note:** Las previsiones de 2027 o 2028 son estimaciones de analistas, no anuncios.
 
 **Voz:**
 
@@ -73,15 +59,13 @@ note: Las previsiones de 2027 o 2028 son estimaciones de analistas, no anuncios.
 
 **En pantalla:**
 
-```yaml
-heading: Cuidado con las estafas
-icon: shield
-items:
-- No existe ninguna descarga de GTA 6 para PC
-- 'Tampoco hay versión de móvil: los APK son falsos'
-- Desconfía de 'requisitos oficiales' y 'betas'
-- Compra solo en tiendas oficiales
-```
+- **heading:** Cuidado con las estafas
+- **icon:** shield
+- **items:**
+  - No existe ninguna descarga de GTA 6 para PC
+  - Tampoco hay versión de móvil: los APK son falsos
+  - Desconfía de 'requisitos oficiales' y 'betas'
+  - Compra solo en tiendas oficiales
 
 **Voz:**
 
@@ -96,19 +80,12 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: Si solo tienes PC
-items:
-- icon: gamepad
-  text: Hazte con una consola
-  sub: Las ofertas de estas fechas ayudan
-- icon: hourglass
-  text: O espera a la versión de PC
-- icon: eye-off
-  text: 'Silencia palabras clave: cero spoilers'
-- icon: bell
-  text: Sigue los anuncios oficiales de Rockstar
-```
+- **heading:** Si solo tienes PC
+- **items:**
+  - Hazte con una consola (sub: Las ofertas de estas fechas ayudan)
+  - O espera a la versión de PC
+  - Silencia palabras clave: cero spoilers
+  - Sigue los anuncios oficiales de Rockstar
 
 **Voz:**
 
@@ -123,15 +100,13 @@ items:
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- Sin versión de PC anunciada
-- 'Historial: de 7 a 19 meses de espera'
-- Ninguna descarga para PC es real
-next: ¿GTA 6 tiene online?
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - Sin versión de PC anunciada
+  - Historial: de 7 a 19 meses de espera
+  - Ninguna descarga para PC es real
+- **next:** ¿GTA 6 tiene online?
+- **cta:** Suscríbete
 
 **Voz:**
 

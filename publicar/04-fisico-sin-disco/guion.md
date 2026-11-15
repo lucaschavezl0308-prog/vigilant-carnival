@@ -3,16 +3,14 @@
 Duración total: **1:56**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · formato físico
-title: La caja sin disco
-subtitle: Qué trae, por qué y si te conviene
-```
+- **kicker:** GTA 6 · formato físico
+- **title:** La caja sin disco
+- **subtitle:** Qué trae, por qué y si te conviene
 
 **Voz:**
 
@@ -25,12 +23,10 @@ subtitle: Qué trae, por qué y si te conviene
 
 **En pantalla:**
 
-```yaml
-value: '0'
-label: Discos dentro de la caja
-sub: Lo que trae es un código para descargar el juego
-icon: box
-```
+- **value:** 0
+- **label:** Discos dentro de la caja
+- **sub:** Lo que trae es un código para descargar el juego
+- **icon:** box
 
 **Voz:**
 
@@ -43,18 +39,12 @@ icon: box
 
 **En pantalla:**
 
-```yaml
-heading: Qué implica
-items:
-- icon: download
-  text: Descargar hasta 212 GB igualmente
-- icon: wifi
-  text: Conexión para canjear y descargar
-- icon: gamepad
-  text: Vale para consolas sin lector de discos
-- icon: ban
-  text: Un código canjeado no se revende
-```
+- **heading:** Qué implica
+- **items:**
+  - Descargar hasta 212 GB igualmente
+  - Conexión para canjear y descargar
+  - Vale para consolas sin lector de discos
+  - Un código canjeado no se revende
 
 **Voz:**
 
@@ -69,14 +59,12 @@ items:
 
 **En pantalla:**
 
-```yaml
-value: '100'
-unit: GB
-countUp: true
-label: Capacidad de un disco de PS5 o Series X
-sub: GTA 6 ocupa hasta 212 GB
-icon: disc
-```
+- **value:** 100
+- **unit:** GB
+- **countUp:** True
+- **label:** Capacidad de un disco de PS5 o Series X
+- **sub:** GTA 6 ocupa hasta 212 GB
+- **icon:** disc
 
 **Voz:**
 
@@ -90,24 +78,16 @@ icon: disc
 
 **En pantalla:**
 
-```yaml
-heading: ¿Caja o digital?
-left:
-  title: Caja con código
-  icon: box
-  items:
+- **heading:** ¿Caja o digital?
+- **left:** Caja con código
   - Puede salir más barata en ofertas de tiendas
   - Ideal para regalar
   - La tienes en la estantería
-right:
-  title: Digital
-  icon: download
-  items:
+- **right:** Digital
   - Lo compras y empieza a bajar al momento
   - Sin depender de stock ni de envíos
   - Las reservas digitales permitían precargar
-verdict: 'Mismo juego, misma descarga: elige por precio y comodidad'
-```
+- **verdict:** Mismo juego, misma descarga: elige por precio y comodidad
 
 **Voz:**
 
@@ -121,15 +101,13 @@ verdict: 'Mismo juego, misma descarga: elige por precio y comodidad'
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- La caja trae un código, no un disco
-- Hay que descargar hasta 212 GB
-- Mismo juego que en digital
-next: ¿GTA 6 va a 60 fps?
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - La caja trae un código, no un disco
+  - Hay que descargar hasta 212 GB
+  - Mismo juego que en digital
+- **next:** ¿GTA 6 va a 60 fps?
+- **cta:** Suscríbete
 
 **Voz:**
 

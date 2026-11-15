@@ -3,16 +3,14 @@
 Duración total: **2:30**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · rendimiento
-title: ¿Va a 60 fps?
-subtitle: PS5, PS5 Pro, Series X y Series S
-```
+- **kicker:** GTA 6 · rendimiento
+- **title:** ¿Va a 60 fps?
+- **subtitle:** PS5, PS5 Pro, Series X y Series S
 
 **Voz:**
 
@@ -25,14 +23,12 @@ subtitle: PS5, PS5 Pro, Series X y Series S
 
 **En pantalla:**
 
-```yaml
-value: '30'
-unit: FPS
-countUp: true
-label: Objetivo en todas las consolas
-sub: PS5, PS5 Pro y Xbox Series X|S. Sin modo rendimiento anunciado.
-icon: zap
-```
+- **value:** 30
+- **unit:** FPS
+- **countUp:** True
+- **label:** Objetivo en todas las consolas
+- **sub:** PS5, PS5 Pro y Xbox Series X|S. Sin modo rendimiento anunciado.
+- **icon:** zap
 
 **Voz:**
 
@@ -45,16 +41,11 @@ icon: zap
 
 **En pantalla:**
 
-```yaml
-heading: ¿Por qué 30 y no 60?
-items:
-- icon: building
-  text: 'Prioridad: detalle en cada calle'
-- icon: users
-  text: Más gente, tráfico y vida a la vez
-- icon: trend
-  text: Red Dead Redemption 2 ya salió así
-```
+- **heading:** ¿Por qué 30 y no 60?
+- **items:**
+  - Prioridad: detalle en cada calle
+  - Más gente, tráfico y vida a la vez
+  - Red Dead Redemption 2 ya salió así
 
 **Voz:**
 
@@ -68,25 +59,16 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: ¿Qué gana la PS5 Pro?
-left:
-  title: PS5 · Series X
-  icon: gamepad
-  items:
+- **heading:** ¿Qué gana la PS5 Pro?
+- **left:** PS5 · Series X
   - 30 fps
   - Buena calidad de imagen
   - Resoluciones sin detallar
-right:
-  title: PS5 Pro
-  icon: sparkles
-  tag: Exclusivo
-  items:
+- **right:** PS5 Pro
   - Los mismos 30 fps
   - Sombras con ray tracing
-  - 'Reescalado PSSR: imagen más nítida'
-verdict: La Pro gana en imagen, no en fluidez
-```
+  - Reescalado PSSR: imagen más nítida
+- **verdict:** La Pro gana en imagen, no en fluidez
 
 **Voz:**
 
@@ -100,15 +82,13 @@ verdict: La Pro gana en imagen, no en fluidez
 
 **En pantalla:**
 
-```yaml
-heading: ¿Y la Xbox Series S?
-icon: info
-items:
-- También apunta a 30 fps
-- 'Resolución sin confirmar: previsiblemente menor'
-- 512 GB de disco para un juego de hasta 212
-- Compatible, pero la opción más justa
-```
+- **heading:** ¿Y la Xbox Series S?
+- **icon:** info
+- **items:**
+  - También apunta a 30 fps
+  - Resolución sin confirmar: previsiblemente menor
+  - 512 GB de disco para un juego de hasta 212
+  - Compatible, pero la opción más justa
 
 **Voz:**
 
@@ -123,21 +103,15 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: Mi consejo según tu consola
-columns:
-- Si tienes…
-- Qué hacer
-rows:
-- - PS5 o Series X
-  - 'Juega ahí: experiencia completa'
-- - PS5 Pro
-  - La mejor imagen en consola
-- - Series S
-  - Adelante, pero libera espacio
-- - Ninguna aún
-  - PS5 o Series X cumplen de sobra
-```
+- **heading:** Mi consejo según tu consola
+- **columns:**
+  - Si tienes…
+  - Qué hacer
+- **rows:**
+  - PS5 o Series X | Juega ahí: experiencia completa
+  - PS5 Pro | La mejor imagen en consola
+  - Series S | Adelante, pero libera espacio
+  - Ninguna aún | PS5 o Series X cumplen de sobra
 
 **Voz:**
 
@@ -152,15 +126,13 @@ rows:
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- 30 fps en todas las consolas
-- 'PS5 Pro: mejor imagen, no más fluidez'
-- 'Series S: compatible, pero justa'
-next: ¿GTA 6 sale en PC?
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - 30 fps en todas las consolas
+  - PS5 Pro: mejor imagen, no más fluidez
+  - Series S: compatible, pero justa
+- **next:** ¿GTA 6 sale en PC?
+- **cta:** Suscríbete
 
 **Voz:**
 

@@ -3,16 +3,14 @@
 Duración total: **2:26**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · ediciones
-title: ¿Estándar o Ultimate?
-subtitle: Qué trae cada una y cuál te conviene
-```
+- **kicker:** GTA 6 · ediciones
+- **title:** ¿Estándar o Ultimate?
+- **subtitle:** Qué trae cada una y cuál te conviene
 
 **Voz:**
 
@@ -24,24 +22,16 @@ subtitle: Qué trae cada una y cuál te conviene
 
 **En pantalla:**
 
-```yaml
-heading: Precios oficiales
-columns:
-- Mercado
-- Estándar
-- Ultimate
-rows:
-- - España y zona euro
-  - 79,99 €
-  - 99,99 €
-- - Estados Unidos
-  - $79.99
-  - $99.99
-- - Reino Unido
-  - £69.99
-  - £89.99
-note: En México, la Estándar sale por 1.499 pesos. Consulta tu tienda para otros países.
-```
+- **heading:** Precios oficiales
+- **columns:**
+  - Mercado
+  - Estándar
+  - Ultimate
+- **rows:**
+  - España y zona euro | 79,99 € | 99,99 €
+  - Estados Unidos | $79.99 | $99.99
+  - Reino Unido | £69.99 | £89.99
+- **note:** En México, la Estándar sale por 1.499 pesos. Consulta tu tienda para otros países.
 
 **Voz:**
 
@@ -56,26 +46,17 @@ note: En México, la Estándar sale por 1.499 pesos. Consulta tu tienda para otr
 
 **En pantalla:**
 
-```yaml
-heading: Qué trae cada edición
-left:
-  title: Estándar
-  price: 79,99 €
-  items:
+- **heading:** Qué trae cada edición
+- **left:** Estándar · 79,99 €
   - El juego completo
   - Toda la historia de Jason y Lucia
   - Bonus si compras antes del 20 de noviembre
-right:
-  title: Ultimate
-  price: 99,99 €
-  tag: +20 €
-  items:
+- **right:** Ultimate · 99,99 €
   - Todo lo de la Estándar
   - 4 coches clásicos exclusivos
   - La tienda exclusiva Stock 305
   - Más extras, como un patrón de arma
   - Se desbloquea al avanzar la historia
-```
 
 **Voz:**
 
@@ -88,19 +69,11 @@ right:
 
 **En pantalla:**
 
-```yaml
-heading: Bonus y mejoras
-items:
-- icon: gift
-  text: Pack Vintage Vice City
-  sub: Compras hechas antes del 20 de noviembre
-- icon: star
-  text: 1 mes de GTA+
-  sub: Reservas digitales en PlayStation Store y Microsoft Store
-- icon: refresh
-  text: Puedes pasar a Ultimate después
-  sub: Sin volver a comprar el juego
-```
+- **heading:** Bonus y mejoras
+- **items:**
+  - Pack Vintage Vice City (sub: Compras hechas antes del 20 de noviembre)
+  - 1 mes de GTA+ (sub: Reservas digitales en PlayStation Store y Microsoft Store)
+  - Puedes pasar a Ultimate después (sub: Sin volver a comprar el juego)
 
 **Voz:**
 
@@ -114,13 +87,11 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: Ojo con el formato físico
-items:
-- La caja no incluye disco
-- Dentro hay un código de descarga
-- En tiendas españolas, la Ultimate aparece solo en digital
-```
+- **heading:** Ojo con el formato físico
+- **items:**
+  - La caja no incluye disco
+  - Dentro hay un código de descarga
+  - En tiendas españolas, la Ultimate aparece solo en digital
 
 **Voz:**
 
@@ -134,24 +105,16 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: ¿Cuál te recomiendo?
-left:
-  title: Estándar si…
-  icon: check
-  items:
+- **heading:** ¿Cuál te recomiendo?
+- **left:** Estándar si…
   - Vienes por la historia
   - Te dan igual los coches y cosméticos extra
   - Prefieres ahorrarte 20 €
-right:
-  title: Ultimate si…
-  icon: crown
-  items:
+- **right:** Ultimate si…
   - Eres de coleccionarlo todo
   - Los extras te hacen ilusión
   - Le vas a echar cientos de horas
-verdict: '¿Dudas? Empieza por la Estándar: puedes mejorar más tarde'
-```
+- **verdict:** ¿Dudas? Empieza por la Estándar: puedes mejorar más tarde
 
 **Voz:**
 
@@ -165,15 +128,13 @@ verdict: '¿Dudas? Empieza por la Estándar: puedes mejorar más tarde'
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- Mismo juego en las dos ediciones
-- 'Ultimate: +20 € en extras'
-- Pack Vintage Vice City antes del 20
-next: La caja sin disco, explicada
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - Mismo juego en las dos ediciones
+  - Ultimate: +20 € en extras
+  - Pack Vintage Vice City antes del 20
+- **next:** La caja sin disco, explicada
+- **cta:** Suscríbete
 
 **Voz:**
 

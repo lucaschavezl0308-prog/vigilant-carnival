@@ -3,16 +3,14 @@
 Duración total: **1:42**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · multijugador
-title: ¿Tiene online?
-subtitle: Qué hay el día 19 y qué viene después
-```
+- **kicker:** GTA 6 · multijugador
+- **title:** ¿Tiene online?
+- **subtitle:** Qué hay el día 19 y qué viene después
 
 **Voz:**
 
@@ -25,10 +23,8 @@ subtitle: Qué hay el día 19 y qué viene después
 
 **En pantalla:**
 
-```yaml
-text: Una experiencia para un jugador
-source: Así presenta Rockstar GTA 6 en el anuncio de reservas y en las tiendas
-```
+- **text:** Una experiencia para un jugador
+- **source:** Así presenta Rockstar GTA 6 en el anuncio de reservas y en las tiendas
 
 **Voz:**
 
@@ -41,18 +37,12 @@ source: Así presenta Rockstar GTA 6 en el anuncio de reservas y en las tiendas
 
 **En pantalla:**
 
-```yaml
-heading: Lo que NO está confirmado
-items:
-- icon: calendar
-  text: Fecha del modo online
-- icon: chat
-  text: Nombre o formato
-- icon: users
-  text: Juego cruzado entre consolas
-- icon: sliders
-  text: Cómo se jugaría
-```
+- **heading:** Lo que NO está confirmado
+- **items:**
+  - Fecha del modo online
+  - Nombre o formato
+  - Juego cruzado entre consolas
+  - Cómo se jugaría
 
 **Voz:**
 
@@ -67,14 +57,12 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: Lo que se rumorea
-icon: info
-items:
-- Muchos esperan el online en 2027
-- Un documental lo sugirió… pero era una frase del guion
-- Rockstar no ha dado ninguna fecha
-```
+- **heading:** Lo que se rumorea
+- **icon:** info
+- **items:**
+  - Muchos esperan el online en 2027
+  - Un documental lo sugirió… pero era una frase del guion
+  - Rockstar no ha dado ninguna fecha
 
 **Voz:**
 
@@ -88,17 +76,11 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: ¿Y el GTA Online de siempre?
-items:
-- icon: globe
-  text: Sigue funcionando con GTA V
-- icon: gamepad
-  text: Tu progreso sigue ahí
-  sub: Rockstar no ha anunciado ningún cierre
-- icon: shield
-  text: Ojo con 'betas' e invitaciones falsas
-```
+- **heading:** ¿Y el GTA Online de siempre?
+- **items:**
+  - Sigue funcionando con GTA V
+  - Tu progreso sigue ahí (sub: Rockstar no ha anunciado ningún cierre)
+  - Ojo con 'betas' e invitaciones falsas
 
 **Voz:**
 
@@ -112,15 +94,13 @@ items:
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- GTA 6 sale solo con historia
-- Sin fecha para el online
-- GTA Online sigue con GTA V
-next: El mapa de GTA 6
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - GTA 6 sale solo con historia
+  - Sin fecha para el online
+  - GTA Online sigue con GTA V
+- **next:** El mapa de GTA 6
+- **cta:** Suscríbete
 
 **Voz:**
 

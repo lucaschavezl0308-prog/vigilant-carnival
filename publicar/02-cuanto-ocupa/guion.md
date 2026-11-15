@@ -3,16 +3,14 @@
 Duración total: **3:02**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · espacio y descarga
-title: ¿Te cabe GTA 6?
-subtitle: Cuánto ocupa y cómo hacer sitio sin perder nada
-```
+- **kicker:** GTA 6 · espacio y descarga
+- **title:** ¿Te cabe GTA 6?
+- **subtitle:** Cuánto ocupa y cómo hacer sitio sin perder nada
 
 **Voz:**
 
@@ -25,14 +23,12 @@ subtitle: Cuánto ocupa y cómo hacer sitio sin perder nada
 
 **En pantalla:**
 
-```yaml
-value: '212'
-unit: GB
-countUp: true
-label: Tamaño máximo de descarga
-sub: Cifra máxima indicada para PS5 y Xbox Series. Los parches pueden sumar más.
-icon: hard-drive
-```
+- **value:** 212
+- **unit:** GB
+- **countUp:** True
+- **label:** Tamaño máximo de descarga
+- **sub:** Cifra máxima indicada para PS5 y Xbox Series. Los parches pueden sumar más.
+- **icon:** hard-drive
 
 **Voz:**
 
@@ -46,22 +42,14 @@ icon: hard-drive
 
 **En pantalla:**
 
-```yaml
-heading: ¿Cuánto te queda después?
-game: 212
-consoles:
-- name: PS5 (825 GB)
-  usable: 667
-- name: PS5 Slim (1 TB)
-  usable: 848
-- name: Xbox Series X
-  usable: 802
-  label: 1 TB · 802 GB útiles
-- name: Xbox Series S
-  usable: 364
-  label: 512 GB · 364 GB útiles
-note: Espacio útil aproximado de fábrica, sin otros juegos instalados.
-```
+- **heading:** ¿Cuánto te queda después?
+- **game:** 212
+- **consoles:**
+  - PS5 (825 GB) (usable: 667)
+  - PS5 Slim (1 TB) (usable: 848)
+  - Xbox Series X (usable: 802; label: 1 TB · 802 GB útiles)
+  - Xbox Series S (usable: 364; label: 512 GB · 364 GB útiles)
+- **note:** Espacio útil aproximado de fábrica, sin otros juegos instalados.
 
 **Voz:**
 
@@ -76,22 +64,16 @@ note: Espacio útil aproximado de fábrica, sin otros juegos instalados.
 
 **En pantalla:**
 
-```yaml
-heading: ¿Cuánto tarda en bajar?
-columns:
-- Tu conexión
-- Tiempo teórico
-rows:
-- - 100 megas
-  - ≈ 4 h 45 min
-- - 300 megas
-  - ≈ 1 h 35 min
-- - 600 megas
-  - ≈ 47 min
-- - 1 giga
-  - ≈ 28 min
-note: Cálculo para 212 GB a velocidad máxima. El día del lanzamiento irá más lento.
-```
+- **heading:** ¿Cuánto tarda en bajar?
+- **columns:**
+  - Tu conexión
+  - Tiempo teórico
+- **rows:**
+  - 100 megas | ≈ 4 h 45 min
+  - 300 megas | ≈ 1 h 35 min
+  - 600 megas | ≈ 47 min
+  - 1 giga | ≈ 28 min
+- **note:** Cálculo para 212 GB a velocidad máxima. El día del lanzamiento irá más lento.
 
 **Voz:**
 
@@ -107,20 +89,12 @@ note: Cálculo para 212 GB a velocidad máxima. El día del lanzamiento irá má
 
 **En pantalla:**
 
-```yaml
-heading: Cómo hacer sitio sin perder nada
-items:
-- icon: sliders
-  text: Mira qué ocupa más en Almacenamiento
-- icon: camera
-  text: Borra o pasa al móvil capturas y clips
-- icon: x
-  text: Desinstala lo que no juegas
-  sub: Tus partidas guardadas no se borran
-- icon: hard-drive
-  text: Mueve juegos a un disco USB
-  sub: Para guardarlos, no para jugarlos
-```
+- **heading:** Cómo hacer sitio sin perder nada
+- **items:**
+  - Mira qué ocupa más en Almacenamiento
+  - Borra o pasa al móvil capturas y clips
+  - Desinstala lo que no juegas (sub: Tus partidas guardadas no se borran)
+  - Mueve juegos a un disco USB (sub: Para guardarlos, no para jugarlos)
 
 **Voz:**
 
@@ -135,26 +109,18 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: ¿Necesitas ampliar?
-left:
-  title: PS5
-  icon: gamepad
-  items:
+- **heading:** ¿Necesitas ampliar?
+- **left:** PS5
   - SSD M.2 NVMe PCIe 4.0
   - Sony recomienda 5.500 MB/s o más
   - Con disipador
   - Va en la ranura de expansión
-right:
-  title: Xbox Series
-  icon: gamepad
-  items:
+- **right:** Xbox Series
   - Tarjeta de expansión compatible
   - Se conecta por detrás, sin abrir nada
   - Los juegos se ejecutan desde ella
   - Suele salir más cara por GB
-verdict: Un disco USB normal sirve para guardar juegos, no para jugar a GTA 6
-```
+- **verdict:** Un disco USB normal sirve para guardar juegos, no para jugar a GTA 6
 
 **Voz:**
 
@@ -168,15 +134,13 @@ verdict: Un disco USB normal sirve para guardar juegos, no para jugar a GTA 6
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- 'Hasta 212 GB: deja 230-250 libres'
-- 'Series S: el caso más justo'
-- Empieza la descarga cuanto antes
-next: ¿Estándar o Ultimate?
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - Hasta 212 GB: deja 230-250 libres
+  - Series S: el caso más justo
+  - Empieza la descarga cuanto antes
+- **next:** ¿Estándar o Ultimate?
+- **cta:** Suscríbete
 
 **Voz:**
 

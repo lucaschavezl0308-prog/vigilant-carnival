@@ -3,16 +3,14 @@
 Duración total: **2:08**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · personajes
-title: ¿Quién es quién?
-subtitle: Protagonistas y secundarios, sin spoilers
-```
+- **kicker:** GTA 6 · personajes
+- **title:** ¿Quién es quién?
+- **subtitle:** Protagonistas y secundarios, sin spoilers
 
 **Voz:**
 
@@ -24,17 +22,15 @@ subtitle: Protagonistas y secundarios, sin spoilers
 
 **En pantalla:**
 
-```yaml
-name: Lucia Caminos
-role: Protagonista
-initials: LC
-color: '#FF2D8A'
-variant: b
-traits:
-- Aprendió a pelear desde niña
-- Pasó por la prisión de Leonida
-- Ahora, solo jugadas inteligentes
-```
+- **name:** Lucia Caminos
+- **role:** Protagonista
+- **initials:** LC
+- **color:** #FF2D8A
+- **variant:** b
+- **traits:**
+  - Aprendió a pelear desde niña
+  - Pasó por la prisión de Leonida
+  - Ahora, solo jugadas inteligentes
 
 **Voz:**
 
@@ -48,16 +44,14 @@ traits:
 
 **En pantalla:**
 
-```yaml
-name: Jason Duval
-role: Protagonista
-initials: JD
-color: '#22E4D4'
-traits:
-- Creció entre timadores
-- Pasó por el ejército
-- Trabaja para contrabandistas en los Keys
-```
+- **name:** Jason Duval
+- **role:** Protagonista
+- **initials:** JD
+- **color:** #22E4D4
+- **traits:**
+  - Creció entre timadores
+  - Pasó por el ejército
+  - Trabaja para contrabandistas en los Keys
 
 **Voz:**
 
@@ -71,10 +65,8 @@ traits:
 
 **En pantalla:**
 
-```yaml
-text: Siempre han sabido que juegan con las cartas en contra
-source: Sinopsis oficial de Rockstar sobre Jason y Lucia
-```
+- **text:** Siempre han sabido que juegan con las cartas en contra
+- **source:** Sinopsis oficial de Rockstar sobre Jason y Lucia
 
 **Voz:**
 
@@ -86,34 +78,14 @@ source: Sinopsis oficial de Rockstar sobre Jason y Lucia
 
 **En pantalla:**
 
-```yaml
-heading: Los secundarios presentados
-people:
-- name: Cal Hampton
-  role: Amigo de Jason. Se cree todo lo de internet
-  initials: CH
-  color: '#FFD23F'
-- name: Boobie Ike
-  role: 'Leyenda de Vice City: club, estudio e inmuebles'
-  initials: BI
-  color: '#FF8A1F'
-- name: Dre'Quan Priest
-  role: Quiere triunfar en la música
-  initials: DP
-  color: '#FF2D8A'
-- name: Real Dimez
-  role: 'Dúo de rap: Bae-Luxe y Roxy'
-  initials: RD
-  color: '#B26BFF'
-- name: Raul Bautista
-  role: Atracador veterano que busca talento
-  initials: RB
-  color: '#22E4D4'
-- name: Brian Heder
-  role: Contrabandista de la vieja escuela
-  initials: BH
-  color: '#7CFF6B'
-```
+- **heading:** Los secundarios presentados
+- **people:**
+  - Cal Hampton (role: Amigo de Jason. Se cree todo lo de internet)
+  - Boobie Ike (role: Leyenda de Vice City: club, estudio e inmuebles)
+  - Dre'Quan Priest (role: Quiere triunfar en la música)
+  - Real Dimez (role: Dúo de rap: Bae-Luxe y Roxy)
+  - Raul Bautista (role: Atracador veterano que busca talento)
+  - Brian Heder (role: Contrabandista de la vieja escuela)
 
 **Voz:**
 
@@ -130,16 +102,11 @@ people:
 
 **En pantalla:**
 
-```yaml
-heading: Cómo esquivar spoilers
-items:
-- icon: eye-off
-  text: Silencia «GTA 6», «Lucia» y «Jason»
-- icon: mute
-  text: Quita la reproducción automática
-- icon: users
-  text: Avisa a tus amigos
-```
+- **heading:** Cómo esquivar spoilers
+- **items:**
+  - Silencia «GTA 6», «Lucia» y «Jason»
+  - Quita la reproducción automática
+  - Avisa a tus amigos
 
 **Voz:**
 
@@ -153,15 +120,13 @@ items:
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- Lucia y Jason, pareja protagonista
-- Seis secundarios ya presentados
-- 'Silencia palabras clave: cero spoilers'
-next: Checklist de la noche del lanzamiento
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - Lucia y Jason, pareja protagonista
+  - Seis secundarios ya presentados
+  - Silencia palabras clave: cero spoilers
+- **next:** Checklist de la noche del lanzamiento
+- **cta:** Suscríbete
 
 **Voz:**
 

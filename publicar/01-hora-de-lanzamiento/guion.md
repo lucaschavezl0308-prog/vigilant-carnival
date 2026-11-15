@@ -3,16 +3,14 @@
 Duración total: **3:45**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · jueves 19 de noviembre
-title: ¿A qué hora puedes jugar?
-subtitle: Horarios por país y qué hacer si no arranca
-```
+- **kicker:** GTA 6 · jueves 19 de noviembre
+- **title:** ¿A qué hora puedes jugar?
+- **subtitle:** Horarios por país y qué hacer si no arranca
 
 **Voz:**
 
@@ -26,12 +24,10 @@ subtitle: Horarios por país y qué hacer si no arranca
 
 **En pantalla:**
 
-```yaml
-value: 00:00
-label: Hora local · jueves 19
-sub: Cada tienda abre a medianoche en su región
-icon: clock
-```
+- **value:** 00:00
+- **label:** Hora local · jueves 19
+- **sub:** Cada tienda abre a medianoche en su región
+- **icon:** clock
 
 **Voz:**
 
@@ -45,21 +41,15 @@ icon: clock
 
 **En pantalla:**
 
-```yaml
-heading: España
-columns:
-- Zona
-- Hora
-- Día
-rows:
-- - Península y Baleares
-  - 00:00
-  - jueves 19
-- - Canarias
-  - '23:00'
-  - miércoles 18
-note: Según los horarios publicados por región. Compruébalo en la ficha de tu tienda.
-```
+- **heading:** España
+- **columns:**
+  - Zona
+  - Hora
+  - Día
+- **rows:**
+  - Península y Baleares | 00:00 | jueves 19
+  - Canarias | 23:00 | miércoles 18
+- **note:** Según los horarios publicados por región. Compruébalo en la ficha de tu tienda.
 
 **Voz:**
 
@@ -72,27 +62,17 @@ note: Según los horarios publicados por región. Compruébalo en la ficha de tu
 
 **En pantalla:**
 
-```yaml
-heading: Latinoamérica y EE. UU.
-columns:
-- País
-- Hora local
-- Hora en España
-rows:
-- - México (centro)
-  - 00:00
-  - 07:00
-- - Colombia y Perú
-  - 00:00
-  - 06:00
-- - Argentina y Chile
-  - 00:00
-  - 04:00
-- - EE. UU. (costa este)
-  - 00:00
-  - 06:00
-note: Siempre medianoche del jueves 19 en tu hora local.
-```
+- **heading:** Latinoamérica y EE. UU.
+- **columns:**
+  - País
+  - Hora local
+  - Hora en España
+- **rows:**
+  - México (centro) | 00:00 | 07:00
+  - Colombia y Perú | 00:00 | 06:00
+  - Argentina y Chile | 00:00 | 04:00
+  - EE. UU. (costa este) | 00:00 | 06:00
+- **note:** Siempre medianoche del jueves 19 en tu hora local.
 
 **Voz:**
 
@@ -108,12 +88,10 @@ note: Siempre medianoche del jueves 19 en tu hora local.
 
 **En pantalla:**
 
-```yaml
-value: '12:00'
-label: Miércoles 18, hora de España
-sub: Nueva Zelanda es la primera en llegar a la medianoche del jueves
-icon: globe
-```
+- **value:** 12:00
+- **label:** Miércoles 18, hora de España
+- **sub:** Nueva Zelanda es la primera en llegar a la medianoche del jueves
+- **icon:** globe
 
 **Voz:**
 
@@ -127,14 +105,12 @@ icon: globe
 
 **En pantalla:**
 
-```yaml
-heading: ¿Cambiar la región a Nueva Zelanda?
-items:
-- En Xbox ha funcionado con otros lanzamientos por hora local
-- No hay garantía de que funcione con GTA 6
-- 'Cambia la tienda y los precios que ves: vuelve a tu región'
-- 'En PlayStation la región va con tu cuenta: no aplica'
-```
+- **heading:** ¿Cambiar la región a Nueva Zelanda?
+- **items:**
+  - En Xbox ha funcionado con otros lanzamientos por hora local
+  - No hay garantía de que funcione con GTA 6
+  - Cambia la tienda y los precios que ves: vuelve a tu región
+  - En PlayStation la región va con tu cuenta: no aplica
 
 **Voz:**
 
@@ -149,18 +125,12 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: 'Precarga: lo que debes saber'
-items:
-- icon: download
-  text: Disponible si reservaste en digital
-- icon: hard-drive
-  text: Ocupa hasta 212 GB
-- icon: lock
-  text: No permite jugar antes de la hora
-- icon: wifi
-  text: ¿Compras el día 19? Descarga completa
-```
+- **heading:** Precarga: lo que debes saber
+- **items:**
+  - Disponible si reservaste en digital
+  - Ocupa hasta 212 GB
+  - No permite jugar antes de la hora
+  - ¿Compras el día 19? Descarga completa
 
 **Voz:**
 
@@ -174,15 +144,13 @@ items:
 
 **En pantalla:**
 
-```yaml
-heading: Si a medianoche no arranca
-items:
-- Descarga al 100 % y sin parches pendientes
-- Reinicia la consola
-- 'PS5: Restaurar licencias'
-- Mira el estado de PSN o Xbox
-- 'Paciencia: los servidores se saturan'
-```
+- **heading:** Si a medianoche no arranca
+- **items:**
+  - Descarga al 100 % y sin parches pendientes
+  - Reinicia la consola
+  - PS5: Restaurar licencias
+  - Mira el estado de PSN o Xbox
+  - Paciencia: los servidores se saturan
 
 **Voz:**
 
@@ -198,15 +166,13 @@ items:
 
 **En pantalla:**
 
-```yaml
-title: Resumen rápido
-points:
-- Medianoche, hora local, del jueves 19
-- Nueva Zelanda primero
-- España a las 00:00 · Latinoamérica unas horas después
-next: ¿Cuánto ocupa GTA 6?
-cta: Suscríbete para no perderte nada
-```
+- **title:** Resumen rápido
+- **points:**
+  - Medianoche, hora local, del jueves 19
+  - Nueva Zelanda primero
+  - España a las 00:00 · Latinoamérica unas horas después
+- **next:** ¿Cuánto ocupa GTA 6?
+- **cta:** Suscríbete para no perderte nada
 
 **Voz:**
 

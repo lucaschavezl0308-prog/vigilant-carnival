@@ -3,16 +3,14 @@
 Duración total: **1:53**
 
 
-## [0:00] intro  
+## [0:00] Intro  
 *Plano: `intro`*
 
 **En pantalla:**
 
-```yaml
-kicker: GTA 6 · el mapa
-title: Leonida, zona por zona
-subtitle: Las 6 regiones que ha mostrado Rockstar
-```
+- **kicker:** GTA 6 · el mapa
+- **title:** Leonida, zona por zona
+- **subtitle:** Las 6 regiones que ha mostrado Rockstar
 
 **Voz:**
 
@@ -25,19 +23,11 @@ subtitle: Las 6 regiones que ha mostrado Rockstar
 
 **En pantalla:**
 
-```yaml
-heading: El sur
-note: 'Mapa ilustrativo: posiciones aproximadas.'
-regions:
-- id: vice-city
-  name: Vice City
-  real: Miami
-  desc: 'La gran ciudad: playas, neones, coches de lujo y vida nocturna sin descanso.'
-- id: keys
-  name: Leonida Keys
-  real: Cayos de Florida
-  desc: Cadena de islas al sur, entre puentes, barcos y contrabando.
-```
+- **heading:** El sur
+- **note:** Mapa ilustrativo: posiciones aproximadas.
+- **regions:**
+  - Vice City (real: Miami; desc: La gran ciudad: playas, neones, coches de lujo y vida nocturna sin descanso.)
+  - Leonida Keys (real: Cayos de Florida; desc: Cadena de islas al sur, entre puentes, barcos y contrabando.)
 
 **Voz:**
 
@@ -50,22 +40,14 @@ regions:
 
 **En pantalla:**
 
-```yaml
-heading: Pantanos y golfo
-note: 'Mapa ilustrativo: posiciones aproximadas.'
-context:
-- vice-city
-- keys
-regions:
-- id: grassrivers
-  name: Grassrivers
-  real: Everglades
-  desc: 'Pantanos salvajes: caimanes, hidrodeslizadores y muy poca ley.'
-- id: port-gellhorn
-  name: Port Gellhorn
-  real: Costa del Golfo
-  desc: Un pueblo costero que vivió tiempos mejores.
-```
+- **heading:** Pantanos y golfo
+- **note:** Mapa ilustrativo: posiciones aproximadas.
+- **context:**
+  - vice-city
+  - keys
+- **regions:**
+  - Grassrivers (real: Everglades; desc: Pantanos salvajes: caimanes, hidrodeslizadores y muy poca ley.)
+  - Port Gellhorn (real: Costa del Golfo; desc: Un pueblo costero que vivió tiempos mejores.)
 
 **Voz:**
 
@@ -78,24 +60,16 @@ regions:
 
 **En pantalla:**
 
-```yaml
-heading: Interior y norte
-note: 'Mapa ilustrativo: posiciones aproximadas.'
-context:
-- vice-city
-- keys
-- grassrivers
-- port-gellhorn
-regions:
-- id: ambrosia
-  name: Ambrosia
-  real: Interior agrícola
-  desc: Zona industrial del interior, marcada por su refinería de azúcar.
-- id: kalaga
-  name: Mount Kalaga
-  real: Bosques del norte
-  desc: 'Parque nacional: bosque, ríos, caza y caminos de tierra.'
-```
+- **heading:** Interior y norte
+- **note:** Mapa ilustrativo: posiciones aproximadas.
+- **context:**
+  - vice-city
+  - keys
+  - grassrivers
+  - port-gellhorn
+- **regions:**
+  - Ambrosia (real: Interior agrícola; desc: Zona industrial del interior, marcada por su refinería de azúcar.)
+  - Mount Kalaga (real: Bosques del norte; desc: Parque nacional: bosque, ríos, caza y caminos de tierra.)
 
 **Voz:**
 
@@ -108,18 +82,12 @@ regions:
 
 **En pantalla:**
 
-```yaml
-heading: Lo que ya hemos visto de Leonida
-items:
-- icon: phone
-  text: Vídeos virales al estilo redes sociales
-- icon: music
-  text: Fiesta y vida nocturna en Vice City
-- icon: car
-  text: Coches tuneados, atascos y persecuciones
-- icon: waves
-  text: Playas, barcos y lanchas por toda la costa
-```
+- **heading:** Lo que ya hemos visto de Leonida
+- **items:**
+  - Vídeos virales al estilo redes sociales
+  - Fiesta y vida nocturna en Vice City
+  - Coches tuneados, atascos y persecuciones
+  - Playas, barcos y lanchas por toda la costa
 
 **Voz:**
 
@@ -134,12 +102,10 @@ items:
 
 **En pantalla:**
 
-```yaml
-value: '6'
-label: Regiones mostradas
-sub: 'Ojo con las comparaciones de tamaño: muchas son estimaciones de fans'
-icon: pin
-```
+- **value:** 6
+- **label:** Regiones mostradas
+- **sub:** Ojo con las comparaciones de tamaño: muchas son estimaciones de fans
+- **icon:** pin
 
 **Voz:**
 
@@ -152,15 +118,13 @@ icon: pin
 
 **En pantalla:**
 
-```yaml
-title: Resumen
-points:
-- Vice City y Leonida Keys al sur
-- Grassrivers y Port Gellhorn
-- Ambrosia y Mount Kalaga
-next: 'Personajes: quién es quién'
-cta: Suscríbete
-```
+- **title:** Resumen
+- **points:**
+  - Vice City y Leonida Keys al sur
+  - Grassrivers y Port Gellhorn
+  - Ambrosia y Mount Kalaga
+- **next:** Personajes: quién es quién
+- **cta:** Suscríbete
 
 **Voz:**
 

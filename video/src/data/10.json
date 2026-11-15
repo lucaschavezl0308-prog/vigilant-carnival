@@ -1,0 +1,467 @@
+{
+ "id": "10",
+ "slug": "checklist-lanzamiento",
+ "fps": 30,
+ "durationInFrames": 3698,
+ "audio": "audio/10.wav",
+ "title": "Checklist GTA 6: 10 cosas que hacer antes de empezar a jugar",
+ "scenes": [
+  {
+   "type": "intro",
+   "from": 0,
+   "duration": 397,
+   "beats": [
+    16,
+    223
+   ],
+   "data": {
+    "kicker": "GTA 6 · noche de lanzamiento",
+    "title": "Checklist antes de jugar",
+    "subtitle": "10 cosas para llegar listo"
+   },
+   "chapter": null,
+   "reveals": []
+  },
+  {
+   "type": "checklist",
+   "from": 397,
+   "duration": 959,
+   "beats": [
+    9,
+    57,
+    193,
+    395,
+    583,
+    750
+   ],
+   "data": {
+    "heading": "1-5 · Antes de medianoche",
+    "items": [
+     "Comprueba tu hora de desbloqueo",
+     "Descarga terminada (o empezada ya)",
+     "Deja libres 230-250 GB",
+     "Actualiza el sistema de la consola",
+     "Activa las descargas en reposo"
+    ]
+   },
+   "chapter": "Antes de medianoche",
+   "reveals": [
+    57,
+    193,
+    395,
+    583,
+    750
+   ]
+  },
+  {
+   "type": "checklist",
+   "from": 1356,
+   "duration": 657,
+   "beats": [
+    9,
+    64,
+    203,
+    462
+   ],
+   "data": {
+    "heading": "6-8 · Imagen y sonido",
+    "items": [
+     "Tele en modo juego",
+     "Calibra el HDR de la consola",
+     "Mando cargado y auriculares listos"
+    ]
+   },
+   "chapter": "Imagen y sonido",
+   "reveals": [
+    64,
+    203,
+    462
+   ]
+  },
+  {
+   "type": "checklist",
+   "from": 2013,
+   "duration": 706,
+   "beats": [
+    9,
+    84,
+    256,
+    459
+   ],
+   "data": {
+    "heading": "9-10 · Para disfrutarlo",
+    "items": [
+     "Silencia palabras clave en redes",
+     "Haz sitio para tus capturas y clips"
+    ]
+   },
+   "chapter": "Para disfrutarlo",
+   "reveals": [
+    84,
+    256
+   ]
+  },
+  {
+   "type": "warning",
+   "from": 2719,
+   "duration": 538,
+   "beats": [
+    9,
+    76,
+    246,
+    377
+   ],
+   "data": {
+    "heading": "Lo que NO debes hacer",
+    "icon": "shield",
+    "items": [
+     "Descargar «GTA 6 para PC» o APK de móvil",
+     "Dar tu cuenta a cambio de «acceso anticipado»",
+     "Ver directos si no quieres spoilers"
+    ]
+   },
+   "chapter": "Lo que NO debes hacer",
+   "reveals": [
+    76,
+    246,
+    377
+   ]
+  },
+  {
+   "type": "outro",
+   "from": 3257,
+   "duration": 441,
+   "beats": [
+    9,
+    200,
+    385
+   ],
+   "data": {
+    "title": "Listo para Leonida",
+    "points": [
+     "Descarga, espacio y actualización",
+     "Tele en modo juego y HDR calibrado",
+     "Cero spoilers"
+    ],
+    "next": "¿A qué hora sale GTA 6?",
+    "cta": "Suscríbete"
+   },
+   "chapter": "Resumen",
+   "reveals": []
+  }
+ ],
+ "captions": [
+  {
+   "from": 16,
+   "to": 74,
+   "text": "Llega la noche del lanzamiento. Lo"
+  },
+  {
+   "from": 74,
+   "to": 142,
+   "text": "último que quieres es estar a medianoche"
+  },
+  {
+   "from": 142,
+   "to": 214,
+   "text": "peleándote con una descarga o con la tele."
+  },
+  {
+   "from": 223,
+   "to": 284,
+   "text": "Aquí tienes diez cosas que hacer antes"
+  },
+  {
+   "from": 284,
+   "to": 342,
+   "text": "de empezar, para que lo único que te"
+  },
+  {
+   "from": 342,
+   "to": 380,
+   "text": "quede sea darle a jugar."
+  },
+  {
+   "from": 406,
+   "to": 445,
+   "text": "Primero, lo técnico."
+  },
+  {
+   "from": 454,
+   "to": 515,
+   "text": "Uno: comprueba a qué hora se desbloquea"
+  },
+  {
+   "from": 515,
+   "to": 581,
+   "text": "en tu país. Tienes el horario en el canal."
+  },
+  {
+   "from": 590,
+   "to": 649,
+   "text": "Dos: si lo has comprado en digital,"
+  },
+  {
+   "from": 649,
+   "to": 705,
+   "text": "asegúrate de que la descarga está"
+  },
+  {
+   "from": 705,
+   "to": 764,
+   "text": "terminada. Y si no la has empezado,"
+  },
+  {
+   "from": 764,
+   "to": 783,
+   "text": "empieza ya."
+  },
+  {
+   "from": 792,
+   "to": 885,
+   "text": "Tres: deja libres entre 230 y 250 GB,"
+  },
+  {
+   "from": 885,
+   "to": 971,
+   "text": "porque los parches también ocupan."
+  },
+  {
+   "from": 980,
+   "to": 1037,
+   "text": "Cuatro: actualiza el sistema de la"
+  },
+  {
+   "from": 1037,
+   "to": 1093,
+   "text": "consola, para que no te pille una"
+  },
+  {
+   "from": 1093,
+   "to": 1138,
+   "text": "actualización a medianoche."
+  },
+  {
+   "from": 1147,
+   "to": 1211,
+   "text": "Y cinco: activa las descargas en modo"
+  },
+  {
+   "from": 1211,
+   "to": 1279,
+   "text": "reposo, así la consola sigue bajando el"
+  },
+  {
+   "from": 1279,
+   "to": 1339,
+   "text": "juego o el parche mientras duermes."
+  },
+  {
+   "from": 1365,
+   "to": 1411,
+   "text": "Ahora, imagen y sonido."
+  },
+  {
+   "from": 1420,
+   "to": 1481,
+   "text": "Seis: pon la tele en modo juego. Reduce"
+  },
+  {
+   "from": 1481,
+   "to": 1550,
+   "text": "el retraso entre lo que pulsas y lo que ves."
+  },
+  {
+   "from": 1559,
+   "to": 1639,
+   "text": "Siete: calibra el HDR. En PS5 lo tienes"
+  },
+  {
+   "from": 1639,
+   "to": 1721,
+   "text": "en los ajustes de pantalla y vídeo, y en"
+  },
+  {
+   "from": 1721,
+   "to": 1809,
+   "text": "Xbox, en la calibración de HDR para juegos."
+  },
+  {
+   "from": 1818,
+   "to": 1879,
+   "text": "Ocho: mando cargado, cable a mano y"
+  },
+  {
+   "from": 1879,
+   "to": 1941,
+   "text": "auriculares listos, porque la banda"
+  },
+  {
+   "from": 1941,
+   "to": 1996,
+   "text": "sonora de un GTA merece la pena."
+  },
+  {
+   "from": 2022,
+   "to": 2088,
+   "text": "Y por último, para disfrutarlo de verdad."
+  },
+  {
+   "from": 2097,
+   "to": 2157,
+   "text": "Nueve: silencia palabras clave en tus"
+  },
+  {
+   "from": 2157,
+   "to": 2223,
+   "text": "redes. En cuanto salga, la historia va a"
+  },
+  {
+   "from": 2223,
+   "to": 2260,
+   "text": "estar por todas partes."
+  },
+  {
+   "from": 2269,
+   "to": 2334,
+   "text": "Diez: si vas a grabar o hacer capturas,"
+  },
+  {
+   "from": 2334,
+   "to": 2401,
+   "text": "deja espacio también para eso. Los clips"
+  },
+  {
+   "from": 2401,
+   "to": 2463,
+   "text": "de vídeo ocupan más de lo que parece."
+  },
+  {
+   "from": 2472,
+   "to": 2538,
+   "text": "Y un extra que no sale en ninguna guía:"
+  },
+  {
+   "from": 2538,
+   "to": 2606,
+   "text": "agua, algo de cena, y una hora razonable"
+  },
+  {
+   "from": 2606,
+   "to": 2671,
+   "text": "para irte a dormir. Leonida no se va a"
+  },
+  {
+   "from": 2671,
+   "to": 2703,
+   "text": "ir a ninguna parte."
+  },
+  {
+   "from": 2728,
+   "to": 2786,
+   "text": "Y tres cosas que no debes hacer."
+  },
+  {
+   "from": 2795,
+   "to": 2866,
+   "text": "No descargues nada que diga GTA 6 para"
+  },
+  {
+   "from": 2866,
+   "to": 2956,
+   "text": "PC o para móvil: no existe, y suele ser malware."
+  },
+  {
+   "from": 2965,
+   "to": 3029,
+   "text": "No des tus datos ni tu cuenta a nadie"
+  },
+  {
+   "from": 3029,
+   "to": 3087,
+   "text": "que te prometa acceso anticipado."
+  },
+  {
+   "from": 3096,
+   "to": 3149,
+   "text": "Y si no quieres spoilers, ni se te"
+  },
+  {
+   "from": 3149,
+   "to": 3212,
+   "text": "ocurra entrar en directos de la historia"
+  },
+  {
+   "from": 3212,
+   "to": 3240,
+   "text": "la primera semana."
+  },
+  {
+   "from": 3266,
+   "to": 3329,
+   "text": "Con esto, estás listo: descarga y"
+  },
+  {
+   "from": 3329,
+   "to": 3390,
+   "text": "espacio, tele en modo juego, HDR"
+  },
+  {
+   "from": 3390,
+   "to": 3448,
+   "text": "calibrado y redes silenciadas."
+  },
+  {
+   "from": 3457,
+   "to": 3515,
+   "text": "Guarda este vídeo para la noche del"
+  },
+  {
+   "from": 3515,
+   "to": 3564,
+   "text": "lanzamiento, y cuéntame en los"
+  },
+  {
+   "from": 3564,
+   "to": 3633,
+   "text": "comentarios desde qué consola vas a jugar."
+  },
+  {
+   "from": 3642,
+   "to": 3682,
+   "text": "Nos vemos en Leonida."
+  }
+ ],
+ "chapters": [
+  {
+   "from": 0,
+   "title": "Intro"
+  },
+  {
+   "from": 397,
+   "title": "Antes de medianoche"
+  },
+  {
+   "from": 1356,
+   "title": "Imagen y sonido"
+  },
+  {
+   "from": 2013,
+   "title": "Para disfrutarlo"
+  },
+  {
+   "from": 2719,
+   "title": "Lo que NO debes hacer"
+  },
+  {
+   "from": 3257,
+   "title": "Resumen"
+  }
+ ],
+ "thumbnail": {
+  "top": "ANTES DE",
+  "big": "JUGAR",
+  "tag": "GTA 6",
+  "visual": "checklist"
+ }
+}

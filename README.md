@@ -7,6 +7,19 @@ Las carpetas `publicar/NN-…/` tienen todo lo que hay que subir. Lee primero **
 ## Los 10 vídeos
 
 <!-- TABLA_VIDEOS -->
+| # | Título | Duración | Carpeta |
+|---|---|---|---|
+| 01 | ¿A qué hora sale GTA 6? Horario por países (España y Latinoamérica) | 3:45 | [`publicar/01-hora-de-lanzamiento/`](publicar/01-hora-de-lanzamiento/) |
+| 02 | ¿Cuánto ocupa GTA 6? Espacio en PS5 y Xbox y cómo hacer sitio | 3:02 | [`publicar/02-cuanto-ocupa/`](publicar/02-cuanto-ocupa/) |
+| 03 | GTA 6: ¿Estándar o Ultimate? Precio, qué incluye y cuál comprar | 2:26 | [`publicar/03-estandar-o-ultimate/`](publicar/03-estandar-o-ultimate/) |
+| 04 | GTA 6 en físico NO trae disco: qué hay en la caja y si te conviene | 1:56 | [`publicar/04-fisico-sin-disco/`](publicar/04-fisico-sin-disco/) |
+| 05 | GTA 6 a 30 FPS: PS5 vs PS5 Pro vs Xbox Series X y S, ¿dónde jugarlo? | 2:30 | [`publicar/05-fps-y-consolas/`](publicar/05-fps-y-consolas/) |
+| 06 | ¿GTA 6 en PC? Lo que se sabe y cuidado con las descargas falsas | 2:01 | [`publicar/06-gta-6-pc/`](publicar/06-gta-6-pc/) |
+| 07 | ¿GTA 6 tiene online? Lo que hay el día 19 (y lo que no) | 1:42 | [`publicar/07-gta-6-online/`](publicar/07-gta-6-online/) |
+| 08 | El mapa de GTA 6: Leonida zona por zona (y sus lugares reales) | 1:53 | [`publicar/08-mapa-leonida/`](publicar/08-mapa-leonida/) |
+| 09 | Personajes de GTA 6: quién es quién (Lucia, Jason y más) sin spoilers | 2:08 | [`publicar/09-personajes/`](publicar/09-personajes/) |
+| 10 | Checklist GTA 6: 10 cosas que hacer antes de empezar a jugar | 2:03 | [`publicar/10-checklist-lanzamiento/`](publicar/10-checklist-lanzamiento/) |
+<!-- /TABLA_VIDEOS -->
 
 Elegí los temas pensando en las preguntas que más se buscan el día de un lanzamiento: hora, espacio, qué edición comprar, formato físico, rendimiento, PC, online, mapa y personajes, más una checklist para esa noche.
 
